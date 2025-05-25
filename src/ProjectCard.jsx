@@ -11,7 +11,7 @@ function ProjectCard() {
       maxWidth: '600px'
     }}>
       <h2>Mein erstes Projekt</h2>
-      <p>Dies ist ein Platzhalter für mein erstes Projekt. Bald kommt hier mehr!</p>
+      <p>Platzhalter</p>
     </div>
   );
 }

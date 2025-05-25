@@ -1,8 +1,9 @@
 .hamburger-wrapper {
     position: absolute;
-    top: 1rem;
     left: 1rem;
-    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
   }
   
   .hamburger-icon {
@@ -29,5 +30,9 @@
     color: #f0f0f0;
     text-decoration: none;
     margin: 0.5rem 0;
+  }
+  .main-header {
+    position: relative;
+    height: 60px;
   }
   

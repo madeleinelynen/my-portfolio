@@ -1,0 +1,29 @@
+.main-header {
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+    padding: 0.5rem 1.5rem;
+    border-bottom: 1px solid #444;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .tagline {
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.8;
+  }
+  
