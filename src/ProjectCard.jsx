@@ -6,6 +6,7 @@ function ProjectCard() {
       border: '1px solid #ccc',
       borderRadius: '8px',
       padding: '1rem',
+      margin: '0 auto',
       marginBottom: '1rem',
       maxWidth: '600px'
     }}>
