@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ProjectCard from './ProjectCard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{
+      backgroundColor: '##2a2a2a',
+      color: '#f0f0f0',
+      minHeight: '100vh',
+      padding: '2rem',
+      fontFamily: 'Arial, sans-serif'
+    }}>
+      <h1>Madeleine Lynen</h1>
+      <h1>Developer Portfolio</h1>
+      <ProjectCard />
     </div>
   );
 }
