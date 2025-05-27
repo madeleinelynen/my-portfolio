@@ -8,7 +8,6 @@ function Header() {
       <div className="header-content">
         <div className="title-block">
           <h1 className="name">Madeleine Lynen | Software Developer </h1>
-          {/* <p className="tagline">Software Developer</p> */}
         </div>
         <div className="menu-block">
           <ProjectDropdown />
