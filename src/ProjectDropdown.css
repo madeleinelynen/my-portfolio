@@ -1,0 +1,41 @@
+.project-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: #f0f0f0;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.5rem;
+}
+
+.dropdown-toggle:hover {
+  color: #ff6600;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #1f1f1f;
+  border: 1px solid #444;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  color: #f0f0f0;
+  text-decoration: none;
+  margin: 0.25rem 0;
+}
+
+.dropdown-menu a:hover {
+  color: #ff6600;
+}

@@ -8,22 +8,27 @@
     z-index: 100;
   }
   
-  .header-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+.header-content {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
   
   .name {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.0rem;
+    font-weight: lighter;
     margin: 0;
   }
   
   .tagline {
-    font-size: 0.9rem;
-    margin: 0;
+    font-size: 0.25rem;
+    margin: 0 0 0 0.5rem; 
     opacity: 0.8;
   }
+
+.menu-block {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
   
