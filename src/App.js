@@ -1,7 +1,7 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import FlamecoachProjectCard from './Pages/FlamecoachProjectCard';
-import Flamecoach2ProjectCard from './Pages/Flamecoach2ProjectCard';
+import FlamecoachPage from './Pages/FlamecoachPage';
+import Flamecoach2Page from './Pages/Flamecoach2Page';
+import AufwindPage from './Pages/AufwindPage';
 import './App.css';
 import Header from './Header';
 
@@ -12,23 +12,21 @@ function Home() {
 function Flamecoach() {
   return (
     <>
-      {/* <h2>Flamecoach</h2> */}
-      <FlamecoachProjectCard />
+      <FlamecoachPage/>
     </>
   );
 }
 
 function Flamecoach2() {
-  return (
-  <>
-    <h2>Flamecoach 2</h2>
-    <Flamecoach2ProjectCard/>
-  </>
-  );
+  return (<>
+    <Flamecoach2Page/>
+  </>);
 }
 
 function Aufwind() {
-  return <h2>Aufwind</h2>;
+  return (  <>
+    <AufwindPage/>
+  </>);
 }
 
 function Oddy() {
