@@ -42,8 +42,8 @@ function Flamecoach2Page() {
       title="Erweiterte VR-Simulation zur Brandbekämpfung in verschiedenen Szenarien"
       image={titleImage}
       description="Ein erweitertes Projekt von Flamecoach2, das einige Verbesserungen und neue Features beinhaltet.
-      Unter anderem können mehrere Feuerlöccher gleichzeitig benutzt werden, das Feuersystem wurde überarbeitet etc. "
-      // projectPeriod="2023 - heute"
+      Unter anderem können mehrere Feuerlöscher gleichzeitig benutzt werden, das Feuersystem wurde überarbeitet etc. "
+      infoTexts={["20", "2023 - heute", "Unity Engine", "Programmierung, UI Integration"]}
     />
 
     <div style={{ display: 'flex', gap: '2rem', marginTop: '5rem', alignItems: 'center' }}>

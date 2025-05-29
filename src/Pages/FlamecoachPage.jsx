@@ -9,7 +9,7 @@ function FlamecoachPage() {
       description="Ein realer Feuerlöscher wird mit firmeneigener Hardware und Trackern ausgestattet, 
       sodass er in der virtuellen Umgebung ebenso sichtbar und steuerbar ist wie in der realen Welt. 
       Das System wurde bereits an mehr als 30 Kunden verkauft, darunter BMW, Daimler, Securitas und Commerzbank."
-      infoTexts={["20", "2019 - heute", "Unity Engine", "Programmierung, Erstellung von Animationen innerhalb der Engine, Integration von Hardware (einschließlich firmeneigener Entwicklungen), Implementierung von Hand-Tracking-Interaktionen, Einrichtung für Neukunden und Versionsverwaltung mit regelmäßigen Updates für Bestandskunden"]}
+      infoTexts={["20", "2019 - heute", "Unity Engine", "Programmierung"]}
     />
   );
 }
