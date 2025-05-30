@@ -1,4 +1,3 @@
-import CodeToggler from '../components/CodeToggler';
 import 'typeface-montserrat';
 import iconGroup from '../assets/images/Icons/GroupIcon.png';
 import iconClock from '../assets/images/Icons/ClockIcon.png';
@@ -23,8 +22,12 @@ function ProjectPage({
         />
       )}
 
-            <div style={{ maxWidth: '1000px', margin: '2rem auto 0 auto' }}>
-        <h1 style={{ fontSize: '2rem', fontFamily: "'Montserrat', sans-serif" }}>{title}</h1>
+      <div style={{ maxWidth: '1000px', margin: '3rem auto 0 auto' }}>
+        <h1 style={{ fontSize: '1.5rem', fontFamily: "'Montserrat', sans-serif", fontWeight: 400, color: 'white' }}>{title}</h1>
+      </div>
+      
+      <div style={{ maxWidth: '1000px', margin: '2rem auto 0 auto' }}>
+        <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>{description}</p>
       </div>
 
       {infoTexts.length === 4 && (
@@ -33,7 +36,7 @@ function ProjectPage({
           justifyContent: 'center',
           gap: '2rem',
           alignItems: 'center',
-          marginTop: '1rem',
+          marginTop: '3rem',
           marginBottom: '1rem'
         }}>
           {infoTexts.map((text, i) => (
@@ -44,11 +47,6 @@ function ProjectPage({
           ))}
         </div>
       )}
-      
-      <div style={{ maxWidth: '1000px', margin: '2rem auto 0 auto' }}>
-        {/* <h1 style={{ fontSize: '2rem', fontFamily: "'Montserrat', sans-serif" }}>{title}</h1> */}
-        <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>{description}</p>
-      </div>
 
     </div>
   );

@@ -1,14 +1,14 @@
 import ProjectPage from '../components/ProjectPage';
-import flamecoachBild from '../assets/images/Aufwind/Aufwind_Title.png';
+import titleImage from '../assets/images/Aufwind/PortfolioTitle.png';
 
 function AufwindPage() {
   return (
     <ProjectPage
       title="Multisensorisches, immersives VR-Erlebnis"
-      image={flamecoachBild}
+      image={titleImage}
       description="In diesem Projekt wird die Geschichte der ersten deutschen Pilotinnen erzählt, 
       dauerhaft für Besucher ausgestellt in Essen."
-    //   projectPeriod="2019 - heute"
+      infoTexts={["2021 - 2024", "Unity Engine", "Programmierung, UX/UI, Animationen"]}
     />
   );
 }

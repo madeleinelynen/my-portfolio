@@ -6,6 +6,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    
   }
   
 .header-content {
@@ -16,7 +17,7 @@
   
   .name {
     font-size: 1.0rem;
-    font-weight: lighter;
+    font-family: "'Montserrat', sans-serif",;
     margin: 0;
   }
   
