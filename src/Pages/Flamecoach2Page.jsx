@@ -3,7 +3,7 @@ import CodeToggler from '../components/CodeToggler';
 import FullWidthImage from '../components/FullWidthImage';
 import ProjectPage from '../components/ProjectPage';
 import TwoImageRow from '../components/TwoImageRow';
-import titleImage from '../assets/images/Flamecoach2/PortfolioTitle.png';
+import titleImage from '../assets/images/Flamecoach2/Flamecoach2HoverTile.png';
 import extinguisherCollection from '../assets/images/Flamecoach2/F2_modells.png';
 import streamnozzle from '../assets/images/Flamecoach2/AwgInspector.png'
 import streamnozzleCal from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Cal_AWG.png'

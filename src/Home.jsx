@@ -1,15 +1,22 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
 
-import flamecoachThumb from './assets/images/Flamecoach/FlamecoachTile.png';
-import flamecoach2Thumb from './assets/images/Flamecoach2/PortfolioTitle.png';
-import aufwindThumb from './assets/images/Aufwind/AufwindTile.png';
+import flamecoachThumb from './assets/images/Flamecoach/Tile.png';
+import flamecoach2Thumb from './assets/images/Flamecoach2/Flamecoach2Tile.png';
+import aufwindThumb from './assets/images/Aufwind/Tile.png';
 import oddyThumb from './assets/images/Oddy/OddyTile.png';
+import vodafoneOMRThumb from './assets/images/VodafoneOMR/Branding_Lvl04.PNG';
+import softrevisionThumb from './assets/images/SoftwareRevision/Tile.PNG';
+import schumannThumb from './assets/images/Schumann/Tile.PNG';
+import essenThumb from './assets/images/Schumann/Tile.PNG';
 
-import flamecoachHover from './assets/images/Flamecoach/FlamecoachHoveringTile.png';
-import flamecoach2Hover from './assets/images/Flamecoach2/Flamecoach2HoveringTile.png';
-import aufwindHover from './assets/images/Aufwind/AufwindHoveringTile.png';
+import flamecoachHover from './assets/images/Flamecoach/HoverTile.png';
+import flamecoach2Hover from './assets/images/Flamecoach2/Flamecoach2HoverTile.png';
+import aufwindHover from './assets/images/Aufwind/HoverTile.png';
 import oddyHover from './assets/images/Oddy/OddyHoveringTile.png';
+import vodafoneOMRHover from './assets/images/VodafoneOMR/Lvl01.PNG';
+import softrevisionHover from './assets/images/SoftwareRevision/HoverTile.PNG';
+import essenHover from './assets/images/Schumann/HoverTile.PNG';
 
 function Home() {
   const tilesPerRow = 3;
@@ -35,9 +42,33 @@ const projects = [
   },
   {
     path: '/oddy',
-    label: 'Oddy',
+    label: 'Oddy VR',
     img: oddyThumb,
     hoverImg: oddyHover
+  },
+    {
+    path: '/vodafoneomr',
+    label: 'Vodafone OMR',
+    img: vodafoneOMRThumb,
+    hoverImg: vodafoneOMRHover
+  },
+      {
+    path: '/softrevision',
+    label: 'Soft Revision',
+    img: softrevisionThumb,
+    hoverImg: softrevisionHover
+  },
+        {
+    path: '/schumann',
+    label: 'Schumann VR',
+    img: schumannThumb,
+    hoverImg: schumannHover
+  },
+          {
+    path: '/essencityguide',
+    label: 'Essen 1887',
+    img: essenThumb,
+    hoverImg: essenHover
   }
 ];
 

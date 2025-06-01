@@ -155,8 +155,6 @@ const titleTextStyle = {
     </>
   )}
 </div>
-
-
 </div>
 
 )}
