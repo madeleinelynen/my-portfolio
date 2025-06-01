@@ -73,10 +73,9 @@ function Flamecoach2Page() {
       hardware={hardware}
       software={software}
       sideImage={extinguisherCollection}
-
     />
  
-      <div style={{ maxWidth: '1000px', margin: '2rem auto', fontFamily: "'Montserrat', sans-serif" }}>
+      <div style={{ maxWidth: '1000px', margin: '2rem auto', fontFamily: "'Montserrat', sans-serif", textAlign:'center' }}>
       <h2 style={{ fontSize: '40px', marginBottom: '0.5rem' }}>Integration der Feuerlöscher-Controller</h2>
 
       <h3 style={{ fontSize: '28px', color: '#888' }}>Grundsätzlicher Feuerlöscher Input</h3>
@@ -89,7 +88,28 @@ function Flamecoach2Page() {
 
       <div style={{ maxWidth: '1000px', margin: '2rem auto', fontFamily: "'Montserrat', sans-serif" }}>
   <h4 style={{ fontSize: '28px', color: '#888' }}>Integrationsbeispiel am Strahlrohr</h4>
-  <p>...</p>
+
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem', color: '#ffffff' }}>
+        <ul style={{
+          listStylePosition: 'inside',  
+          textAlign: 'left',
+          color: '#ffffff',            
+          fontFamily: "'Montserrat', sans-serif",
+          lineHeight: '1.8',
+          fontWeight: 300,
+          maxWidth: '1000px',            
+          paddingLeft: '0',       
+          margin: 0
+        }}>
+          <li>Unterstützung der drei benötigten Eingangskanäle (Hall-Sensoren)</li>
+          <li>Kontrolle und Testbarkeit der Inputs im Game Mode </li>
+          <li>Werte werden im Game Mode über Events weitergegeben</li>
+          <li>Debus-Modus, der Inputs imitiert und Reaktionen testet</li>
+          <li>Speicherung und Auslesung der Grenzwerte im JSON</li>
+          <li>Modularisierung durch Vererbung von ExtinguisherInputManager&lt;T&gt;</li>
+        </ul>
+      </div>
+
   {awg1 && <CodeToggler code={awg1} label="AWGNozzleInputManager.cs" />}
   {awg2 && <CodeToggler code={awg2} label="AWGNozzleInputVisuals.cs" />}
 </div>
