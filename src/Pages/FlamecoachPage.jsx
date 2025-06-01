@@ -39,42 +39,21 @@ function FlamecoachPage() {
   return (
     <>
     <ProjectPage
-      title="VR-Simulation zur Brandbekämpfung in verschiedenen Szenarien"
+    title ="Flamecoach"
       image={titleImage}
-      description="Ein realer Feuerlöscher wird mit firmeneigener Hardware und Trackern ausgestattet, 
+      description="VR-Simulation zur Brandbekämpfung in verschiedenen Szenarien.
+      Ein realer Feuerlöscher wird mit firmeneigener Hardware und Trackern ausgestattet, 
       sodass er in der virtuellen Umgebung ebenso sichtbar und steuerbar ist wie in der realen Welt. 
       Das System wurde bereits an mehr als 30 Kunden verkauft, darunter BMW, Daimler, Securitas und Commerzbank."
-      infoTexts={["10", "2019 - heute", "Unity Engine", "Programmierung, UX/UI, Animationen"]}
+      role="Programmierung, UX/UI-Entwicklung und -Integration, Erstellung von Animationen innerhalb der 
+      Engine, Integration von Hardware (einschließlich firmeneigener Entwicklungen), Implementierung von 
+      Hand-Tracking-Interaktionen, Einrichtung für Neukunden und Versionsverwaltung mit regelmäßigen Updates 
+      für Bestandskunden"
+      infoTexts={["10", "2019 - heute", "Unity Engine"]}
+      hardware={hardware}
+      software={software}
+      sideImage={extinguisherCollection}
     />
-
-        <div style={{ display: 'flex', gap: '2rem', marginTop: '5rem', alignItems: 'center' }}>
-            <img
-              src={extinguisherCollection}
-              alt="Zusätzliches Bild"
-              style={{ width: '45%', borderRadius: '8px', objectFit: 'cover' }}
-            />
-            <div style={{
-            backgroundColor: '#2a2a2a',
-            textAlign: 'left',
-            border: '1px solid white',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            color: 'white',             
-            fontFamily: "'Montserrat', sans-serif",
-            flex: 1,
-            }}>
-    
-          <div>
-            <h4>Verwendete Hardware:</h4>
-              <ul>{hardware.map((item, i) => <li key={i}>{item}</li>)}</ul>
-    
-          <h4>Verwendete Software:</h4>
-            <ul>{software.map((item, i) => <li key={i}>{item}</li>)}</ul>
-          </div>
-     </div>  
-        </div>   
-    
-    
     </> 
   );
 }

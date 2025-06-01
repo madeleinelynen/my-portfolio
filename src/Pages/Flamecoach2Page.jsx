@@ -2,11 +2,16 @@ import React, { useState, useEffect } from 'react';
 import CodeToggler from '../components/CodeToggler';
 import FullWidthImage from '../components/FullWidthImage';
 import ProjectPage from '../components/ProjectPage';
+import TwoImageRow from '../components/TwoImageRow';
 import titleImage from '../assets/images/Flamecoach2/PortfolioTitle.png';
 import extinguisherCollection from '../assets/images/Flamecoach2/F2_modells.png';
 import streamnozzle from '../assets/images/Flamecoach2/AwgInspector.png'
 import streamnozzleCal from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Cal_AWG.png'
 import trackerUI from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Tracker_2.png'
+import sceneUI from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Scenes.png'
+
+import playlist1 from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Playlist_1.1.png'
+import playlist2 from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Playlist_1.2.png'
 
 function Flamecoach2Page() {
   const hardware = [
@@ -56,40 +61,17 @@ function Flamecoach2Page() {
   return (
     <>
     <ProjectPage
-      title="Erweiterte VR-Simulation zur Brandbekämpfung in verschiedenen Szenarien"
+    title ="Flamecoach 2"
       image={titleImage}
-      description="Ein erweitertes Projekt von Flamecoach2, das einige Verbesserungen und neue Features beinhaltet.
+      description="Erweiterte VR-Simulation zur Brandbekämpfung in verschiedenen Szenarien.
+      Ein erweitertes Projekt von Flamecoach2, das einige Verbesserungen und neue Features beinhaltet.
       Unter anderem können mehrere Feuerlöscher gleichzeitig benutzt werden, das Feuersystem wurde überarbeitet etc. "
-      infoTexts={["9", "2023 - heute", "Unity Engine", "Programmierung, UX/UI, Animationen"]}
+      infoTexts={["9", "2023 - heute", "Unity Engine"]}
+      hardware={hardware}
+      software={software}
+      sideImage={extinguisherCollection}
+
     />
-
-    <div style={{ display: 'flex', gap: '1rem', marginTop: '5rem', alignItems: 'center' }}>
-        <img
-          src={extinguisherCollection}
-          alt="extinguisherCollection"
-          style={{ width: '45%', borderRadius: '8px', objectFit: 'cover', }}
-        />
-        <div style={{
-        backgroundColor: '#2a2a2a',
-        textAlign: 'left',
-        border: '1px solid white',
-        borderRadius: '12px',
-        borderColor: '#888',
-        padding: '1.5rem',
-        color: 'white',             
-        fontFamily: "'Montserrat', sans-serif",
-        flex: 1,
-        }}>
-
-      <div>
-        <h4>Verwendete Hardware:</h4>
-          <ul>{hardware.map((item, i) => <li key={i}>{item}</li>)}</ul>
-
-      <h4>Verwendete Software:</h4>
-        <ul>{software.map((item, i) => <li key={i}>{item}</li>)}</ul>
-      </div>
-    </div>
- </div>  
  
       <div style={{ maxWidth: '1000px', margin: '2rem auto', fontFamily: "'Montserrat', sans-serif" }}>
       <h2 style={{ fontSize: '40px', marginBottom: '0.5rem' }}>Integration der Feuerlöscher-Controller</h2>
@@ -172,7 +154,20 @@ function Flamecoach2Page() {
       <h2 style={{ fontSize: '40px', marginBottom: '0.5rem' }}>UX/UI</h2>
       <h2 style={{ fontSize: '28px', color: '#888' }}>Playlist Feature</h2>
 
+      <TwoImageRow 
+        leftImage={playlist1}
+        rightImage={playlist2}
+        gap='2rem'
+        altLeft="playlist1"
+        altRight='playlist2'
+      />
+
       <h2 style={{ fontSize: '28px', color: '#888' }}>Scene Management</h2>
+
+      <FullWidthImage 
+        src={sceneUI} 
+        alt="sceneui"
+      />
 
       <h2 style={{ fontSize: '28px', color: '#888' }}>Löscher Kalibrierung</h2>
 

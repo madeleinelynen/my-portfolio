@@ -1,16 +1,14 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
-import ProjectDropdown from './ProjectDropdown';
 
 function Header() {
   return (
     <header className="main-header">
       <div className="header-content">
         <div className="title-block">
-          <h1 className="name">Madeleine Lynen | Software Developer </h1>
-        </div>
-        <div className="menu-block">
-          <ProjectDropdown />
+          <Link to="/" className="home-link">
+            <h1 className="name">Madeleine Lynen | Software Developer</h1>
+          </Link>
         </div>
       </div>
     </header>
