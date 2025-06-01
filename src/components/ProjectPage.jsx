@@ -23,7 +23,7 @@ const titleTextStyle = {
   color: 'white',
   fontFamily: "'Montserrat', sans-serif",
   textAlign: 'center',
-  marginTop: '0.5rem',   // oder z. B. '0rem' für ganz nah
+  marginTop: '0rem',   // oder z. B. '0rem' für ganz nah
   marginBottom: '0rem'   // kein zusätzlicher Abstand nach unten
 };
 
@@ -46,14 +46,6 @@ const titleTextStyle = {
         />
       )}
 
-      <div style={{ maxWidth: '1000px', margin: '0 auto 0 auto' }}>
-        <p style={titleTextStyle}>{title}</p>
-      </div>
-
-      <div style={{ maxWidth: '1000px', margin: '2rem auto 0 auto' }}>
-        <p style={baseTextStyle}>{description}</p>
-      </div>
-
       {infoTexts.length === 3 && (
         <div style={{
           display: 'flex',
@@ -71,6 +63,12 @@ const titleTextStyle = {
           ))}
         </div>
       )}       
+
+
+      <div style={{ maxWidth: '1000px', margin: '0 auto 0 auto' }}>
+        <p style={titleTextStyle}>{title}</p>
+        <p style={baseTextStyle}>{description}</p>
+      </div>
 
       <div style={{ maxWidth: '1000px', margin: '0rem auto 0 auto', marginBottom: '0.5rem',fontSize: '1rem',
   lineHeight: '1.6',

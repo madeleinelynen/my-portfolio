@@ -1,4 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import Header from './Header';
+import './App.css';
 import FlamecoachPage from './Pages/FlamecoachPage';
 import Flamecoach2Page from './Pages/Flamecoach2Page';
 import AufwindPage from './Pages/AufwindPage';
@@ -6,10 +9,8 @@ import OddyPage from './Pages/OddyPage';
 import VodafoneOMRPage from './Pages/VodafoneOMRPage';
 import SoftRevisionPage from './Pages/SoftRevisionPage';
 import SchumannPage from './Pages/SchumannPage';
-import Home from './Home';
-import Header from './Header';
-import './App.css';
 import EssenCityguide from './Pages/EssenCityguide';
+import TirolPage from './Pages/Tirol';
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
         <Route path="/vodafoneomr" element={<VodafoneOMRPage />} />
         <Route path="/softrevision" element={<SoftRevisionPage />} />
         <Route path="/schumann" element={<SchumannPage />} />
-         <Route path="/essencityguide" element={<EssenCityguide />} />
+        <Route path="/essencityguide" element={<EssenCityguide />} />
+        <Route path="/tirol" element={<TirolPage />} />
       </Routes>
     </Router>
   );

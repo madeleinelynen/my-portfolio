@@ -2,7 +2,7 @@ import ProjectPage from '../components/ProjectPage';
 import titleImage from '../assets/images/VodafoneOMR/Branding_Lvl04.PNG';
 import sideImage from '../assets/images/VodafoneOMR/Lvl01.PNG';
 
-function VodafoneOMRPage() {
+function TirolPage() {
     const hardware = [
     'HTC Vive Focus 2',
     'Tactical Haptics Controller',
@@ -17,13 +17,14 @@ function VodafoneOMRPage() {
 
   return (
     <ProjectPage
-      title ="Vodafone OMR"
+      title ="Tirol Experience"
       image={titleImage}
-      description="Lokaler VR-Multiplayer für bis zu vier Spielern, die in einer digitalen Arena in vier 
-      verschiedenen Leveln und jeweils vier verschiedenen Mechaniken um die meisten Punkte kämpfen müssen"
-      role="Programmierung unter Nutzung der implementierten MLAPI, UI/UX-Implementierung und Programmierung, 
-      Implementierung von Feedback auf der haptischen Weste, technischer Support auf der OMR"
-      infoTexts={["8", "Januar 2022 - Mai 2022", "Unity Engine"]}
+      description="Eine multisensorische Erlebniswelt mit immersivem Storytelling, die in vier 
+      verschiedenen Räumen interaktive Ausstellungen bietet und die Geschichte Tirols erzählt. 
+      Diese Experience ist als permanentes Museum in Innsbruck ausgestellt."
+      role='Programmierung des VR-Projektes, UI-Implementierung und -Programmierung, 
+      Hand-Tracking Implementierung'
+      infoTexts={["21", "2022 - 2023", "Unity Engine"]}
       hardware={hardware}
       software={software}
       sideImage={sideImage}
@@ -31,4 +32,4 @@ function VodafoneOMRPage() {
   );
 }
 
-export default VodafoneOMRPage;
+export default TirolPage;

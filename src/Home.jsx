@@ -5,18 +5,21 @@ import flamecoachThumb from './assets/images/Flamecoach/Tile.png';
 import flamecoach2Thumb from './assets/images/Flamecoach2/Flamecoach2Tile.png';
 import aufwindThumb from './assets/images/Aufwind/Tile.png';
 import oddyThumb from './assets/images/Oddy/OddyTile.png';
-import vodafoneOMRThumb from './assets/images/VodafoneOMR/Branding_Lvl04.PNG';
-import softrevisionThumb from './assets/images/SoftwareRevision/Tile.PNG';
-import schumannThumb from './assets/images/Schumann/Tile.PNG';
-import essenThumb from './assets/images/Schumann/Tile.PNG';
+import vodafoneOMRThumb from './assets/images/VodafoneOMR/Tile.png';
+import softrevisionThumb from './assets/images/SoftRevision/Tile.png';
+import schumannThumb from './assets/images/Schumann/Tile.png';
+import essenThumb from './assets/images/Schumann/Tile.png';
+import tirolThumb from './assets/images/Schumann/Tile.png';
 
 import flamecoachHover from './assets/images/Flamecoach/HoverTile.png';
 import flamecoach2Hover from './assets/images/Flamecoach2/Flamecoach2HoverTile.png';
 import aufwindHover from './assets/images/Aufwind/HoverTile.png';
 import oddyHover from './assets/images/Oddy/OddyHoveringTile.png';
-import vodafoneOMRHover from './assets/images/VodafoneOMR/Lvl01.PNG';
-import softrevisionHover from './assets/images/SoftwareRevision/HoverTile.PNG';
-import essenHover from './assets/images/Schumann/HoverTile.PNG';
+import vodafoneOMRHover from './assets/images/VodafoneOMR/HoverTile.png';
+import softrevisionHover from './assets/images/SoftRevision/HoverTile.png';
+import schumannHover from './assets/images/Schumann/Tile.png';
+import essenHover from './assets/images/Schumann/Tile.png';
+import tirolHover from './assets/images/Schumann/Tile.png';
 
 function Home() {
   const tilesPerRow = 3;
@@ -69,6 +72,12 @@ const projects = [
     label: 'Essen 1887',
     img: essenThumb,
     hoverImg: essenHover
+  },
+            {
+    path: '/tirol',
+    label: 'Tirol Experience',
+    img: tirolThumb,
+    hoverImg: tirolHover
   }
 ];
 
