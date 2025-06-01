@@ -37,8 +37,6 @@ function CodeToggler({ code, label = "Codeblock" }) {
       </button>
     </div>
 
-
-    {/* Codeblock darunter */}
     {visible && (
       <div style={{ 
             width: '100vw',               // Volle Fensterbreite

@@ -1,12 +1,13 @@
 import ProjectPage from '../components/ProjectPage';
 import titleImage from '../assets/images/Aufwind/PortfolioTitle.png';
-import sideImage from '../assets/images/Aufwind/PortfolioTitle.png';
+import sideImage from '../assets/images/Aufwind/Aufwind_keyvisual_Poster.jpg';
 
 function AufwindPage() {
   const hardware = [
   'Yaw Motion Seat',
   'Varjo Aero',
-  'Ultraleap'
+  'Ultraleap',
+  'Multisensorische Integration (Duft, Hitze), schaltbar über LAN-Steckdosen'
   ];
 
   const software = [
