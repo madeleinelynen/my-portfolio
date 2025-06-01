@@ -3,13 +3,13 @@ import './Home.css';
 
 import flamecoachThumb from './assets/images/Flamecoach/FC_Title_Text.png';
 import flamecoach2Thumb from './assets/images/Flamecoach2/PortfolioTitle.png';
-import aufwindThumb from './assets/images/Aufwind/PortfolioTitle.png';
-import oddyThumb from './assets/images/Oddy/PortfolioTitle.png';
+import aufwindThumb from './assets/images/Aufwind/AufwindTile.png';
+import oddyThumb from './assets/images/Oddy/OddyTile.png';
 
 import flamecoachHover from './assets/images/Flamecoach/FC_Extinguisher.jpg';
-import flamecoach2Hover from './assets/images/Flamecoach2/awg_render.png';
-import aufwindHover from './assets/images/Aufwind/PortfolioTitle.png';
-import oddyHover from './assets/images/Oddy/PortfolioTitle.png';
+import flamecoach2Hover from './assets/images/Flamecoach2/Flamecoach2HoveringTile.png';
+import aufwindHover from './assets/images/Aufwind/AufwindHoveringTile.png';
+import oddyHover from './assets/images/Oddy/OddyHoveringTile.png';
 
 function Home() {
   const tilesPerRow = 3;
