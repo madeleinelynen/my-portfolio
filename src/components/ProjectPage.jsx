@@ -72,6 +72,15 @@ const titleTextStyle = {
         </div>
       )}       
 
+      <div style={{ maxWidth: '1000px', margin: '0rem auto 0 auto', marginBottom: '0.5rem',fontSize: '1rem',
+  lineHeight: '1.6',
+  fontWeight: 600,
+  color: 'white',
+  fontFamily: "'Montserrat', sans-serif",
+  textAlign: 'center' }}>
+        <p>Meine Beteiliung in diesem Projekt</p>
+      </div>
+
       <div style={{ maxWidth: '1000px', margin: '0rem auto 0 auto', marginBottom: '3rem' }}>
         <p style={baseTextStyle}>{role}</p>
       </div>

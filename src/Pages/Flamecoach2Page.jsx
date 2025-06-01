@@ -66,6 +66,9 @@ function Flamecoach2Page() {
       description="Erweiterte VR-Simulation zur Brandbekämpfung in verschiedenen Szenarien.
       Ein erweitertes Projekt von Flamecoach2, das einige Verbesserungen und neue Features beinhaltet.
       Unter anderem können mehrere Feuerlöscher gleichzeitig benutzt werden, das Feuersystem wurde überarbeitet etc. "
+      role='Programmierung, UX/UI-Entwicklung und -Integration, Erstellung von Animationen innerhalb der 
+      Engine, Integration von Hardware (einschließlich firmeneigener Entwicklungen), Implementierung von 
+      Hand-Tracking-Interaktionen'
       infoTexts={["9", "2023 - heute", "Unity Engine"]}
       hardware={hardware}
       software={software}

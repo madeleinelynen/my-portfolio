@@ -20,6 +20,7 @@ function AufwindPage() {
       image={titleImage}
       description="Multisensorisches, immersives VR-Erlebnis. In diesem Projekt wird die Geschichte der ersten deutschen Pilotinnen erzählt, 
       dauerhaft für Besucher ausgestellt in Essen."
+      role='Programmierung, Erstellung von Animationen innerhalb der Engine, Implementierung von Hand-Tracking-Interaktionen'
       infoTexts={["22", "2021 - 2024", "Unity Engine"]}
       software={software}
       hardware={hardware}
