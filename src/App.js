@@ -11,6 +11,7 @@ import SoftRevisionPage from './Pages/SoftRevisionPage';
 import SchumannPage from './Pages/SchumannPage';
 import EssenCityguide from './Pages/EssenCityguide';
 import TirolPage from './Pages/Tirol';
+import TrikottaufePage from './Pages/TrikottaufePage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/schumann" element={<SchumannPage />} />
         <Route path="/essencityguide" element={<EssenCityguide />} />
         <Route path="/tirol" element={<TirolPage />} />
+        <Route path="/trikottaufe" element={<TrikottaufePage />} />
       </Routes>
     </Router>
   );

@@ -2,6 +2,7 @@ import 'typeface-montserrat';
 import iconGroup from '../assets/images/Icons/GroupIcon.png';
 import iconClock from '../assets/images/Icons/ClockIcon.png';
 import iconEngine from '../assets/images/Icons/EngineSelectIcon.png';
+import FadingImage from './FadingImage';
 
 function ProjectPage({ 
   title,
@@ -37,14 +38,24 @@ const titleTextStyle = {
 };
 
   return (
-    <div style={{ margin: '0 auto', marginBottom: '0rem' }}>
-      {image && (
-        <img
-          src={image}
-          alt={imageAlt}
-          style={{ width: '100%', height: 'auto', borderRadius: '0px' }}
-        />
-      )}
+    // <div style={{ margin: '0 auto', marginBottom: '0rem' }}>
+    //   {image && (
+    //     <img
+    //       src={image}
+    //       alt={imageAlt}
+    //       style={{ width: '100%', height: 'auto', borderRadius: '0px' }}
+    //     />
+    //   )}
+
+      <div style={{ margin: '0 auto', marginBottom: '0rem' }}>
+    {image && (
+      <FadingImage
+        src={image}
+        alt={imageAlt}
+        fadeHeight="10%" // Optional: z. B. "80px"
+        backgroundColor="#2a2a2a" // Hintergrundfarbe deiner Seite
+      />
+    )}
 
       {infoTexts.length === 3 && (
         <div style={{

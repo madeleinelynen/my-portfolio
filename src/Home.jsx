@@ -10,6 +10,7 @@ import softrevisionThumb from './assets/images/SoftRevision/Tile.png';
 import schumannThumb from './assets/images/Schumann/Tile.png';
 import essenThumb from './assets/images/Schumann/Tile.png';
 import tirolThumb from './assets/images/Schumann/Tile.png';
+import trikottaufeThumb from './assets/images/Trikottaufe/Tile.png';
 
 import flamecoachHover from './assets/images/Flamecoach/HoverTile.png';
 import flamecoach2Hover from './assets/images/Flamecoach2/Flamecoach2HoverTile.png';
@@ -20,6 +21,7 @@ import softrevisionHover from './assets/images/SoftRevision/HoverTile.png';
 import schumannHover from './assets/images/Schumann/Tile.png';
 import essenHover from './assets/images/Schumann/Tile.png';
 import tirolHover from './assets/images/Schumann/Tile.png';
+import trikottaufeHover from './assets/images/Trikottaufe/HoverTile.png';
 
 function Home() {
   const tilesPerRow = 3;
@@ -78,6 +80,12 @@ const projects = [
     label: 'Tirol Experience',
     img: tirolThumb,
     hoverImg: tirolHover
+  },
+      {
+    path: '/trikottaufe',
+    label: 'Fortuna Trikottaufe',
+    img: trikottaufeThumb,
+    hoverImg: trikottaufeHover
   }
 ];
 
