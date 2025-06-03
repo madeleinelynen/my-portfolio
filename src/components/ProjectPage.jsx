@@ -1,4 +1,5 @@
 import 'typeface-montserrat';
+import { useEffect } from 'react';
 import iconGroup from '../assets/images/Icons/GroupIcon.png';
 import iconClock from '../assets/images/Icons/ClockIcon.png';
 import iconEngine from '../assets/images/Icons/EngineSelectIcon.png';
@@ -15,45 +16,41 @@ function ProjectPage({
   software = [],
   sideImage = null}) {
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const icons = [iconGroup, iconClock, iconEngine];
 
-const titleTextStyle = {
-  fontSize: '3rem',
-  lineHeight: '1.6',
-  fontWeight: 300,
-  color: 'white',
-  fontFamily: "'Montserrat', sans-serif",
-  textAlign: 'center',
-  marginTop: '0rem',   // oder z. B. '0rem' für ganz nah
-  marginBottom: '0rem'   // kein zusätzlicher Abstand nach unten
-};
+  const titleTextStyle = {
+    fontSize: '3rem',
+    lineHeight: '1.6',
+    fontWeight: 300,
+    color: 'white',
+    fontFamily: "'Montserrat', sans-serif",
+    textAlign: 'center',
+    marginTop: '0rem',
+    marginBottom: '0rem'
+  };
 
   const baseTextStyle = {
-  fontSize: '1rem',
-  lineHeight: '1.6',
-  fontWeight: 300,
-  color: 'white',
-  fontFamily: "'Montserrat', sans-serif",
-  textAlign: 'center'
-};
+    fontSize: '1rem',
+    lineHeight: '1.6',
+    fontWeight: 300,
+    color: 'white',
+    fontFamily: "'Montserrat', sans-serif",
+    textAlign: 'center'
+  };
 
   return (
-    // <div style={{ margin: '0 auto', marginBottom: '0rem' }}>
-    //   {image && (
-    //     <img
-    //       src={image}
-    //       alt={imageAlt}
-    //       style={{ width: '100%', height: 'auto', borderRadius: '0px' }}
-    //     />
-    //   )}
-
-      <div style={{ margin: '0 auto', marginBottom: '0rem' }}>
+    <div style={{ margin: '0 auto', marginBottom: '0rem' }}>
+å
     {image && (
       <FadingImage
         src={image}
         alt={imageAlt}
-        fadeHeight="10%" // Optional: z. B. "80px"
-        backgroundColor="#2a2a2a" // Hintergrundfarbe deiner Seite
+        fadeHeight="10%"
+        backgroundColor="#2a2a2a"
       />
     )}
 

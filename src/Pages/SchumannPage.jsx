@@ -1,6 +1,6 @@
 import ProjectPage from '../components/ProjectPage';
-import titleImage from '../assets/images/VodafoneOMR/Branding_Lvl04.PNG';
-import sideImage from '../assets/images/VodafoneOMR/Lvl01.PNG';
+import titleImage from '../assets/images/Schumann/Banner.png';
+import sideImage from '../assets/images/Schumann/sideImage.jpg';
 
 function SchumannPage() {
     const hardware = [

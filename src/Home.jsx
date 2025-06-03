@@ -18,7 +18,7 @@ import aufwindHover from './assets/images/Aufwind/HoverTile.png';
 import oddyHover from './assets/images/Oddy/OddyHoveringTile.png';
 import vodafoneOMRHover from './assets/images/VodafoneOMR/HoverTile.png';
 import softrevisionHover from './assets/images/SoftRevision/HoverTile.png';
-import schumannHover from './assets/images/Schumann/Tile.png';
+import schumannHover from './assets/images/Schumann/HoveringTile.png';
 import essenHover from './assets/images/Schumann/Tile.png';
 import tirolHover from './assets/images/Schumann/Tile.png';
 import trikottaufeHover from './assets/images/Trikottaufe/HoverTile.png';
