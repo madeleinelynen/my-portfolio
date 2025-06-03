@@ -7,7 +7,7 @@ function Header() {
       <div className="header-content">
         <div className="title-block">
           <Link to="/" className="home-link">
-            <h1 className="name">Madeleine Lynen | Software Developer</h1>
+            <h1 className="name">PORTFOLIO 2025</h1>
           </Link>
         </div>
       </div>

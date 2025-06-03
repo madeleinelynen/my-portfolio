@@ -1,4 +1,3 @@
-import 'typeface-montserrat';
 import { useEffect } from 'react';
 import iconGroup from '../assets/images/Icons/GroupIcon.png';
 import iconClock from '../assets/images/Icons/ClockIcon.png';
@@ -26,8 +25,8 @@ function ProjectPage({
     fontSize: '3rem',
     lineHeight: '1.6',
     fontWeight: 300,
-    color: 'white',
-    fontFamily: "'Montserrat', sans-serif",
+    color: 'black',
+    fontFamily: "'Playfair Display', sans-serif",
     textAlign: 'center',
     marginTop: '0rem',
     marginBottom: '0rem'
@@ -38,7 +37,7 @@ function ProjectPage({
     lineHeight: '1.6',
     fontWeight: 300,
     color: 'white',
-    fontFamily: "'Montserrat', sans-serif",
+    fontFamily: "'Playfair Display', sans-serif",
     textAlign: 'center'
   };
 
@@ -50,7 +49,7 @@ function ProjectPage({
         src={image}
         alt={imageAlt}
         fadeHeight="10%"
-        backgroundColor="#2a2a2a"
+        backgroundColor="#f3eae3"
       />
     )}
 
@@ -64,8 +63,8 @@ function ProjectPage({
           marginBottom: '3rem'
         }}>
           {infoTexts.map((text, i) => (
-            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <img src={icons[i]} alt={`Icon ${i}`} style={{ height: '40px' }} />
+            <div key={i} style={{color:'black', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <img src={icons[i]} alt={`Icon ${i}`} style={{ color:'black',height: '40px' }} />
               <span style={{baseTextStyle}}>{text}</span>
             </div>
           ))}

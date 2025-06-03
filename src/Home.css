@@ -15,13 +15,11 @@
   transition: opacity 0.3s ease;
 }
 
-/* Erstes Bild: sichtbar */
 .tile-img.default {
   z-index: 1;
   opacity: 1;
 }
 
-/* Zweites Bild: erst sichtbar beim Hover */
 .tile-img.hover {
   z-index: 2;
   opacity: 0;
@@ -64,3 +62,125 @@
   border-radius: 6px;
   text-align: center;
 }
+
+.intro-fullscreen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3eae3;
+  background-repeat: repeat;
+}
+
+.intro-text {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.hero-left {
+  width: 40%;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 2rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', sans-serif;
+  letter-spacing: -0.05em;
+  margin-bottom: 0rem;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', sans-serif;
+  letter-spacing: -0.05em;
+  margin-top: 0;
+}
+
+.hero-description {
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: #1a1a1a;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.hero-right {
+  text-align: right;
+  z-index: 1;
+}
+
+.hero-nav {
+  list-style: none;
+  font-size: 7rem;
+  line-height: 1.2;
+  color: #1a1a1a;
+  cursor: pointer;
+}
+
+.hero-nav li {
+  text-align: left;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.hero-nav li:hover {
+  color: #888;
+}
+
+.about-section {
+  height: 100vh;
+  background-color: #f3eae3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  box-sizing: border-box;
+}
+
+.about-title{
+  font-size: 2rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', sans-serif;
+  letter-spacing: -0.05em;
+  margin-bottom: 0rem;
+}
+
+
+.hero-section {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 4rem;
+  background-color: #f3eae3;
+  font-family: 'Playfair Display', sans-serif;
+    overflow: hidden;
+}
+
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+  background-color: #f5ece7; /* etwas heller als #f3eae3 */
+  border-radius: 50%;
+  z-index: 0;
+}
+
+
+
+
+

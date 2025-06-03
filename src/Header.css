@@ -6,7 +6,7 @@
   
 .name {
   font-size: 1.0rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Playfair Display', sans-serif;
   margin: 0;
 }
 
@@ -24,6 +24,7 @@
 
 .home-link {
   text-decoration: none;
+  font-family: 'Playfair Display', sans-serif;
   color: inherit;
   cursor: pointer;
 }

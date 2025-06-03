@@ -1,25 +1,29 @@
 import ProjectPage from '../components/ProjectPage';
-import titleImage from '../assets/images/VodafoneOMR/Branding_Lvl04.PNG';
-import sideImage from '../assets/images/VodafoneOMR/Lvl01.PNG';
+import titleImage from '../assets/images/EssenCityguide/Banner.png';
+import sideImage from '../assets/images/EssenCityguide/sideImage.jpg';
+import YoutubeEmbed from '../components/YoutubeEmbed';
 
 function EssenCityguide() {
     const hardware = [
-    'HTC Vive Focus 2',
-    'Tactical Haptics Controller',
-    'Multisensorische Integration (Duft, Hitze), schaltbar über LAN-Steckdosen',
+    'xReal (heute: nReal)',
+    'Android Smartphone'
     ];
   
     const software = [
-    'Unity Engine 2021.???',
-    'Visual Studio 2022',
-    'HTC Vive Focus Trackingspace'
+    'Unity Engine 2021.2',
+    'Visual Studio',
+    'Device Management Tool (Esper)'
     ];
 
+        const myVideoId = "iqLJLlujaTw";
+
+
   return (
+    <>
     <ProjectPage
       title ="Essen 1887"
       image={titleImage}
-      description="Eine AR-basierte Zeitreise durch die Geschichte Essens, bei der Besucher mittels einer 
+      description="Eine Mixed-Reality-Zeitreise durch die Geschichte Essens, bei der Besucher mittels einer 
       Mixed-Reality-Brille und Android-Smartphone durch die Innenstadt navigieren und an GPS-gestützten 
       Punkten historische Stadtansichten sowie Ereignisse in AR erleben können."
       role="Entwicklung interaktiver Mechaniken, Verwaltung der vom Unternehmen für das Projekt genutzten 
@@ -29,6 +33,11 @@ function EssenCityguide() {
       software={software}
       sideImage={sideImage}
     />
+
+    <div style={{ marginTop: "5rem" }}></div>
+    <YoutubeEmbed videoId={myVideoId} />
+    
+    </>
   );
 }
 

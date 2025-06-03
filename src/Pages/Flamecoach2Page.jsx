@@ -63,9 +63,11 @@ function Flamecoach2Page() {
     <ProjectPage
     title ="Flamecoach 2"
       image={titleImage}
-      description="Erweiterte VR-Simulation zur Brandbekämpfung in verschiedenen Szenarien.
-      Ein erweitertes Projekt von Flamecoach2, das einige Verbesserungen und neue Features beinhaltet.
-      Unter anderem können mehrere Feuerlöscher gleichzeitig benutzt werden, das Feuersystem wurde überarbeitet etc. "
+      description="Erweiterte VR-Brandbekämpfungssimulation mit neuen Funktionen und realitätsnahen Szenarien.
+      Basierend auf dem Projekt Flamecoach2 bietet diese erweiterte Simulation eine realistische Trainingsumgebung 
+      zur Brandbekämpfung. Zu den Verbesserungen zählen ein überarbeitetes Feuersystem und User Interface, erweiterte Szenarien 
+      sowie die Möglichkeit, mehrere Feuerlöscher gleichzeitig einzusetzen. Ziel ist es, das Trainingserlebnis 
+      praxisnäher und flexibler zu gestalten."
       role='Programmierung, UX/UI-Entwicklung und -Integration, Erstellung von Animationen innerhalb der 
       Engine, Integration von Hardware (einschließlich firmeneigener Entwicklungen), Implementierung von 
       Hand-Tracking-Interaktionen'
