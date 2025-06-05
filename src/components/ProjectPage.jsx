@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
-import iconGroup from '../assets/images/Icons/GroupIcon.png';
-import iconClock from '../assets/images/Icons/ClockIcon.png';
-import iconEngine from '../assets/images/Icons/UnityLogo.png';
+import iconGroup from '../assets/images/Icons/GroupIcon_black.png';
+import iconClock from '../assets/images/Icons/ClockIcon_black.png';
+import iconEngine from '../assets/images/Icons/UnityIcon_black.png';
 import FadingImage from './FadingImage';
+import './ProjectPage.css';
 
 function ProjectPage({ 
   title,
@@ -20,26 +21,7 @@ function ProjectPage({
   }, []);
 
   const icons = [iconGroup, iconClock, iconEngine];
-
-  const titleTextStyle = {
-    fontSize: '3rem',
-    lineHeight: '1.6',
-    fontWeight: 300,
-    color: 'black',
-    fontFamily: "'Playfair Display', sans-serif",
-    textAlign: 'center',
-    marginTop: '0rem',
-    marginBottom: '0rem'
-  };
-
-  const baseTextStyle = {
-    fontSize: '1rem',
-    lineHeight: '1.6',
-    fontWeight: 300,
-    color: 'white',
-    fontFamily: "'Playfair Display', sans-serif",
-    textAlign: 'center'
-  };
+  
 
   return (
     <div style={{ margin: '0 auto', marginBottom: '0rem' }}>
@@ -65,7 +47,7 @@ function ProjectPage({
           {infoTexts.map((text, i) => (
             <div key={i} style={{color:'black', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <img src={icons[i]} alt={`Icon ${i}`} style={{ color:'black',height: '40px' }} />
-              <span style={{baseTextStyle}}>{text}</span>
+              <span className="description">{text}</span>
             </div>
           ))}
         </div>
@@ -73,8 +55,8 @@ function ProjectPage({
 
 
       <div style={{ maxWidth: '1000px', margin: '0 auto 0 auto' }}>
-        <p style={titleTextStyle}>{title}</p>
-        <p style={baseTextStyle}>{description}</p>
+          <h1 className="title-label">{title}</h1>
+          <p className="description">{description}</p>
       </div>
 
       <div style={{ maxWidth: '1000px', margin: '0rem auto 0 auto', marginBottom: '0.5rem',fontSize: '1rem',
@@ -87,7 +69,7 @@ function ProjectPage({
       </div>
 
       <div style={{ maxWidth: '1000px', margin: '0rem auto 0 auto', marginBottom: '3rem' }}>
-        <p style={baseTextStyle}>{role}</p>
+        <p className="description">{role}</p>
       </div>
 
       {(hardware.length > 0 || software.length > 0) && sideImage && (

@@ -1,4 +1,3 @@
-// components/CodeToggle.jsx
 import React, { useState } from 'react';
 import './CodeToggler.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -9,10 +8,9 @@ function CodeToggler({ code, label = "Codeblock" }) {
 
   return (
   <div style={{ marginBottom: '1rem' }}>
-    {/* Zentrierte Zeile */}
     <div style={{
       display: 'flex',
-      justifyContent: 'center',      // <- hier wird zentriert
+      justifyContent: 'center',
       alignItems: 'center',
       gap: '1rem',
       marginBottom: '1rem'
@@ -39,13 +37,13 @@ function CodeToggler({ code, label = "Codeblock" }) {
 
     {visible && (
       <div style={{ 
-            width: '100vw',               // Volle Fensterbreite
+            width: '100vw',          
             position: 'relative',
             left: '50%',
             right: '50%',
-            marginLeft: '-50vw',         // Trick: zentriert auf Viewport
+            marginLeft: '-50vw',
             marginRight: '-50vw',
-            padding: '2rem 0',           // etwas Abstand
+            padding: '2rem 0',
         }}>
         <SyntaxHighlighter
           language="csharp"

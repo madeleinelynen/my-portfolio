@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
-import { useRef } from 'react';
+import AnimatedNumberBlock from './components/AnimatedNumberBlock';
+import AnimatedHighlightList from './components/AnimatedHighlightList';
+import { useRef, useEffect } from 'react';
 
 import flamecoachThumb from './assets/images/Flamecoach/Tile.png';
 import flamecoach2Thumb from './assets/images/Flamecoach2/Flamecoach2Tile.png';
@@ -25,7 +27,17 @@ import tirolHover from './assets/images/Tirol/HoveringTile.png';
 import trikottaufeHover from './assets/images/Trikottaufe/HoverTile.png';
 
 function Home() {
-  const tilesPerRow = 3;
+    const description = [
+    'Kernkompetenz in der Programmierung in C#',
+    'Erste Erfahrungen in C++, Python, Dart, HTML',
+    'Kompetenz in der Entwicklung von VR/AR-Projekten',
+    'Erfahrung in der Mobile-Entwicklung auf Android & iOS Systemen (Flutter, React, Unity)',
+    'Sicherer Umgang mit der Unity Engine und Erfahrung mit der Unreal Engine',
+    'Versionskontrolle mit GitHub, SourceTree, Git Extensions, oder Perforce',
+    'Zusätzliche Erfahrung im Bereich UI/UX-Konzeption, Game Design, Level Design',
+  ];
+
+  const tilesPerRow = 5;
   const gridRef = useRef();
   const aboutRef = useRef();
 
@@ -36,6 +48,16 @@ function Home() {
   const scrollToAbout = () => {
     aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const leftRef = useRef();
+  const rightRef = useRef();
+
+useEffect(() => {
+  if (leftRef.current && rightRef.current) {
+    const leftHeight = leftRef.current.offsetHeight;
+    rightRef.current.style.height = `${leftHeight}px`;
+  }
+}, []);
 
 const projects = [
   {
@@ -102,38 +124,43 @@ const projects = [
 
   return (
     <>
-<div className="hero-section">
-  <div className="hero-left">
-    <h1 className="hero-title">Madeleine Lynen</h1>
-    <h2 className="hero-subtitle">Software Developer</h2>
-    <p className="hero-description">
-      Mit über sechs Jahren Erfahrung in der Entwicklung von Game-Engine-Projekten bringe ich 
-      fundiertes Wissen aus allen Phasen der Projektentwicklung mit.
-      <br/><br/>
-      Ich zeichne mich beruflich aus durch:<br/>
-      – Programmierung in C#, C++, Python, Dart (Flutter)<br/>
-      - Kompetenz in der Entwicklung von VR/AR- Projekten<br/>
-      - Erfahrung in der Mobile-Entwicklung auf Android & iOS Systemen (Flutter, Unity)<br/>
-      - Sicherer Umgang mit der Unity Engine und Erfahrung mit der Unreal Engine<br/>
-      – Strukturiertes Arbeiten, auch mit Versionskontrolle in GitHub, SourceTree/Git Extensions, Perforce<br/>
-      – Kompetenzen im Bereich UI/UX-Konzeption, Game Design, Level Design<br/>
-      <br/>
-      Ich begleite Projekte als technische Ansprechpartnerin, unterstütze bei Implementierung & Support und 
-      präsentiere Produkte auf Messen und Branchenevents.<br/>
-    </p>
+  <div className="hero-section">
+    <div className="hero-screen">
+      <div className="hero-left" style={{ position: 'relative' }}>
+        <div className="hero-content-block">
+          <h1 className="hero-title">Madeleine<br />Lynen</h1>
+          <div className="circle-row">
+            <AnimatedNumberBlock
+              max={30}
+              suffix="+"
+              title="Projekte erfolgreich abgeschlossen"
+              text=""
+            />
+            <AnimatedNumberBlock
+              max={6}
+              suffix="+"
+              title="Jahre Berufserfahrung als Software Developer"
+              text=""
+            />
+          </div>
+
+          <AnimatedHighlightList content={description} />
+        </div>
+      </div>
+
+      <div className="hero-right">
+        <ul className="hero-nav">
+          <li onClick={scrollToGrid}>PROJEKTE</li>
+          <li onClick={scrollToAbout}>ABOUT</li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div className="hero-right">
-    <ul className="hero-nav">
-  <li onClick={scrollToGrid}>PROJEKTE</li>
-  <li onClick={scrollToAbout}>ABOUT</li>
-    </ul>
-  </div>
-</div>
 
 <div ref={aboutRef} className="about-section">
   <div className="about-content">
     <h3 className="about-title"> About</h3>
-    <p>Ich bin Madeleine, ...</p>
+    <p>...</p>
   </div>
 </div>
 

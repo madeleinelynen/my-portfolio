@@ -1,8 +1,6 @@
 import ProjectPage from '../components/ProjectPage';
 import banner from '../assets/images/Aufwind/Banner.png';
 import sideImage from '../assets/images/Aufwind/Aufwind_keyvisual_Poster.jpg';
-import playtoy1 from '../assets/images/Aufwind/Planetoy_Editor.png';
-import playtoy2 from '../assets/images/Aufwind/Planetoy_Editor_2.png';
 
 function AufwindPage() {
   const hardware = [
