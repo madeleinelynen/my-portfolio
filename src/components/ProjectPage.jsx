@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import iconGroup from '../assets/images/Icons/GroupIcon.png';
 import iconClock from '../assets/images/Icons/ClockIcon.png';
-import iconEngine from '../assets/images/Icons/EngineSelectIcon.png';
+import iconEngine from '../assets/images/Icons/UnityLogo.png';
 import FadingImage from './FadingImage';
 
 function ProjectPage({ 
