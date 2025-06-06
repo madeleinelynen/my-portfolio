@@ -3,6 +3,7 @@ import './Home.css';
 import AnimatedNumberBlock from './components/AnimatedNumberBlock';
 import AnimatedHighlightList from './components/AnimatedHighlightList';
 import { useRef, useEffect } from 'react';
+import AutoResizingText from './components/AutoResizingText';
 
 import flamecoachThumb from './assets/images/Flamecoach/Tile.png';
 import flamecoach2Thumb from './assets/images/Flamecoach2/Flamecoach2Tile.png';
@@ -27,6 +28,10 @@ import tirolHover from './assets/images/Tirol/HoveringTile.png';
 import trikottaufeHover from './assets/images/Trikottaufe/HoverTile.png';
 
 function Home() {
+
+const projekteRef = useRef(null);
+const aboutRef = useRef(null);
+
     const description = [
     'Kernkompetenz in der Programmierung in C#',
     'Erste Erfahrungen in C++, Python, Dart, HTML',
@@ -39,14 +44,14 @@ function Home() {
 
   const tilesPerRow = 5;
   const gridRef = useRef();
-  const aboutRef = useRef();
+  const aboutScrollRef = useRef();
 
   const scrollToGrid = () => {
     gridRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToAbout = () => {
-    aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+    aboutScrollRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const leftRef = useRef();
@@ -127,9 +132,12 @@ const projects = [
   <div className="hero-section">
     <div className="hero-screen">
       <div className="hero-left" style={{ position: 'relative' }}>
-        <div className="hero-content-block">
-          <h1 className="hero-title">Madeleine<br />Lynen</h1>
-          <div className="circle-row">
+           <AutoResizingText
+              words={['MADELEINE', 'LYNEN']}
+              textalign="left"
+              enableHover={false}
+            />
+          <div className="stats-row">
             <AnimatedNumberBlock
               max={30}
               suffix="+"
@@ -145,19 +153,24 @@ const projects = [
           </div>
 
           <AnimatedHighlightList content={description} />
-        </div>
+        
       </div>
 
-      <div className="hero-right">
-        <ul className="hero-nav">
-          <li onClick={scrollToGrid}>PROJEKTE</li>
-          <li onClick={scrollToAbout}>ABOUT</li>
-        </ul>
-      </div>
+  <div className="hero-right">
+    <AutoResizingText
+      words={['PROJEKTE', 'ABOUT']}
+      textalign='right'
+      projekteRef={projekteRef}
+      aboutRef={aboutRef}
+      onClickProjekte={scrollToGrid}
+      onClickAbout={scrollToAbout}
+      enableHover={true}
+    />
+  </div>
     </div>
   </div>
 
-<div ref={aboutRef} className="about-section">
+<div ref={aboutScrollRef} className="about-section">
   <div className="about-content">
     <h3 className="about-title"> About</h3>
     <p>...</p>
