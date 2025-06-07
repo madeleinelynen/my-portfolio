@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
 import AnimatedNumberBlock from './components/AnimatedNumberBlock';
-import AnimatedHighlightList from './components/AnimatedHighlightList';
 import { useRef, useEffect } from 'react';
 import AutoResizingText from './components/AutoResizingText';
 
@@ -31,16 +30,6 @@ function Home() {
 
 const projekteRef = useRef(null);
 const aboutRef = useRef(null);
-
-    const description = [
-    'Kernkompetenz in der Programmierung in C#',
-    'Erste Erfahrungen in C++, Python, Dart, HTML',
-    'Kompetenz in der Entwicklung von VR/AR-Projekten',
-    'Erfahrung in der Mobile-Entwicklung auf Android & iOS Systemen (Flutter, React, Unity)',
-    'Sicherer Umgang mit der Unity Engine und Erfahrung mit der Unreal Engine',
-    'Versionskontrolle mit GitHub, SourceTree, Git Extensions, oder Perforce',
-    'Zusätzliche Erfahrung im Bereich UI/UX-Konzeption, Game Design, Level Design',
-  ];
 
   const tilesPerRow = 5;
   const gridRef = useRef();
@@ -131,35 +120,39 @@ const projects = [
     <>
   <div className="hero-section">
     <div className="hero-screen">
-      <div className="hero-left" style={{ position: 'relative' }}>
-           <AutoResizingText
-              words={['MADELEINE', 'LYNEN']}
-              textalign="left"
-              enableHover={false}
-            />
-          <div className="stats-row">
-            <AnimatedNumberBlock
-              max={30}
-              suffix="+"
-              title="Projekte erfolgreich abgeschlossen"
-              text=""
-            />
-            <AnimatedNumberBlock
-              max={6}
-              suffix="+"
-              title="Jahre Berufserfahrung als Software Developer"
-              text=""
-            />
-          </div>
 
-          <AnimatedHighlightList content={description} />
-        
-      </div>
+ <div className="hero-left">
+  <div className="hero-left-top">
+    <AutoResizingText
+      words={['MADELEINE', 'LYNEN']}
+      textalign="left"
+      enableHover={false}
+    />
+  </div>
+
+  <div className="hero-left-bottom">
+    <div className="stats-row">
+      <AnimatedNumberBlock
+        max={30}
+        suffix="+"
+        title="Projekte erfolgreich abgeschlossen"
+        text=""
+      />
+      <AnimatedNumberBlock
+        max={6}
+        suffix="+"
+        title="Jahre Berufserfahrung als Software Developer"
+        text=""
+      />
+    </div>
+  </div>
+</div>
+
 
   <div className="hero-right">
     <AutoResizingText
       words={['PROJEKTE', 'ABOUT']}
-      textalign='right'
+      textalign='left'
       projekteRef={projekteRef}
       aboutRef={aboutRef}
       onClickProjekte={scrollToGrid}
@@ -168,7 +161,7 @@ const projects = [
     />
   </div>
     </div>
-  </div>
+</div>
 
 <div ref={aboutScrollRef} className="about-section">
   <div className="about-content">
@@ -184,7 +177,7 @@ const projects = [
     display: 'grid',
     gridTemplateColumns: `repeat(${tilesPerRow}, 1fr)`,
     gap: '0rem',
-    width: '100vw',
+    width: '100%',
   }}
 >
   {projects.map((proj, i) => (

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
-import Header from './Header';
+import Banner from './Banner';
 import './App.css';
 import FlamecoachPage from './Pages/FlamecoachPage';
 import Flamecoach2Page from './Pages/Flamecoach2Page';
@@ -16,22 +16,23 @@ import TrikottaufePage from './Pages/TrikottaufePage';
 function App() {
   return (
     <Router basename="/my-portfolio">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/flamecoach" element={<FlamecoachPage />} />
-        <Route path="/flamecoach2" element={<Flamecoach2Page />} />
-        <Route path="/aufwind" element={<AufwindPage />} />
-        <Route path="/oddy" element={<OddyPage />} />
-        <Route path="/vodafoneomr" element={<VodafoneOMRPage />} />
-        <Route path="/softrevision" element={<SoftRevisionPage />} />
-        <Route path="/schumann" element={<SchumannPage />} />
-        <Route path="/essencityguide" element={<EssenCityguide />} />
-        <Route path="/tirol" element={<TirolPage />} />
-        <Route path="/trikottaufe" element={<TrikottaufePage />} />
-      </Routes>
+      <Banner />
+      <div className="app-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/flamecoach" element={<FlamecoachPage />} />
+          <Route path="/flamecoach2" element={<Flamecoach2Page />} />
+          <Route path="/aufwind" element={<AufwindPage />} />
+          <Route path="/oddy" element={<OddyPage />} />
+          <Route path="/vodafoneomr" element={<VodafoneOMRPage />} />
+          <Route path="/softrevision" element={<SoftRevisionPage />} />
+          <Route path="/schumann" element={<SchumannPage />} />
+          <Route path="/essencityguide" element={<EssenCityguide />} />
+          <Route path="/tirol" element={<TirolPage />} />
+          <Route path="/trikottaufe" element={<TrikottaufePage />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
-
 export default App;
