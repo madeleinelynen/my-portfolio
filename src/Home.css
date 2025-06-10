@@ -105,7 +105,7 @@
 
 .intro-text {
   font-size: 3rem;
-  font-family: 'Playfair Display';
+  font-family: 'Greyson', serif;
   color: var(--dark-text);
   text-transform: uppercase;
   font-weight: 300;
@@ -142,7 +142,7 @@
 .hero-description {
   margin-top: 2rem;
   font-size: 1rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Grayson', serif;
   color: var(--dark-text);
   line-height: 1.6;
   text-align: justify;
@@ -162,7 +162,7 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-   position: relative;
+  position: relative;
 }
 
 .hero-section {
@@ -172,30 +172,32 @@
 
 .hero-left {
   height: 100vh;
-  width: 40vw;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
-  padding: 2rem;
+  align-items: flex-end;
+  padding-right: 2rem;
+  padding-left: 2rem;
   box-sizing: border-box;
+
 }
 
 
-.hero-left-top {
-  flex: 0 1 auto;
+.hero-right-top {
+ flex: auto;
   width: 100%;
   min-width: 0;
   min-height: 0;
   overflow: visible;
-  box-sizing: border-box;
+  background-color: #1a3b2a;
+  /* box-sizing: border-box; */
 }
 
-.hero-left-bottom {
+.hero-right-bottom {
   flex: 0 0 auto;
   max-height: 40vh;
   margin-top: 2rem;
- /* border: 2px dashed blue; */
 }
 
 .hero-right {
@@ -204,7 +206,7 @@
   height: 100vh;
   padding: 2rem 2rem 2rem 0;
   display: flex;
-  margin-left: calc(2vw + 2vh);
+  margin-left: calc(2.5vw + 2.5vh);
   flex-direction: column;
   justify-content: flex-end;
   box-sizing: border-box;
@@ -217,8 +219,9 @@
   max-width: 100%;
   min-width: 0;
   overflow: visible;
-  white-space: nowrap;
+  white-space: normal;
   box-sizing: border-box;
+  outline: 2px solid lime;
 }
 
 
@@ -250,12 +253,10 @@
   transition: color 0.3s ease;
 }
 
-/* Nur anwenden, wenn Hover erlaubt ist */
 .hero-list.hover-active li:hover {
   color: var(--tile-hover);
 }
 
-/* Kein Hover-Farbwechsel, wenn disabled */
 .hero-list.hover-disabled li:hover {
   color: inherit;
 }
@@ -274,7 +275,7 @@
   font-size: 2rem;
   color: var( --dark-text);
   text-transform: uppercase;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Grayson', serif;
   letter-spacing: -0.05em;
   margin-bottom: 0rem;
 }

@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
+import './style.css';
 import AnimatedNumberBlock from './components/AnimatedNumberBlock';
 import { useRef, useEffect } from 'react';
-import AutoResizingText from './components/AutoResizingText';
+import HomeTitle from './HomeTitle';
 
 import flamecoachThumb from './assets/images/Flamecoach/Tile.png';
 import flamecoach2Thumb from './assets/images/Flamecoach2/Flamecoach2Tile.png';
@@ -26,22 +27,22 @@ import essenHover from './assets/images/EssenCityguide/Tile.png';
 import tirolHover from './assets/images/Tirol/HoveringTile.png';
 import trikottaufeHover from './assets/images/Trikottaufe/HoverTile.png';
 
+import HomeSelection from './HomeSelection';
+
 function Home() {
 
-const projekteRef = useRef(null);
-const aboutRef = useRef(null);
+  const aboutScrollRef = useRef();
+    const gridRef = useRef();
+  
+    const scrollToProjectGrid = () => {
+      gridRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+  
+    const scrollToAbout = () => {
+      aboutScrollRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
 
   const tilesPerRow = 5;
-  const gridRef = useRef();
-  const aboutScrollRef = useRef();
-
-  const scrollToGrid = () => {
-    gridRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const scrollToAbout = () => {
-    aboutScrollRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   const leftRef = useRef();
   const rightRef = useRef();
@@ -121,46 +122,32 @@ const projects = [
   <div className="hero-section">
     <div className="hero-screen">
 
- <div className="hero-left">
-  <div className="hero-left-top">
-    <AutoResizingText
-      words={['MADELEINE', 'LYNEN']}
-      textalign="left"
-      enableHover={false}
-    />
+  <div className="hero-left">
+      <HomeSelection onClickProjekte={scrollToProjectGrid} onClickAbout={scrollToAbout}/> 
   </div>
 
-  <div className="hero-left-bottom">
+  <div className="hero-right">
+    <div className="hero-right-top">
+        <HomeTitle/> 
+    </div>
+
+      <div className="hero-right-bottom">
     <div className="stats-row">
       <AnimatedNumberBlock
         max={30}
         suffix="+"
-        title="Projekte erfolgreich abgeschlossen"
-        text=""
+        text="Projekte"
       />
       <AnimatedNumberBlock
         max={6}
         suffix="+"
-        title="Jahre Berufserfahrung als Software Developer"
-        text=""
+        text="Jahre Berufserfahrung"
       />
     </div>
   </div>
-</div>
-
-
-  <div className="hero-right">
-    <AutoResizingText
-      words={['PROJEKTE', 'ABOUT']}
-      textalign='left'
-      projekteRef={projekteRef}
-      aboutRef={aboutRef}
-      onClickProjekte={scrollToGrid}
-      onClickAbout={scrollToAbout}
-      enableHover={true}
-    />
   </div>
-    </div>
+  
+</div> 
 </div>
 
 <div ref={aboutScrollRef} className="about-section">

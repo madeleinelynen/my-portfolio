@@ -1,14 +1,11 @@
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
-const AutoResizingText = ({
-  words,
-  textalign = 'right',
-  projekteRef,
-  aboutRef,
-  onClickProjekte,
-  onClickAbout,
-  enableHover = false,
-}) => {
+function HomeTitle() {
+  const projekteRef = useRef(null);
+  const aboutRef = useRef(null);
+
+  const selections = ['madeleine lynen', ];
+
   const containerRef = useRef(null);
   const testRef = useRef(null);
   const [fontSize, setFontSize] = useState(10);
@@ -26,7 +23,7 @@ const AutoResizingText = ({
     if (!container || !test || container.clientWidth === 0) return;
 
     const style = window.getComputedStyle(container);
-    const longest = words.reduce((a, b) => (a.length > b.length ? a : b), '');
+    const longest = selections.reduce((a, b) => (a.length > b.length ? a : b), '');
     test.textContent = longest;
 
     test.style.fontFamily = style.fontFamily;
@@ -53,7 +50,7 @@ const AutoResizingText = ({
     }
 
     setFontSize(best - 1);
-  }, [words, windowWidth]);
+  }, [selections, windowWidth]);
 
   return (
     <div
@@ -62,7 +59,9 @@ const AutoResizingText = ({
       style={{
         fontSize,
         color: 'black',
-        textAlign: textalign,
+        textAlign: 'right',
+        fontFamily: 'Grayson',
+        textTransform: 'uppercase',
       }}
     >
       <span
@@ -77,44 +76,44 @@ const AutoResizingText = ({
       />
 
       <ul
-className={`hero-list ${enableHover ? 'hover-active' : 'hover-disabled'}`}
+        className={`hero-list 'hover-disabled`}
         style={{
           padding: 0,
           margin: 0,
           listStyle: 'none',
-          textAlign: textalign,
+          textAlign: 'right',
         }}
       >
         <li
-className={`hero-nav ${enableHover ? 'hover-active' : 'hover-disabled'}`}
-          onClick={onClickProjekte}
-          style={{ width: '100%', textAlign: textalign }}
+          className={`hero-nav 'hover-disabled`}
+          style={{ width: '100%', textAlign: 'right' }}
         >
           <span
             ref={projekteRef}
             style={{
               fontWeight: 'normal',
-              cursor: enableHover ? 'pointer' : 'default',
+              cursor: 'default',
               display: 'inline-block',
               whiteSpace: 'nowrap',
               overflow: 'visible',
               textOverflow: 'clip',
+              width: '100%',
               fontSize,
             }}
           >
-            {words[0]}
+            {selections[0]}
           </span>
         </li>
+
         <li
-className={`hero-nav ${enableHover ? 'hover-active' : 'hover-disabled'}`}
-          onClick={onClickAbout}
-          style={{ width: '100%', textAlign: textalign }}
+          className={`hero-nav 'hover-disabled`}
+          style={{ width: '100%', textAlign: 'right' }}
         >
           <span
             ref={aboutRef}
             style={{
               fontWeight: 'normal',
-              cursor: enableHover ? 'pointer' : 'default',
+              cursor: 'default',
               display: 'inline-block',
               whiteSpace: 'nowrap',
               overflow: 'visible',
@@ -122,12 +121,12 @@ className={`hero-nav ${enableHover ? 'hover-active' : 'hover-disabled'}`}
               fontSize,
             }}
           >
-            {words[1]}
+            {selections[1]}
           </span>
         </li>
       </ul>
     </div>
   );
-};
+}
 
-export default AutoResizingText; 
+export default HomeTitle;

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Banner from './Banner';
 import './App.css';
+import './style.css';
 import FlamecoachPage from './Pages/FlamecoachPage';
 import Flamecoach2Page from './Pages/Flamecoach2Page';
 import AufwindPage from './Pages/AufwindPage';
@@ -17,7 +18,7 @@ function App() {
   return (
     <Router basename="/my-portfolio">
       <Banner />
-      <div className="app-content">
+      <div className="main-layout-wrapper">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/flamecoach" element={<FlamecoachPage />} />

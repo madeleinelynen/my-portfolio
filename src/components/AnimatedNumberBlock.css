@@ -1,9 +1,14 @@
+:root {
+  --black_t: #1f1f1f;;
+}
+
 .number-block {
   flex: 1 1 0;
   min-width: 0; 
   max-width: 100%;
   padding: 0.5rem 0.5rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Grayson', serif;
+  font-weight: 800;
   box-sizing: border-box;
 }
 
@@ -11,7 +16,7 @@
   margin-top: 0;
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 300;
-  background: linear-gradient(to right, #1a3b2a, #ff3300);
+  background: linear-gradient(to right, #1a3b2a, #ee9f89);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   word-break: break-word;
@@ -19,20 +24,13 @@
   overflow-wrap: break-word;
 }
 
-.number-title {
+.number-text {
   font-size: 2.0vw;
   font-weight: 400;
-  margin-top: 0;
-  color: #1a1a1a;
-  word-break: break-word;
-  hyphens: auto;
-  overflow-wrap: break-word;
-}
+  color: var(--black_t);
+  /* background-color: #1a3b2a; */
 
-.number-text {
-  font-size: clamp(0.8rem, 2vw, 1rem);
-  color: #333;
-  line-height: 1.6;
+  padding-bottom: 2rem; /* ← NUR nach unten mehr Abstand */
   word-break: break-word;
   hyphens: auto;
   overflow-wrap: break-word;

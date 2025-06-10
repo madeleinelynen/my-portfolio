@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./AnimatedNumberBlock.css";
 
-function AnimatedNumberBlock({ max = 100, suffix = "", title = "", text = "" }) {
+function AnimatedNumberBlock({ max = 100, suffix = "", text = "" }) {
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const blockRef = useRef();
@@ -43,7 +43,6 @@ function AnimatedNumberBlock({ max = 100, suffix = "", title = "", text = "" }) 
   return (
     <div className="number-block" ref={blockRef}>
       <div className="number-count">{count}{suffix}</div>
-      <div className="number-title">{title}</div>
       <div className="number-text">{text}</div>
     </div>
   );

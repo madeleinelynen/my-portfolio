@@ -1,18 +1,17 @@
-import './Banner.css';
+import "./Banner.css";
+import ScrollToTopArrow from "./components/ScrollToTopArrow";
 
 function Banner() {
   return (
     <div className="left-banner">
-      <div className="banner-top">
-        <div className="banner-text">LI</div>
-        <div className="banner-text">TW</div>
-        <div className="banner-text">DR</div>
+      <div className="banner">
+        <ScrollToTopArrow />
       </div>
 
-      <div className="banner-divider" />
+      {/* <div className="banner-divider" /> */}
 
       <div className="banner-bottom">
-        <div className="banner-copyright">©/2025</div>
+        <div className="banner-copyright">Portfolio ©/2025</div>
       </div>
     </div>
   );
