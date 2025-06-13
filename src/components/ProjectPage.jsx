@@ -24,8 +24,9 @@ function ProjectPage({
   
 
   return (
-    <div style={{ margin: '0 auto', marginBottom: '0rem' }}>
-å
+    <div className="project-page-container">
+          <h1 className="title-label">{title}</h1>
+
     {image && (
       <FadingImage
         src={image}
@@ -55,17 +56,22 @@ function ProjectPage({
 
 
       <div style={{ maxWidth: '1000px', margin: '0 auto 0 auto' }}>
-          <h1 className="title-label">{title}</h1>
+          
           <p className="description">{description}</p>
       </div>
 
-      <div style={{ maxWidth: '1000px', margin: '0rem auto 0 auto', marginBottom: '0.5rem',fontSize: '1rem',
-  lineHeight: '1.6',
-  fontWeight: 600,
-  color: 'white',
-  fontFamily: "'Montserrat', sans-serif",
-  textAlign: 'center' }}>
-        <p>Meine Beteiliung in diesem Projekt</p>
+      <div style={{ 
+        maxWidth: '1000px', 
+        margin: '0rem auto 0 auto', 
+        marginBottom: '0.5rem',
+        fontSize: '1rem',
+        lineHeight: '1.6',
+        fontWeight: 600,
+        color: 'white',
+        fontFamily: "'Montserrat', sans-serif",
+        textAlign: 'center' }}>
+
+        <p className="description">Meine Beteiliung in diesem Projekt</p>
       </div>
 
       <div style={{ maxWidth: '1000px', margin: '0rem auto 0 auto', marginBottom: '3rem' }}>
@@ -76,7 +82,7 @@ function ProjectPage({
       <div style={{
         display: 'flex',
         gap: '2rem',
-        width: '100vw',
+        width: '100%',
         marginLeft: '-50vw',
         marginRight: '-50vw',
         position: 'relative',
@@ -88,7 +94,7 @@ function ProjectPage({
           src={sideImage}
           alt="HardwareVisual"
           style={{
-            width: '45vw',
+            width: '45%',
             borderRadius: '8px',
             objectFit: 'cover',
             height: 'auto',

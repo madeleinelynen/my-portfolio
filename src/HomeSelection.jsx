@@ -3,14 +3,18 @@ import { useRef, useState, useEffect } from 'react';
 function HomeSelection({ onClickAbout, onClickProjekte }) {
   const projekteRef = useRef(null);
   const aboutRef = useRef(null);
-
-  const selections = ['projekte', 'about'];
-  const enableHover = true;
-
   const containerRef = useRef(null);
   const testRef = useRef(null);
+
+  const selections = ['projekte', 'about'];
+
   const [fontSize, setFontSize] = useState(10);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [hovered, setHovered] = useState(null); 
+
+  const lineWidth = 2;
+  const remToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  const gapInPx = 1.5 * remToPx;
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -19,9 +23,13 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
   }, []);
 
   useEffect(() => {
+
     const container = containerRef.current;
+    const availableWidth = container.getBoundingClientRect().width - gapInPx - lineWidth;
     const test = testRef.current;
-    if (!container || !test || container.clientWidth === 0) return;
+    
+    if (!container || !test || container.clientWidth === 0) 
+      return;
 
     const style = window.getComputedStyle(container);
     const longest = selections.reduce((a, b) => (a.length > b.length ? a : b), '');
@@ -42,7 +50,7 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
       const mid = Math.floor((min + max) / 2);
       test.style.fontSize = `${mid}px`;
 
-      if (test.getBoundingClientRect().width <= container.getBoundingClientRect().width) {
+      if (test.getBoundingClientRect().width <= availableWidth) {
         best = mid;
         min = mid + 1;
       } else {
@@ -54,20 +62,20 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
   }, [selections, windowWidth]);
 
   return (
-    <div
+ <div
       ref={containerRef}
       className="hero-nav"
       style={{
-        fontSize,
-        color: 'black',
-        fontFamily: 'Grayson',
-        textTransform: 'uppercase',
         display: 'flex',
         justifyContent: 'flex-end',
-        alignItems: 'flex-start',
-        gap: '1rem', // Abstand zwischen Text und Linie
+        alignItems: 'flex-end',
+        height: 'auto',
+        color: '#1f1f1f',
+        textTransform: 'uppercase',
+        fontFamily: 'Grayson',
       }}
     >
+
       <span
         ref={testRef}
         style={{
@@ -76,72 +84,91 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
           height: 0,
           overflow: 'hidden',
           pointerEvents: 'none',
+          fontSize,
         }}
       />
 
-      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'stretch' }}>
-        <ul
-          className={`hero-list ${enableHover ? 'hover-active' : 'hover-disabled'}`}
-          style={{
-            padding: 0,
-            margin: 0,
-            listStyle: 'none',
-            textAlign: 'right',
-          }}
-        >
-          <li
-            className={`hero-nav ${enableHover ? 'hover-active' : 'hover-disabled'}`}
-            onClick={onClickProjekte}
-            style={{ width: '100%', textAlign: 'right' }}
-          >
-            <span
-              ref={projekteRef}
-              style={{
-                fontWeight: 'normal',
-                cursor: enableHover ? 'pointer' : 'default',
-                display: 'inline-block',
-                whiteSpace: 'nowrap',
-                overflow: 'visible',
-                textOverflow: 'clip',
-                width: '100%',
-                fontSize,
-              }}
-            >
-              {selections[0]}
-            </span>
-          </li>
-
-          <li
-            className={`hero-nav ${enableHover ? 'hover-active' : 'hover-disabled'}`}
-            onClick={onClickAbout}
-            style={{ width: '100%', textAlign: 'right' }}
-          >
-            <span
-              ref={aboutRef}
-              style={{
-                fontWeight: 'normal',
-                cursor: enableHover ? 'pointer' : 'default',
-                display: 'inline-block',
-                whiteSpace: 'nowrap',
-                overflow: 'visible',
-                textOverflow: 'clip',
-                fontSize,
-              }}
-            >
-              {selections[1]}
-            </span>
-          </li>
-        </ul>
-
-        {/* Vertikaler Strich */}
+      <div style={{ display: 'flex', flexDirection: 'row'}}>
         <div
           style={{
-            width: '2px',
-            backgroundColor: 'black',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-end',
+            gap: '0.5rem',
+            marginRight: `${gapInPx}px`,
+    }}
+
+        >
+      <div 
+      style={{
+        display: 'flex',
+        alignItems: 'end',
+        flexDirection: 'column',
+        justifyContent: 'flex-end',
+        cursor: 'pointer',
+        height: 'auto',
           }}
+      >
+        <span
+              
+          onMouseEnter={() => setHovered('projekte')}
+          onMouseLeave={() => setHovered(null)}
+          ref={projekteRef}
+          onClick={onClickProjekte}
+          style={{
+            color: hovered === 'projekte' ? '#112A51' : '#1f1f1f',
+            letterSpacing: hovered === 'projekte' ? '-0.02em' : 'normal',
+            transition: 'color 0.2s ease, letter-spacing 0.3s ease',
+            fontSize,
+            outlineColor: '2px',
+            fontWeight: 'normal',
+            position: 'absolut',
+            lineHeight: 1,
+            whiteSpace: 'nowrap',
+            justifyContent: 'flex-end',
+            alignItems: 'end',
+            alignSelf: 'flex-end',
+          }}
+        >
+          {selections[0]}
+        </span>
+      </div>
+
+          <span
+            onMouseEnter={() => setHovered('about')}
+            onMouseLeave={() => setHovered(null)}
+            ref={aboutRef}
+            onClick={onClickAbout}
+            style={{
+              color: hovered === 'about' ? '#112A51' : '#1f1f1f',
+              letterSpacing: hovered === 'about' ? '-0.02em' : 'normal',
+              transition: 'color 0.2s ease, letter-spacing 0.3s ease',
+              fontSize,
+              lineHeight: 1,
+              fontWeight: 'normal',
+              cursor: 'pointer',
+              display: 'inline-block',
+              whiteSpace: 'nowrap',
+              verticalAlign: 'middle',
+              height:'100%',
+              marginBottom: '8rem',
+            }}
+          >
+            {selections[1]}
+          </span>
+        </div>
+
+        <div
+      style={{
+        width: `${lineWidth}px`,
+        backgroundColor: '#1f1f1f',
+        alignSelf: 'stretch',
+        }}
         />
       </div>
     </div>
+
+    
   );
 }
 

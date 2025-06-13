@@ -17,13 +17,12 @@ const ScrollToTopArrow = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-   if(!showArrow) return null;
+   if(!showArrow) 
+    return null;
 
   return (
 <div className="scroll-to-top-inside-banner" onClick={scrollToTop}>
-  <div className="circle">
     <span className="triangle">▴</span>
-  </div>
 </div>
 
 

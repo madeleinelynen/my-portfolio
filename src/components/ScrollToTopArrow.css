@@ -1,9 +1,9 @@
 .scroll-to-top-inside-banner {
   position: absolute;
-  top: 1rem;                        /* Abstand von oben */
-  left: 50%;                        /* horizontal zentriert */
-  transform: translateX(-50%);      /* horizontale Zentrierung */
-  width: 5vw;                       /* Bannerbreite */
+  top: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
   height: auto;
   display: flex;
   justify-content: center;
@@ -12,28 +12,11 @@
   pointer-events: auto;
 }
 
-.circle {
-  width: 2.5vw;
-  height: 2.5vw;
-  background-color: transparent;          /* kein Füllhintergrund */
-  border: 1px solid #1f1f1f; 
-  color: #1f1f1f;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.4rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.circle:hover {
-  transform: scale(1.1);
-}
-
 .triangle {
   display: inline-block;
   line-height: 1;
-  transform: translateY(-2px);
+  color: black;
+  font-size: clamp(1rem, 3vw, 5rem); /* responsiv: min - ideal - max */
+  padding: 0.25rem;
+  box-sizing: border-box;
 }

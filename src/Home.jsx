@@ -126,28 +126,24 @@ const projects = [
       <HomeSelection onClickProjekte={scrollToProjectGrid} onClickAbout={scrollToAbout}/> 
   </div>
 
-  <div className="hero-right">
-    <div className="hero-right-top">
-        <HomeTitle/> 
-    </div>
 
-      <div className="hero-right-bottom">
-    <div className="stats-row">
-      <AnimatedNumberBlock
-        max={30}
-        suffix="+"
-        text="Projekte"
-      />
-      <AnimatedNumberBlock
-        max={6}
-        suffix="+"
-        text="Jahre Berufserfahrung"
-      />
+  <div className="hero-right">
+        <HomeTitle />
+        <div className="stats-row">
+          <AnimatedNumberBlock
+            max={30}
+            suffix="+"
+            text="Projekte erfolgreich abgeschlossen"
+          />
+          <AnimatedNumberBlock
+            max={6}
+            suffix="+"
+            text="Jahre Berufserfahrung"
+          />
+      </div>
     </div>
   </div>
-  </div>
-  
-</div> 
+
 </div>
 
 <div ref={aboutScrollRef} className="about-section">

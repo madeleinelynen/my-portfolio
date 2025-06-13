@@ -1,15 +1,19 @@
 import { useRef, useState, useEffect } from 'react';
 
 function HomeTitle() {
-  const projekteRef = useRef(null);
-  const aboutRef = useRef(null);
+  const nameRef = useRef(null);
+  const jobRef = useRef(null);
 
-  const selections = ['madeleine lynen', ];
+  const selections = ['Madeleine Lynen', 'Software Developer' ];
 
   const containerRef = useRef(null);
   const testRef = useRef(null);
+
   const [fontSize, setFontSize] = useState(10);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const remToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  const gapInPx = 15.5 * remToPx;
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -19,8 +23,12 @@ function HomeTitle() {
 
   useEffect(() => {
     const container = containerRef.current;
+    const availableWidth = container.getBoundingClientRect().width - gapInPx;
     const test = testRef.current;
-    if (!container || !test || container.clientWidth === 0) return;
+
+    if (!container || !test || container.clientWidth === 0) 
+        return;
+
 
     const style = window.getComputedStyle(container);
     const longest = selections.reduce((a, b) => (a.length > b.length ? a : b), '');
@@ -41,7 +49,8 @@ function HomeTitle() {
       const mid = Math.floor((min + max) / 2);
       test.style.fontSize = `${mid}px`;
 
-      if (test.getBoundingClientRect().width <= container.getBoundingClientRect().width) {
+      if (test.getBoundingClientRect().width <= availableWidth) 
+        {
         best = mid;
         min = mid + 1;
       } else {
@@ -59,9 +68,10 @@ function HomeTitle() {
       style={{
         fontSize,
         color: 'black',
-        textAlign: 'right',
-        fontFamily: 'Grayson',
-        textTransform: 'uppercase',
+        textAlign: 'left',
+        fontFamily: 'Inter',
+        fontWeight: '300',
+        // textTransform: 'uppercase',
       }}
     >
       <span
@@ -78,18 +88,18 @@ function HomeTitle() {
       <ul
         className={`hero-list 'hover-disabled`}
         style={{
-          padding: 0,
+        padding: 0,
           margin: 0,
           listStyle: 'none',
-          textAlign: 'right',
+          textAlign: 'left',
         }}
       >
         <li
           className={`hero-nav 'hover-disabled`}
-          style={{ width: '100%', textAlign: 'right' }}
+          style={{ width: '100%', textAlign: 'left' }}
         >
           <span
-            ref={projekteRef}
+            ref={nameRef}
             style={{
               fontWeight: 'normal',
               cursor: 'default',
@@ -107,10 +117,10 @@ function HomeTitle() {
 
         <li
           className={`hero-nav 'hover-disabled`}
-          style={{ width: '100%', textAlign: 'right' }}
+          style={{ width: '100%', textAlign: 'left' }}
         >
           <span
-            ref={aboutRef}
+            ref={jobRef}
             style={{
               fontWeight: 'normal',
               cursor: 'default',
