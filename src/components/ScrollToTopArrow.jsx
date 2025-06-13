@@ -22,7 +22,7 @@ const ScrollToTopArrow = () => {
 
   return (
 <div className="scroll-to-top-inside-banner" onClick={scrollToTop}>
-    <span className="triangle">▴</span>
+    <span className="arrow">↑</span>
 </div>
 
 

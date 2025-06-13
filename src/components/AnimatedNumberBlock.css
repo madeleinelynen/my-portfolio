@@ -11,15 +11,16 @@
   font-family: 'Inter', serif;
   font-weight: 800;
   box-sizing: border-box;
-  /* background-color: #1a3b2a; */
+  text-align: left;
+  align-items: flex-start;
 }
 
 .number-count {
   margin-top: 0;
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 8rem);
   font-weight: 300;
   font-family: 'Grayson', serif;
-  background: linear-gradient(to right, #112A51, #ee9f89);
+  background: linear-gradient(to right,#ee9f89, #112A51);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   word-break: break-word;
@@ -29,12 +30,12 @@
 }
 
 .number-text {
-  font-size: 1.5vw;
-  font-weight: 400;
+  font-size: 1.2rem;
   color: var(--black_t);
-  padding-bottom: 2rem; /* ← NUR nach unten mehr Abstand */
   word-break: break-word;
+  text-transform: uppercase;
   hyphens: auto;
+  margin-left: 0;
   overflow-wrap: break-word;
 }
 

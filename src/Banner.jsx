@@ -4,7 +4,8 @@ import ScrollToTopArrow from "./components/ScrollToTopArrow";
 function Banner() {
   return (
 <div className="left-banner">
-  <div className="banner">
+  <div className="banner-background" />
+  <div className="banner-top">
     <ScrollToTopArrow />
   </div>
   <div className="banner-bottom">

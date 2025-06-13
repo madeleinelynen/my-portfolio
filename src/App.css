@@ -1,6 +1,5 @@
 :root {
   --lightbeige-bg: #eee8e1;
-  ---bgbeige: #f3e1d4;
   --darkbeige-circle: #f5e0d0;
 }
 
@@ -17,15 +16,17 @@ body {
 }
 
 .app-content {
-  margin-left: 5vw;
-  width: 95vw;
+  margin-left: 2vw;
+  width: calc(100vw - 2vw);
   overflow-x: hidden;
   position: relative;
+  box-sizing: border-box;
 }
 
 .main-layout-wrapper {
-  margin-left: 3vw; 
-  width: calc(100vw - 3vw); 
+  margin-left: 2vw;
+  width: calc(100vw - 2vw);
   overflow-x: hidden;
   box-sizing: border-box;
+  position: relative;
 }

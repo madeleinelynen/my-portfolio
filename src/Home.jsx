@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import './style.css';
 import AnimatedNumberBlock from './components/AnimatedNumberBlock';
-import { useRef, useEffect } from 'react';
-import HomeTitle from './HomeTitle';
+import { useRef, useEffect  } from 'react';
 
 import flamecoachThumb from './assets/images/Flamecoach/Tile.png';
 import flamecoach2Thumb from './assets/images/Flamecoach2/Flamecoach2Tile.png';
@@ -42,7 +41,7 @@ function Home() {
       aboutScrollRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-  const tilesPerRow = 5;
+  const tilesPerRow = 4;
 
   const leftRef = useRef();
   const rightRef = useRef();
@@ -126,9 +125,11 @@ const projects = [
       <HomeSelection onClickProjekte={scrollToProjectGrid} onClickAbout={scrollToAbout}/> 
   </div>
 
-
   <div className="hero-right">
-        <HomeTitle />
+         <div className="hero-text-block">
+    <p className="hero-headline">Madeleine Lynen</p>
+    <p className="hero-subline">Software Developer mit Fokus auf die Unity Engine und XR-Entwicklung</p>
+  </div>
         <div className="stats-row">
           <AnimatedNumberBlock
             max={30}
@@ -142,7 +143,7 @@ const projects = [
           />
       </div>
     </div>
-  </div>
+</div>
 
 </div>
 
@@ -159,7 +160,7 @@ const projects = [
   style={{
     display: 'grid',
     gridTemplateColumns: `repeat(${tilesPerRow}, 1fr)`,
-    gap: '0rem',
+    gap: '1rem',
     width: '100%',
   }}
 >

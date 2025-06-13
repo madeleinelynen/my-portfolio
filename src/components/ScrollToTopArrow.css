@@ -10,13 +10,16 @@
   align-items: flex-start;
   z-index: 1000;
   pointer-events: auto;
+  max-width: 100%;
 }
 
-.triangle {
+.arrow {
+  max-width: 100%;
   display: inline-block;
   line-height: 1;
   color: black;
-  font-size: clamp(1rem, 3vw, 5rem); /* responsiv: min - ideal - max */
-  padding: 0.25rem;
+  font-size: clamp(1rem, 2vw, 5rem); /* responsiv: min - ideal - max */
+  padding: 0.5rem;
   box-sizing: border-box;
+  cursor: pointer;
 }

@@ -7,27 +7,36 @@
   --tile-hover: #1a3b2a;
 }
 
-/* .hero-section > * {
+.hero-section {
   position: relative;
-  z-index: 1;
-} */
+  min-height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
 
-/* .hero-section::before {
+.hero-section::after {
   content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vmin;
-  height: 80vmin;
-  background-color: var(--darkbeige-circle);
-  opacity: 0.8;
-  filter: blur(10px);
-  border-radius: 50%;
-  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-} */
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  opacity: 0.75;
+  z-index: 1;
+  animation: grainMove 15s steps(90) infinite;
+}
 
+@keyframes grainMove {
+  0% { background-position: 0 0; }
+  25% { background-position: 10px -10px; }
+  50% { background-position: -10px 10px; }
+  75% { background-position: -5px -5px; }
+  100% { background-position: 0 0; }
+}
 
 .home-tile {
   position: relative;
@@ -64,6 +73,10 @@
   opacity: 1;
 }
 
+.home-tile:hover .tile-overlay {
+  opacity: 1;
+}
+
 .tile-overlay {
   position: absolute;
   top: 0;
@@ -77,10 +90,6 @@
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease;
-}
-
-.home-tile:hover .tile-overlay {
-  opacity: 1;
 }
 
 .tile-label {
@@ -103,46 +112,39 @@
   background-repeat: repeat;
 }
 
-.intro-text {
-  font-size: 3rem;
-  font-family: 'Greyson', serif;
-  color: var(--dark-text);
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-.hero-header {
-  flex-shrink: 0;
-  flex-grow: 0;
-  min-height: 0;
-  max-height: 100%;
-  overflow: visible;
-}
-
 .stats-row {
   display: flex;
   flex-wrap: nowrap;         
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: stretch;
   gap: 2rem;
-  width: 100%;
+  width: 80%;
   box-sizing: border-box;
   flex-shrink: 1;
-  margin-bottom: 1.5rem;
+  margin-left: 0;
+  height:100%;
 }
 
-
-.hero-list-wrapper {
-  flex-grow: 1;
-  min-height: 0;
-  overflow-y: auto;
+.hero-headline {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-family: 'Grayson', serif;
+  text-transform: uppercase;
+  color: var(--light-text, var(--dark-text));
+  margin: 0;
 }
 
+.hero-subline {
+  font-size: 1rem;
+  font-family: 'Inter', serif;
+  text-transform: uppercase;
+  color: var(--light-text-secondary, var(--dark-text));
+  margin: 0;
+}
 
 .hero-description {
   margin-top: 2rem;
   font-size: 1rem;
-  font-family: 'Grayson', serif;
+  font-family: 'Inter', serif;
   color: var(--dark-text);
   line-height: 1.6;
   text-align: justify;
@@ -165,11 +167,6 @@
   position: relative;
 }
 
-.hero-section {
-  position: relative;
-  z-index: 0;
-}
-
 .hero-left {
   height: 100vh;
   width: 50vw;
@@ -181,25 +178,25 @@
 }
 
 .hero-right {
-  flex: 1;
+  width: 50vw;
+  height: 50vh;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start; /* optional: horizontal linksbündig */
-  box-sizing: border-box;
-  background-color: #1a3b2a;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 2rem;
 }
 
-.hero-content-box {
-  background-color:#f3e1d4;
-  /* padding: 2rem; */
-  /* border-radius: 1.5rem; */
+.hero-text-block {
+  text-align: left;
+  font-weight: 800;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  /* gap: 1.5rem; */
-  height: 100%;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .hero-nav {
@@ -210,6 +207,11 @@
   white-space: normal;
   box-sizing: border-box;
   display: flex;
+}
+
+.hero-nav,
+.hero-right {
+  flex: 1;
 }
 
 
