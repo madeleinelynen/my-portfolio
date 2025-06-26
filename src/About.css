@@ -1,0 +1,81 @@
+/* .about-section {
+  height: 100vh;
+  background-color: var(--beige-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  box-sizing: border-box;
+} */
+
+.about-title{
+  font-size: 2rem;
+  color: var( --dark-text);
+  text-transform: uppercase;
+  font-family: 'Grayson', serif;
+  letter-spacing: -0.05em;
+  margin-bottom: 0rem;
+}
+
+/* About.css */
+
+/* About.css */
+
+.about-section {
+  width: 100vw;
+  height: 100vh;
+  padding: 5rem 3rem;
+  box-sizing: border-box;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.about-heading {
+  font-family: 'Grayson', serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex: 1;
+}
+
+.about-column {
+  flex: 1;
+  max-width: 33%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.about-subheading {
+  font-family: 'Grayson', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.about-column p,
+.about-column ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-column ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+

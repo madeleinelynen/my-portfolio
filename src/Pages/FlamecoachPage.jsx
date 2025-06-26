@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import ProjectPage from '../components/ProjectPage';
-import titleImage from '../assets/images/Flamecoach/FC_Title_Text.png';
+import titleImage from '../assets/images/Flamecoach/Title.png';
 import extinguisherCollection from '../assets/images/Flamecoach/FC_Extinguisher.jpg';
 
 function FlamecoachPage() {

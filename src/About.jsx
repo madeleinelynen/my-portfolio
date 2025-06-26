@@ -1,28 +1,121 @@
-import './Header.css';
+// import './About.css';
+// import AnimatedHighlightList from './components/AnimatedHighlightList';
 
-import AnimatedHighlightList from './components/AnimatedHighlightList';
+// function About() {
 
-function About() {
+//     const description = [
+//     'Kernkompetenz in der Programmierung in C#',
+//     'Erste Erfahrungen in C++, Python, Dart, HTML',
+//     'Kompetenz in der Entwicklung von VR/AR-Projekten',
+//     'Erfahrung in der Mobile-Entwicklung auf Android & iOS Systemen (Flutter, React, Unity)',
+//     'Sicherer Umgang mit der Unity Engine und Erfahrung mit der Unreal Engine',
+//     'Versionskontrolle mit GitHub, SourceTree, Git Extensions, oder Perforce',
+//     'Zusätzliche Erfahrung im Bereich UI/UX-Konzeption, Game Design, Level Design',
+//   ];
 
-    const description = [
-    'Kernkompetenz in der Programmierung in C#',
-    'Erste Erfahrungen in C++, Python, Dart, HTML',
-    'Kompetenz in der Entwicklung von VR/AR-Projekten',
-    'Erfahrung in der Mobile-Entwicklung auf Android & iOS Systemen (Flutter, React, Unity)',
-    'Sicherer Umgang mit der Unity Engine und Erfahrung mit der Unreal Engine',
-    'Versionskontrolle mit GitHub, SourceTree, Git Extensions, oder Perforce',
-    'Zusätzliche Erfahrung im Bereich UI/UX-Konzeption, Game Design, Level Design',
-  ];
+//   return (
+//       <div className="about-content">
+//     <h3 className="about-title"> About</h3>
+//     <AnimatedHighlightList content={description} />
+//   </div>
 
+//     // <header className="main-header">
+//     //   <div className="header-content">
+//     //     <div className="hero-list-wrapper"> 
+//     //         <AnimatedHighlightList content={description} />
+//     //       </div>
+//     //   </div>
+//     // </header>
+//   );
+// }
+
+// export default About;
+
+import React from "react";
+import "./About.css";
+
+const About = () => {
   return (
-    <header className="main-header">
-      <div className="header-content">
-        <div className="hero-list-wrapper"> 
-            <AnimatedHighlightList content={description} />
-          </div>
+    <div className="about-section">
+      <h1 className="about-heading">Madeleine Lynen</h1>
+
+      <div className="about-columns">
+        {/* Spalte 1 */}
+        <div className="about-column">
+          <section>
+            <h2 className="about-subheading">Über mich</h2>
+            <p>
+              Über fünf Jahre Erfahrung in der Softwareentwicklung mit fundierter Expertise in C# und C++, spezialisiert auf XR, App-Entwicklung und Games. Technische Präzision trifft auf ästhetische UX.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="about-subheading">Kooperationsfähigkeiten</h2>
+            <ul>
+              <li>Multitasking & Teamarbeit</li>
+              <li>Verantwortungsübernahme</li>
+              <li>Kontinuierliche Weiterbildung</li>
+              <li>Mentoring & Leadership</li>
+            </ul>
+          </section>
+        </div>
+
+        {/* Spalte 2 */}
+        <div className="about-column">
+          <section>
+            <h2 className="about-subheading">Kompetenzen</h2>
+            <ul>
+              <li>C#, C++, Python, Dart</li>
+              <li>Unity, Unreal, Visual Studio</li>
+              <li>GitHub, SourceTree, Perforce</li>
+              <li>Android & iOS (Flutter, Unity)</li>
+              <li>VR/AR: SteamVR, Varjo, Pico, Meta, Vuforia</li>
+              <li>SDK & Hardwareintegration</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="about-subheading">Ausbildung</h2>
+            <p className="font-semibold">Game Design B.Sc.<br />Mediadesign Hochschule, Düsseldorf (2015–2019)</p>
+            <ul>
+              <li>Schwerpunkt: Programmierung</li>
+              <li>Bachelorarbeit: AR in der Medizin (Note 1.0)</li>
+            </ul>
+          </section>
+        </div>
+
+        {/* Spalte 3 */}
+        <div className="about-column">
+          <section>
+            <h2 className="about-subheading">Schlüsselerfolge</h2>
+            <ul>
+              <li>VR-Feuerlöschtraining (seit 2019)</li>
+              <li>VR-Erlebnisse mit Neonreal (seit 2021)</li>
+              <li>Puzzle-Multiplayer mit Android & Quest 2 (2021–2024)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="about-subheading">Berufserfahrung</h2>
+            <p className="font-semibold">Software Developer<br />A4VR GmbH | Mai 2019 – heute</p>
+            <ul>
+              <li>Unity/C# für interaktive VR/AR-Projekte</li>
+              <li>Unreal Engine & C++ Grundlagen</li>
+              <li>App-Entwicklung Android/iOS</li>
+              <li>UI/UX-Konzeption & Integration</li>
+              <li>SDK/Hardware-Einbindung</li>
+              <li>Technischer Messe-Support</li>
+            </ul>
+          </section>
+        </div>
       </div>
-    </header>
+    </div>
   );
-}
+};
 
 export default About;
+
+
+
+
+

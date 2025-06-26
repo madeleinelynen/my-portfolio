@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
 import './style.css';
+import About from './About';
 import AnimatedNumberBlock from './components/AnimatedNumberBlock';
 import { useRef, useEffect  } from 'react';
 
@@ -128,7 +129,7 @@ const projects = [
   <div className="hero-right">
          <div className="hero-text-block">
     <p className="hero-headline">Madeleine Lynen</p>
-    <p className="hero-subline">Software Developer mit Fokus auf die Unity Engine und XR-Entwicklung</p>
+    <p className="hero-subline">Software Developer mit Fokus auf die Unity Engine und die Entwicklung von XR- und Mobile Projekten</p>
   </div>
         <div className="stats-row">
           <AnimatedNumberBlock
@@ -147,11 +148,10 @@ const projects = [
 
 </div>
 
-<div ref={aboutScrollRef} className="about-section">
+<div ref={aboutScrollRef}>
   <div className="about-content">
-    <h3 className="about-title"> About</h3>
-    <p>...</p>
-  </div>
+      <About/>
+  </div> 
 </div>
 
 <div

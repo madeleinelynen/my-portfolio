@@ -100,6 +100,7 @@
   padding: 0.5rem 1rem;
   border-radius: 6px;
   text-align: center;
+    font-family: 'Inter', sans-serif;
 }
 
 .intro-fullscreen {
@@ -242,28 +243,19 @@
   transition: color 0.3s ease;
 }
 
-.about-section {
-  height: 100vh;
-  background-color: var(--beige-bg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem;
-  box-sizing: border-box;
-}
-
-.about-title{
-  font-size: 2rem;
-  color: var( --dark-text);
-  text-transform: uppercase;
-  font-family: 'Grayson', serif;
-  letter-spacing: -0.05em;
-  margin-bottom: 0rem;
-}
-
 .fit-text {
   margin-left: auto;
   width: 100%;
   display: block;
   text-align: right;
+}
+
+.about-content {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* optional */
+  align-items: center; /* optional */
+  padding: 2rem; /* optional */
 }
