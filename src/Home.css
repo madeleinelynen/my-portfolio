@@ -93,14 +93,20 @@
 }
 
 .tile-label {
+  position: absolute;
+  top: 0.5rem;
+  left: .75rem;
+  z-index: 3;
   color: white;
   font-size: 1.2rem;
-  font-weight: 300;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-align: center;
-    font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  pointer-events: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
 }
 
 .intro-fullscreen {
@@ -215,12 +221,10 @@
   flex: 1;
 }
 
-
 .hero-container {
   display: flex;
   gap: 40px;
 }
-
 
 .scalable-text {
   display: inline-block;

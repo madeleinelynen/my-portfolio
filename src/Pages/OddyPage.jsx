@@ -1,5 +1,5 @@
 import ProjectPage from '../components/ProjectPage';
-import titleImage from '../assets/images/Oddy/PortfolioTitle.png';
+import titleImage from '../assets/images/Oddy/Banner.png';
 import sideImage from '../assets/images/Oddy/Screenshot_Level00_Tutorial_164845.png';
 
 function OddyPage() {
@@ -28,6 +28,7 @@ function OddyPage() {
       hardware={hardware}
       software={software}
       sideImage={sideImage}
+      websiteLink='https://jugendpastoral.de/news-und-tipps/253-oddy'
     />
   );
 }

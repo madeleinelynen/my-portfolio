@@ -28,6 +28,7 @@ function AufwindPage() {
       software={software}
       hardware={hardware}
       sideImage={sideImage}
+      websiteLink='https://www.aufwindvr.com/'
     />
 
      <div style={{ maxWidth: '1000px', margin: '2rem auto', fontFamily: "'Montserrat', sans-serif", textAlign:'center', }}>

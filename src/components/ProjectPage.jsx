@@ -1,19 +1,22 @@
 import { useEffect } from 'react';
+import { Link } from "react-router-dom";
 import iconGroup from '../assets/images/Icons/GroupIcon_black.png';
 import iconClock from '../assets/images/Icons/ClockIcon_black.png';
 import iconEngine from '../assets/images/Icons/UnityIcon_black.png';
 import './ProjectPage.css';
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 function ProjectPage({ 
 title,
   image,
   imageAlt = 'title', 
   description,
-  role = '',
+  role = [],
   infoTexts = [],
   hardware = [],
   software = [],
-  sideImage = null }) {
+  sideImage = null,
+  websiteLink = '' }) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -21,7 +24,19 @@ title,
 
   const icons = [iconGroup, iconClock, iconEngine];
 
+  useEffect(() => {
+    document.body.classList.add("project-bg-dark");
+
+    return () => document.body.classList.remove("project-bg-dark");
+  }, []);
+
   return (
+    <>
+    <div className="project-page">
+      <Link to="/" className="project-home-link">
+        Home
+      </Link>
+
 <div className="project-page-container">
   {/* OBERER TEIL: horizontal angeordnet */}
 <div className="hero-fullscreen">
@@ -36,70 +51,74 @@ title,
           </div>
         ))}
       </div>
-      <h1 className="hero-title">{title}</h1>
+
+      <h1
+        className="hero-title"
+        onClick={() =>
+          window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })
+        }
+      >
+        {title}
+      </h1>
+      </div>
     </div>
+  </div>
+
+  {/* ---------- SECOND SCREEN ---------- */}
+<section className="second-screen">
+  <div className="content-wrapper">
+
+    {/* Linke Spalte: Beschreibung */}
+<div className="left-column">
+  <p className="description">{description}</p>
+
+  {websiteLink && (
+    <div className="project-website-link">
+      <a href={websiteLink} target="_blank" rel="noopener noreferrer">
+        Zur Projektwebsite →
+      </a>
+    </div>
+  )}
+
+  <div className="role-section">
+    <h3 className="section-heading">Meine Beteiligung</h3>
+    <ul className="role-list">
+      {role.map((item, i) => (
+        <li key={`role-${i}`}>{item}</li>
+      ))}
+    </ul>
   </div>
 </div>
 
-
-  {/* ALLES UNTEN: wieder vertikal */}
-  <div className="project-content-below">
-    <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-      <p className="description">{description}</p>
-    </div>
-
-    <div style={{
-      maxWidth: '1000px',
-      margin: '0 auto',
-      marginBottom: '0.5rem',
-      fontSize: '1rem',
-      lineHeight: '1.6',
-      fontWeight: 600,
-      color: 'white',
-      fontFamily: "'Montserrat', sans-serif",
-      textAlign: 'center'
-    }}>
-      <p className="description">Meine Beteiligung in diesem Projekt</p>
-    </div>
-
-    <div style={{ maxWidth: '1000px', margin: '0 auto 3rem auto' }}>
-      <p className="description">{role}</p>
-    </div>
-
-    {(hardware.length > 0 || software.length > 0) && sideImage && (
-      <div className="hardware-software-block">
-        <img
-          src={sideImage}
-          alt="HardwareVisual"
-          className="side-image"
-        />
-        <div className="tech-specs-box">
+    {/* Rechte Spalte: zwei gestapelte Karten */}
+    <div className="right-column">
+      {(hardware.length > 0 || software.length > 0) && (
+        <div className="card card-tech-specs">
           {hardware.length > 0 && (
             <>
-              <h4>Verwendete Hardware:</h4>
-              <ul>
-                {hardware.map((item, i) => (
-                  <li key={`hw-${i}`}>{item}</li>
-                ))}
-              </ul>
+              <h4>Verwendete Hardware</h4>
+              <ul>{hardware.map((item, i) => <li key={`hw-${i}`}>{item}</li>)}</ul>
             </>
           )}
           {software.length > 0 && (
             <>
-              <h4>Verwendete Software:</h4>
-              <ul>
-                {software.map((item, i) => (
-                  <li key={`sw-${i}`}>{item}</li>
-                ))}
-              </ul>
+              <h4>Verwendete Software</h4>
+              <ul>{software.map((item, i) => <li key={`sw-${i}`}>{item}</li>)}</ul>
             </>
           )}
         </div>
-      </div>
-    )}
-  </div>
-</div>
+      )}
 
+    </div>
+
+  </div>
+</section>
+
+
+</div>
+</div>
+<ScrollToTopButton scrollTriggerFactor={0.9} />
+</>
   );
 }
 

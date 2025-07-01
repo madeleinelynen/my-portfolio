@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
+// import './HomeSelection.css';
 
 function HomeSelection({ onClickAbout, onClickProjekte }) {
   const projekteRef = useRef(null);
@@ -117,7 +118,8 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
           ref={projekteRef}
           onClick={onClickProjekte}
           style={{
-            color: hovered === 'projekte' ? '#1a3b2a' : '#1f1f1f',
+            color: hovered == 'projekte' ? '#ee9f89' : '#1f1f1f',
+            //'projekte' ? '#1a3b2a' : '#1f1f1f',
               //  'projekte' ? '#112A51' : '#1f1f1f',
             letterSpacing: hovered === 'projekte' ? '-0.01em' : 'normal',
             transition: 'color 0.2s ease, letter-spacing 0.3s ease',
@@ -142,7 +144,8 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
             ref={aboutRef}
             onClick={onClickAbout}
             style={{
-            color: hovered === 'about' ? '#1a3b2a' : '#1f1f1f',
+            color: hovered == 'about' ? '#ee9f89' : '#1f1f1f',
+            //'about' ? '#1a3b2a' : '#1f1f1f',
               //  'about' ? '#112A51' : '#1f1f1f',
               letterSpacing: hovered === 'about' ? '-0.1rem' : 'normal',
               transition: 'color 0.2s ease, letter-spacing 0.3s ease',

@@ -1,5 +1,5 @@
 import ProjectPage from '../components/ProjectPage';
-import titleImage from '../assets/images/VodafoneOMR/Branding_Lvl04.PNG';
+import titleImage from '../assets/images/Tirol/Banner.png';
 import sideImage from '../assets/images/VodafoneOMR/Lvl01.PNG';
 
 function TirolPage() {
@@ -28,6 +28,7 @@ function TirolPage() {
       hardware={hardware}
       software={software}
       sideImage={sideImage}
+      websiteLink='https://www.experiencetirol.com/'
     />
   );
 }

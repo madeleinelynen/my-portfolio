@@ -1,5 +1,5 @@
 import ProjectPage from '../components/ProjectPage';
-import titleImage from '../assets/images/Flamecoach/Title.png';
+import titleImage from '../assets/images/Flamecoach/Banner.jpeg';
 import extinguisherCollection from '../assets/images/Flamecoach/FC_Extinguisher.jpg';
 
 function FlamecoachPage() {
@@ -44,14 +44,18 @@ function FlamecoachPage() {
       Ein realer Feuerlöscher wird mit firmeneigener Hardware und Trackern ausgestattet, 
       sodass er in der virtuellen Umgebung ebenso sichtbar und steuerbar ist wie in der realen Welt. 
       Das System wurde bereits an mehr als 30 Kunden verkauft, darunter BMW, Daimler, Securitas und Commerzbank."
-      role="Programmierung, UX/UI-Entwicklung und -Integration, Erstellung von Animationen innerhalb der 
-      Engine, Integration von Hardware (einschließlich firmeneigener Entwicklungen), Implementierung von 
-      Hand-Tracking-Interaktionen, Einrichtung für Neukunden und Versionsverwaltung mit regelmäßigen Updates 
-      für Bestandskunden"
+      role = {[
+      "Programmierung",
+      "UX/UI-Entwicklung und -Integration",
+      "Erstellung von Animationen innerhalb der Engine",
+      "Implementierung von Hand-Tracking-Interaktionen",
+      "Einrichtung für Neukunden und Versionsverwaltung mit regelmäßigen Updates für Bestandskunden"
+      ]}
       infoTexts={["10", "2019 - heute", "Unity Engine"]}
       hardware={hardware}
       software={software}
       sideImage={extinguisherCollection}
+      websiteLink='https://www.flamecoach.com'
     />
     </> 
   );

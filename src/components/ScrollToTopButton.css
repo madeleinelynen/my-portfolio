@@ -1,0 +1,60 @@
+
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 0.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  z-index: 2000;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top-button.visible {
+  opacity: 0.85;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top-button.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
+
+.scroll-to-top-button:hover {
+  opacity: 1;
+}
+
+.scroll-line {
+  display: block;
+  width: 2px;
+  height: 3rem;  /* Länge wie oben beim Home-Button */
+  background-color: white;
+  opacity: 0.7;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.scroll-arrow {
+  font-size: clamp(1rem, 2vw, 2rem);
+  color: white;
+  font-family: 'Grayson', 'Inter', sans-serif;
+  transition: color 0.2s ease;
+}
+
+.scroll-to-top-button:hover .scroll-arrow {
+  color: #ee9f89;
+}
+
+.scroll-to-top-button:hover .scroll-line {
+  background-color: #ee9f89;
+  opacity: 1;
+}

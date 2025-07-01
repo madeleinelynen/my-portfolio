@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
-import Banner from './Banner';
 import './App.css';
 import './style.css';
 import FlamecoachPage from './Pages/FlamecoachPage';
@@ -18,7 +17,6 @@ function App() {
   return (
     <Router basename="/my-portfolio">
       <div className="main-layout-wrapper">
-              <Banner />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/flamecoach" element={<FlamecoachPage />} />

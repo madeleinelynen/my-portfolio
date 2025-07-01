@@ -1,5 +1,5 @@
 import ProjectPage from '../components/ProjectPage';
-import titleImage from '../assets/images/Schumann/Banner.png';
+import titleImage from '../assets/images/Schumann/Title.jpg';
 import sideImage from '../assets/images/Schumann/sideImage.jpg';
 
 function SchumannPage() {
@@ -27,6 +27,7 @@ function SchumannPage() {
       hardware={hardware}
       software={software}
       sideImage={sideImage}
+      websiteLink='https://www.neonreal.com/schumannvr'
     />
   );
 }

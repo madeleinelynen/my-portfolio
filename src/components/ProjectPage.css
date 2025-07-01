@@ -1,21 +1,35 @@
 :root {
   --dark-text: #1a1a1a;
-  --bg-color: #f3eae3;
+  --dark-bg: #1a1a1a;
+  --hightlight-text:#ee9f89;
+  --tile-hover: #1a3b2a;
   --font-family: 'Inter', sans-serif;
 }
-:root {
-  --dark-text: #1a1a1a;
-  --bg-color: #f3eae3;
-  --font-family: 'Inter', sans-serif;
+
+body.project-bg-dark {
+  background:  var(--dark-bg);
+                /* url("https://www.transparenttextures.com/patterns/concrete-wall.png")
+                repeat; */
+  background-size: 320px 320px;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: var(--font-family);
-  background-color: var(--bg-color);
 }
 
+.hero-title {
+  cursor: pointer;
+  transition: all 0.4s ease;
+  color: white;
+  transition: color 0.2s ease, letter-spacing 0.3s ease;
+}
+
+.hero-title:hover {
+  color: var(--hightlight-text);
+   letter-spacing: 0.01em;
+}
 .hero-fullscreen {
   position: relative;
   width: 100vw;
@@ -32,9 +46,9 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover; /* ← Skaliert proportional, ohne Beschnitt */
+  object-fit: cover;
   object-position: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-overlay {
@@ -88,13 +102,6 @@ body {
   margin: 0;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-family);
-  background-color: var(--bg-color);
-}
-
 .project-page-container {
   display: flex;
   flex-direction: column;
@@ -113,7 +120,6 @@ body {
   margin-right: 0;
   gap: 2rem;
   box-sizing: border-box;
-  background-color: var(--bg-color);
 }
 
 .project-left-vertical {
@@ -132,7 +138,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* ← Icons oben, Titel unten */
+  justify-content: space-between;
   height: 100%;
   width: 100%;
 }
@@ -154,11 +160,19 @@ body {
 }
 
 .description {
+  max-width: 600px;         /* schön begrenzte Spaltenbreite */
+  width: 100%;
+  margin: 0 auto;
+
+  max-height: 50vh;         /* HÖHENBEGRENZUNG auf halbe Bildschirmhöhe */
+  overflow: hidden;         /* NICHT überlaufen lassen */
+  text-align: justify;      /* saubere linke/rechte Kante */
+  line-height: 1.5;         /* lesbare Zeilenhöhe */
+
   font-size: 1rem;
   font-weight: 500;
   color: var(--dark-text);
   font-family: var(--font-family);
-  text-align: left;
 }
 
 .title-label {
@@ -233,6 +247,234 @@ body {
   padding-left: 1.2em;
   margin: 0;
 }
+
+.project-page {
+  position: relative;    
+  min-height: 100vh;  
+  overflow: hidden;   
+  z-index: 0;              
+}
+
+.project-page::after {
+  content: "";
+  position: fixed;      
+  inset: 0;            
+  pointer-events: none;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  background-repeat: repeat;
+  background-size: 320px 320px;
+  opacity: 0.65;  
+  z-index: 1;
+  animation: grainMove 15s steps(90) infinite;
+}
+
+/* 3) Grain-Animation (leichtes Wandern) */
+@keyframes projectGrainMove {
+  0%   { transform: translate(0,   0); }
+  10%  { transform: translate(-5%, -3%); }
+  20%  { transform: translate(-10%,5%); }
+  30%  { transform: translate(5%,  -10%); }
+  40%  { transform: translate(-5%, 15%); }
+  50%  { transform: translate(-10%,5%); }
+  60%  { transform: translate(15%, 0); }
+  70%  { transform: translate(0,   10%); }
+  80%  { transform: translate(5%,  5%); }
+  90%  { transform: translate(-10%,10%); }
+  100% { transform: translate(0,   0); }
+}
+
+.project-home-link {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2000;
+  font-size: clamp(1rem, 2vw, 2rem);
+  text-decoration: none;
+  color: white;
+  font-family: 'Grayson', 'Inter', sans-serif;
+  opacity: 0.85;
+  transition: color 0.2s ease, letter-spacing 0.3s ease, opacity 0.3s;
+  
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.project-home-link {
+  position: absolute;
+  top: .75rem;
+  left: .3rem;
+  z-index: 2000;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  text-decoration: none;
+  color: rgb(218, 218, 218);
+  font-family: 'Grayson', 'Inter', sans-serif;
+  opacity: 0.85;
+  transition: color 0.2s ease, letter-spacing 0.3s ease, opacity 0.3s;
+  
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.project-home-link::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 3rem; 
+  background-color: white;
+  opacity: 0.7;
+  margin-top: 1rem;
+}
+
+.project-home-link:hover {
+  cursor: pointer;
+  color: var(--hightlight-text);;
+  letter-spacing: -0.02em;
+  opacity: 1;
+}
+
+.project-website-link {
+  margin-top: 1rem;
+}
+
+.project-website-link a:link,
+.project-website-link a:visited {  
+  color: #ee9f89;
+  text-decoration: none;
+}
+
+.project-website-link a:hover {
+  text-decoration: underline;
+}
+
+.project-website-link a:active {
+  color: #ee9f89;
+}
+
+.role-section {
+  margin-top: 2rem;  /* Abstand zur Description */
+  max-width: 600px;
+  width: 100%;
+}
+
+.section-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color:white;
+}
+
+.role-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+.project-content {
+  padding: 2rem;
+}
+
+.second-screen {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 4rem);
+  width: 100%;
+  max-width: 1200px;
+  height: 90vh;                    
+  box-sizing: border-box;
+  overflow: hidden;            
+  padding: 2rem;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.left-column .description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #e8e8e8;
+  max-height: 100%;
+}
+
+/* Rechte Seite: Zwei Cards */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: auto;                  /* falls notwendig */
+}
+
+/* Beide Karten gleich gestalten */
+.card {
+  flex: 1 1 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+  color: #fff;
+  overflow: auto;
+}
+
+/* Titel + Text */
+.section-heading {
+  margin-top: 0;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  letter-spacing: 0.03em;
+}
+
+.card-tech-specs h4 {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.card-tech-specs ul {
+  padding-left: 1.2rem;
+  list-style: square;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Mobile Anpassung */
+@media (max-width: 768px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    height: 100vh; /* nicht 90, sondern ganz */
+  }
+
+  .right-column {
+    margin-top: 2rem;
+  }
+}
+
+
 
 
 @media (max-width: 600px) {

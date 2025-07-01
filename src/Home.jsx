@@ -156,12 +156,14 @@ const projects = [
 
 <div
   ref={gridRef}
-  className="home-grid"
   style={{
     display: 'grid',
     gridTemplateColumns: `repeat(${tilesPerRow}, 1fr)`,
     gap: '1rem',
+    paddingLeft: '1rem',
+    paddingRight: '1rem',
     width: '100%',
+    boxSizing: 'border-box',
   }}
 >
   {projects.map((proj, i) => (
