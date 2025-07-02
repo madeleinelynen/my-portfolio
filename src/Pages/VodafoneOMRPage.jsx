@@ -21,8 +21,12 @@ function VodafoneOMRPage() {
       image={titleImage}
       description="Lokaler VR-Multiplayer für bis zu vier Spielern, die in einer digitalen Arena in vier 
       verschiedenen Leveln und jeweils vier verschiedenen Mechaniken um die meisten Punkte kämpfen müssen"
-      role="Programmierung unter Nutzung der implementierten MLAPI, UI/UX-Implementierung und Programmierung, 
-      Implementierung von Feedback auf der haptischen Weste, technischer Support auf der OMR"
+           role = {[
+            "Programmierung unter Nutzung der implementierten MLAPI",
+            "UX/UI-Entwicklung und -Integration",
+            "Implementierung von Feedback auf der haptischen Weste",
+            "Technischer Support auf der OMR",
+            ]}
       infoTexts={["8", "Januar 2022 - Mai 2022", "Unity Engine"]}
       hardware={hardware}
       software={software}

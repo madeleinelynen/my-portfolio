@@ -1,0 +1,94 @@
+:root {
+  --line-width: 2px;
+  --color-text: #1f1f1f;
+  --color-hover: #1a3b2a;
+}
+
+/* Hidden test span for measuring */
+.hero-nav-test {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+/* Container */
+.hero-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: var(--color-text);
+  text-transform: uppercase;
+  font-family:'Grayson';
+  position: relative;
+}
+
+/* Flex wrapper for links + divider */
+.hero-nav-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+/* Links container */
+.hero-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-right: 1.5rem;
+  line-height: 1;
+}
+
+/* Individual nav link */
+.nav-link {
+  cursor: pointer;
+  font-weight: normal;
+  letter-spacing: normal;
+  transition: color 0.2s ease, letter-spacing 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Hover state */
+.nav-link.hovered {
+  color: var(--color-hover);
+  letter-spacing: -0.01em;
+}
+
+/* Divider line */
+.hero-nav-divider {
+  width: var(--line-width);
+  background-color: var(--color-text);
+  align-self: stretch;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 1200px) {
+  .hero-nav {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-nav-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 0;
+  }
+
+  .hero-nav-divider {
+    display: none;
+  }
+
+  .nav-link {
+    text-align: center;
+  }
+}

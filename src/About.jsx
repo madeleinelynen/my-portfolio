@@ -6,7 +6,6 @@ const About = () => {
       <h1 className="about-heading">ABOUT</h1>
 
       <div className="about-columns">
-
         <div className="about-column">
           <section>
             <h2 className="about-subheading">Über mich</h2>
@@ -26,7 +25,6 @@ const About = () => {
           </section>
         </div>
 
-        {/* Spalte 2 */}
         <div className="about-column">
           <section>
             <h2 className="about-subheading">Kompetenzen</h2>
@@ -42,7 +40,9 @@ const About = () => {
 
           <section>
             <h2 className="about-subheading">Ausbildung</h2>
-            <p className="font-semibold">Game Design B.Sc.<br />Mediadesign Hochschule, Düsseldorf (2015–2019)</p>
+            <p className="font-semibold">
+              Game Design B.Sc.<br />Mediadesign Hochschule, Düsseldorf (2015–2019)
+            </p>
             <ul>
               <li>Schwerpunkt: Programmierung</li>
               <li>Bachelorarbeit: AR in der Medizin (Note 1.0)</li>
@@ -50,7 +50,6 @@ const About = () => {
           </section>
         </div>
 
-        {/* Spalte 3 */}
         <div className="about-column">
           <section>
             <h2 className="about-subheading">Schlüsselerfolge</h2>
@@ -63,7 +62,9 @@ const About = () => {
 
           <section>
             <h2 className="about-subheading">Berufserfahrung</h2>
-            <p className="font-semibold">Software Developer<br />A4VR GmbH | Mai 2019 – heute</p>
+            <p className="font-semibold">
+              Software Developer<br />A4VR GmbH | Mai 2019 – heute
+            </p>
             <ul>
               <li>Unity/C# für interaktive VR/AR-Projekte</li>
               <li>Unreal Engine & C++ Grundlagen</li>
@@ -80,8 +81,6 @@ const About = () => {
 };
 
 export default About;
-
-
 
 
 

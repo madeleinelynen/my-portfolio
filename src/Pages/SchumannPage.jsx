@@ -22,7 +22,11 @@ function SchumannPage() {
       image={titleImage}
       description="Multisensorische VR-Experience mit immersivem Storytelling über das Leben von 
       Robert Schumann, welche zeitweise als kostenpflichtiges Erlebnis in Düsseldorf ausgestellt wurde"
-      role="Programmierung, UX/UI-Integration und -Programmierung, Hand-Tracking Implementierung"
+      role = {[
+      "Programmierung",
+      "UX/UI-Integration und -Programmierung",
+      "Hand-Tracking Implementierung",
+      ]}
       infoTexts={["8", "Mai 2019 - Oktober 2019", "Unity Engine"]}
       hardware={hardware}
       software={software}

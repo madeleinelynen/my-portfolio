@@ -1,6 +1,7 @@
 :root {
   --black_t: #1f1f1f;
   --darkblue_n: #112A51;
+  --dark-green: #1a3b2a;
 }
 
 .number-block {
@@ -20,7 +21,7 @@
   font-size: clamp(2rem, 5vw, 8rem);
   font-weight: 300;
   font-family: 'Grayson', serif;
-  background: linear-gradient(to right,#ee9f89, #112A51);
+  background: linear-gradient(to right,var(--dark-green), #ee9f89);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   word-break: break-word;

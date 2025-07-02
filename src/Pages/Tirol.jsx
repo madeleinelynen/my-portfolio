@@ -22,8 +22,12 @@ function TirolPage() {
       description="Eine multisensorische Erlebniswelt mit immersivem Storytelling, die in vier 
       verschiedenen Räumen interaktive Ausstellungen bietet und die Geschichte Tirols erzählt. 
       Diese Experience ist als permanentes Museum in Innsbruck ausgestellt."
-      role='Ich habe die Verantwortung für die "Zeitreise"-Scene erhalten. Programmierung des VR-Projektes, 
-      UI-Implementierung und -Programmierung, Hand-Tracking Implementierung'
+      role = {[
+      "Programmierung",
+      "Verantwortung für die Zeitreise-Szene",
+      "UI-Implementierung und -Programmierung",
+      "Hand-Tracking Implementierung",
+      ]}
       infoTexts={["21", "2022 - 2023", "Unity Engine"]}
       hardware={hardware}
       software={software}

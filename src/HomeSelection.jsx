@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-// import './HomeSelection.css';
+import './HomeSelection.css';
 
 function HomeSelection({ onClickAbout, onClickProjekte }) {
   const projekteRef = useRef(null);
@@ -11,11 +11,9 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
 
   const [fontSize, setFontSize] = useState(10);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [hovered, setHovered] = useState(null); 
+  const [hovered, setHovered] = useState(null);
 
   const lineWidth = 2;
-  const remToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
-  const gapInPx = 1.5 * remToPx;
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -24,13 +22,14 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
   }, []);
 
   useEffect(() => {
-
     const container = containerRef.current;
-    const availableWidth = container.getBoundingClientRect().width - gapInPx - lineWidth;
     const test = testRef.current;
-    
-    if (!container || !test || container.clientWidth === 0) 
-      return;
+    if (!container || !test || container.clientWidth === 0) return;
+
+    const remToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const gapInPx = 1.5 * remToPx;
+
+    const availableWidth = container.getBoundingClientRect().width - gapInPx - lineWidth;
 
     const style = window.getComputedStyle(container);
     const longest = selections.reduce((a, b) => (a.length > b.length ? a : b), '');
@@ -43,14 +42,13 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
     test.style.lineHeight = style.lineHeight;
     test.style.whiteSpace = 'nowrap';
 
-    let min = 10;
+    let min = 8;
     let max = 1000;
     let best = min;
 
     while (min <= max) {
       const mid = Math.floor((min + max) / 2);
       test.style.fontSize = `${mid}px`;
-
       if (test.getBoundingClientRect().width <= availableWidth) {
         best = mid;
         min = mid + 1;
@@ -62,119 +60,40 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
     setFontSize(best - 1);
   }, [selections, windowWidth]);
 
-
   return (
- <div
-      ref={containerRef}
-      className="hero-nav"
-      style={{
-        display: 'flex',
-        justifyContent: 'flex-end',
-        alignItems: 'flex-end',
-        height: 'auto',
-        color: '#1f1f1f',
-        textTransform: 'uppercase',
-        fontFamily: 'Grayson',
-      }}
-    >
-
+    <div ref={containerRef} className="hero-nav">
       <span
         ref={testRef}
-        style={{
-          position: 'absolute',
-          visibility: 'hidden',
-          height: 0,
-          overflow: 'hidden',
-          pointerEvents: 'none',
-          fontSize,
-        }}
+        className="hero-nav-test"
+        style={{ fontSize }}
       />
 
-      <div style={{ display: 'flex', flexDirection: 'row'}}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-end',
-            gap: '0.5rem',
-            marginRight: `${gapInPx}px`,
-    }}
-
-        >
-      <div 
-      style={{
-        display: 'flex',
-        alignItems: 'end',
-        flexDirection: 'column',
-        justifyContent: 'flex-end',
-        cursor: 'pointer',
-        height: 'auto',
-          }}
-      >
-        <span
-              
-          onMouseEnter={() => setHovered('projekte')}
-          onMouseLeave={() => setHovered(null)}
-          ref={projekteRef}
-          onClick={onClickProjekte}
-          style={{
-            color: hovered == 'projekte' ? '#ee9f89' : '#1f1f1f',
-            //'projekte' ? '#1a3b2a' : '#1f1f1f',
-              //  'projekte' ? '#112A51' : '#1f1f1f',
-            letterSpacing: hovered === 'projekte' ? '-0.01em' : 'normal',
-            transition: 'color 0.2s ease, letter-spacing 0.3s ease',
-            fontSize,
-            outlineColor: '2px',
-            fontWeight: 'normal',
-            position: 'absolut',
-            lineHeight: 1,
-            whiteSpace: 'nowrap',
-            justifyContent: 'flex-end',
-            alignItems: 'end',
-            alignSelf: 'flex-end',
-          }}
-        >
-          {selections[0]}
-        </span>
-      </div>
+      <div className="hero-nav-content">
+        <div className="hero-nav-links" style={{ fontSize }}>
+          <span
+            ref={projekteRef}
+            onClick={onClickProjekte}
+            onMouseEnter={() => setHovered('projekte')}
+            onMouseLeave={() => setHovered(null)}
+            className={`nav-link ${hovered === 'projekte' ? 'hovered' : ''}`}
+          >
+            {selections[0]}
+          </span>
 
           <span
-            onMouseEnter={() => setHovered('about')}
-            onMouseLeave={() => setHovered(null)}
             ref={aboutRef}
             onClick={onClickAbout}
-            style={{
-            color: hovered == 'about' ? '#ee9f89' : '#1f1f1f',
-            //'about' ? '#1a3b2a' : '#1f1f1f',
-              //  'about' ? '#112A51' : '#1f1f1f',
-              letterSpacing: hovered === 'about' ? '-0.1rem' : 'normal',
-              transition: 'color 0.2s ease, letter-spacing 0.3s ease',
-              fontSize,
-              lineHeight: 1,
-              fontWeight: 'normal',
-              cursor: 'pointer',
-              display: 'inline-block',
-              whiteSpace: 'nowrap',
-              verticalAlign: 'middle',
-              height:'100%',
-              marginBottom: '8rem',
-            }}
+            onMouseEnter={() => setHovered('about')}
+            onMouseLeave={() => setHovered(null)}
+            className={`nav-link ${hovered === 'about' ? 'hovered' : ''}`}
           >
             {selections[1]}
           </span>
         </div>
 
-        <div
-      style={{
-        width: `${lineWidth}px`,
-        backgroundColor: '#1f1f1f',
-        alignSelf: 'stretch',
-        }}
-        />
+        <div className="hero-nav-divider" />
       </div>
     </div>
-
-    
   );
 }
 

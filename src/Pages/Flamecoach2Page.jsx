@@ -68,9 +68,12 @@ function Flamecoach2Page() {
       zur Brandbekämpfung. Zu den Verbesserungen zählen ein überarbeitetes Feuersystem und User Interface, erweiterte Szenarien 
       sowie die Möglichkeit, mehrere Feuerlöscher gleichzeitig einzusetzen. Ziel ist es, das Trainingserlebnis 
       praxisnäher und flexibler zu gestalten."
-      role='Programmierung, UX/UI-Entwicklung und -Integration, Erstellung von Animationen innerhalb der 
-      Engine, Integration von Hardware (einschließlich firmeneigener Entwicklungen), Implementierung von 
-      Hand-Tracking-Interaktionen'
+      role = {[
+      "Programmierung",
+      "UX/UI-Entwicklung und -Integration, Erstellung von Animationen innerhalb der Engine",
+      "Integration der Löscher-Hardware (einschließlich firmeneigener Entwicklungen)",
+      "Implementierung von Hand-Tracking-Interaktionen",
+      ]}
       infoTexts={["9", "2023 - heute", "Unity Engine"]}
       hardware={hardware}
       software={software}
