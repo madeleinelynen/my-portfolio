@@ -42,7 +42,8 @@ const About = () => {
             </p>
             <ul>
               <li>Schwerpunkt: Programmierung</li>
-              <li>Bachelorarbeit: AR in der Medizin (Note 1.0)</li>
+              <li>Bachelorarbeit: Experimentelles Game Design: Zum Einsatz von Augmented Reality als
+medizinische Behandlungsform | Note: 1.0 </li>
             </ul>
           </section>
 

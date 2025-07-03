@@ -319,7 +319,6 @@
     background-clip: padding-box;
     height: 50vh;
     overflow: auto;
-    background-color: #f85b00;
   }
 
   .hero-right {
@@ -334,7 +333,6 @@
     background-clip: padding-box;
     height: 50vh;
     overflow: auto;
-    background-color: aqua;
   }
 
   .hero-nav {
@@ -359,7 +357,7 @@
     display: none;
   }
 
-    .projects-section,
+  .projects-section,
   .intro-fullscreen,
   .about-section {
     height: auto;

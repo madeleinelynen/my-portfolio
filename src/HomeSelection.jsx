@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './HomeSelection.css';
 
 function HomeSelection({ onClickAbout, onClickProjekte }) {
@@ -7,49 +7,50 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
   const containerRef = useRef(null);
   const testRef = useRef(null);
 
-  const selections = ['projekte', 'about'];
-
+  const selections = ['PROJEKTE', 'ABOUT'];
   const [fontSize, setFontSize] = useState(10);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [hovered, setHovered] = useState(null);
 
-  const lineWidth = 2;
+  const lineWidth = 2; // Outline width in px if used for spacing
 
+  // Update window width on resize
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Dynamic font scaling
   useEffect(() => {
     const container = containerRef.current;
     const test = testRef.current;
-    if (!container || !test || container.clientWidth === 0) return;
+    if (!container || !test) return;
 
     const remToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
-    const gapInPx = 1.5 * remToPx;
+    const isMobile = windowWidth < 1200;
+    const gapPx = isMobile ? 0 : 1.5 * remToPx;
+    const { width: availW, height: availH } = container.getBoundingClientRect();
 
-    const availableWidth = container.getBoundingClientRect().width - gapInPx - lineWidth;
+    let perLinkH = (availH - gapPx) / selections.length;
+    const SAFETY = isMobile ? 0.10 : 0.05;
+    perLinkH *= (1 - SAFETY);
 
-    const style = window.getComputedStyle(container);
-    const longest = selections.reduce((a, b) => (a.length > b.length ? a : b), '');
+    // Prepare test element
+    const style = getComputedStyle(container);
+    const longest = selections.reduce((a, b) => (a.length > b.length ? a : b));
     test.textContent = longest;
-
-    test.style.fontFamily = style.fontFamily;
-    test.style.fontWeight = style.fontWeight;
-    test.style.letterSpacing = style.letterSpacing;
-    test.style.textTransform = style.textTransform;
-    test.style.lineHeight = style.lineHeight;
+    ['fontFamily','fontWeight','letterSpacing','textTransform','lineHeight'].forEach(prop => {
+      test.style[prop] = style[prop];
+    });
     test.style.whiteSpace = 'nowrap';
 
-    let min = 8;
-    let max = 1000;
-    let best = min;
-
+    let min = 8, max = 1000, best = min;
     while (min <= max) {
       const mid = Math.floor((min + max) / 2);
       test.style.fontSize = `${mid}px`;
-      if (test.getBoundingClientRect().width <= availableWidth) {
+      const { width: w, height: h } = test.getBoundingClientRect();
+      if (w <= availW - gapPx - lineWidth && h <= perLinkH) {
         best = mid;
         min = mid + 1;
       } else {
@@ -57,38 +58,48 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
       }
     }
 
-    setFontSize(best - 1);
-  }, [selections, windowWidth]);
+    setFontSize(best);
+  }, [windowWidth, selections]);
 
   return (
     <div ref={containerRef} className="hero-nav">
+
       <span
         ref={testRef}
         className="hero-nav-test"
-        style={{ fontSize }}
+        style={{ fontSize: `${fontSize}px`, visibility: 'hidden', position: 'absolute' }}
       />
 
       <div className="hero-nav-content">
-        <div className="hero-nav-links" style={{ fontSize }}>
+        <div className="hero-nav-links">
           <span
             ref={projekteRef}
             onClick={onClickProjekte}
             onMouseEnter={() => setHovered('projekte')}
             onMouseLeave={() => setHovered(null)}
             className={`nav-link ${hovered === 'projekte' ? 'hovered' : ''}`}
+            {...(windowWidth < 1200 ? { } : {style: { fontSize }})}
           >
             {selections[0]}
           </span>
 
           <span
-            ref={aboutRef}
-            onClick={onClickAbout}
-            onMouseEnter={() => setHovered('about')}
-            onMouseLeave={() => setHovered(null)}
-            className={`nav-link ${hovered === 'about' ? 'hovered' : ''}`}
-          >
-            {selections[1]}
-          </span>
+  ref={aboutRef}
+  onClick={onClickAbout}
+  onMouseEnter={() => setHovered('about')}
+  onMouseLeave={() => setHovered(null)}
+  className={`nav-link ${hovered === 'about' ? 'hovered' : ''}`}
+  style={
+    windowWidth > 1200
+      ? {
+          fontSize: `${fontSize}px`,
+          paddingBottom: '3rem'
+        }
+      : undefined
+  }
+>
+  {selections[1]}
+</span>
         </div>
 
         <div className="hero-nav-divider" />
