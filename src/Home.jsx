@@ -45,6 +45,14 @@ function Home() {
     aboutScrollRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
+//   const scrollToAbout = () => {
+//   const isMobile = window.innerWidth < 600;
+//   aboutScrollRef.current?.scrollIntoView({
+//     behavior: 'smooth',
+//     block: isMobile ? 'nearest' : 'start',
+//   });
+// };
+
   const projects = [
     { path: '/flamecoach', label: 'Flamecoach', img: flamecoachThumb, hoverImg: flamecoachHover },
     { path: '/flamecoach2', label: 'Flamecoach 2', img: flamecoach2Thumb, hoverImg: flamecoach2Hover },
@@ -133,9 +141,7 @@ function Home() {
       </div>
 
       <div ref={aboutScrollRef}>
-        <div className="about-content">
           <About/>
-        </div> 
       </div>
 
       <div ref={gridRef} className="projects-section">
