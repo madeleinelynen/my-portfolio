@@ -2,12 +2,14 @@ import ProjectPage from '../components/ProjectPage';
 import ImageCarousel from '../components/ImageCarousel';
 
 import titleImage from '../assets/images/VodafoneOMR/Title.jpg';
-import sideImage from '../assets/images/VodafoneOMR/Lvl01.PNG';
+import sideImage from '../assets/images/VodafoneOMR/vlcsnap-2025-07-08-15h26m50s248.png';
 
-import img1 from '../assets/images/VodafoneOMR/Lvl01.PNG';
-import img2 from '../assets/images/VodafoneOMR/Lvl01_Game.PNG';
-import img3 from '../assets/images/VodafoneOMR/Lvl04_Game.PNG';
+import img1 from '../assets/images/VodafoneOMR/Lvl02_Tutorial.PNG';
+import img2 from '../assets/images/VodafoneOMR/vlcsnap-2025-07-08-15h25m55s803.png';
+import img3 from '../assets/images/VodafoneOMR/vlcsnap-2025-07-08-15h26m01s907.png';
 import img4 from '../assets/images/VodafoneOMR/Branding_Lvl04.PNG';
+import img5 from '../assets/images/VodafoneOMR/vlcsnap-2025-07-08-15h27m02s036.png';
+import img6 from '../assets/images/VodafoneOMR/vlcsnap-2025-07-08-15h27m42s845.png';
 
 function VodafoneOMRPage() {
     const hardware = [
@@ -17,7 +19,7 @@ function VodafoneOMRPage() {
     ];
   
     const software = [
-    'Unity Engine 2021.???',
+    'Unity 2021.3 LTS',
     'Visual Studio 2022',
     'HTC Vive Focus Trackingspace'
     ];
@@ -40,7 +42,7 @@ function VodafoneOMRPage() {
       software={software}
       sideImage={sideImage}
     />
-    <ImageCarousel images={[img1, img2, img3, img4]} maxWidth="1000px" />;
+    <ImageCarousel images={[img1, img2, img3, img4, img5, img6]} maxWidth="1000px" />;
     </>
   );
 }

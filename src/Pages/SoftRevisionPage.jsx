@@ -13,14 +13,17 @@ function SoftRevisionPage() {
     const hardware = [
     'Vive Pro Eye',
     'Tactical Haptics Controller',
+    'Hand-Tracking-Technologie (Ultraleap)',
     'Ultraleap',
     ];
   
     const software = [
-    'Unity Engine 2021.???',
-    'Visual Studio 2022',
-    'Steam VR',
-    'Ultraleap'
+    'Unity 2021.3 LTS',
+    'Visual Studio 2019',
+    'SteamVR',
+    'Vive Input Utility (VIU)',
+    'SRanipal SDK (für Eye Tracking)',
+    'Ultraleap Gemini v5'
     ];
 
   return (

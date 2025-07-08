@@ -1,26 +1,20 @@
 import ProjectPage from '../components/ProjectPage';
 import ImageCarousel from '../components/ImageCarousel';
 
-import titleImage from '../assets/images/VodafoneOMR/Title.jpg';
-import sideImage from '../assets/images/VodafoneOMR/Lvl01.PNG';
-
-import img1 from '../assets/images/VodafoneOMR/Lvl01.PNG';
-import img2 from '../assets/images/VodafoneOMR/Lvl01_Game.PNG';
-import img3 from '../assets/images/VodafoneOMR/Lvl04_Game.PNG';
-import img4 from '../assets/images/VodafoneOMR/Branding_Lvl04.PNG';
+import titleImage from '../assets/images/5GCar/Banner.png';
+import sideImage from '../assets/images/5GCar/Bildschirmfoto 2020-01-30 um 12.24.14.png';
 
 function VodafoneGigacar() {
     const hardware = [
     'Valve Index',
     'Motion Seat',
-    'Multisensorische Integration (Duft, Hitze), schaltbar über LAN-Steckdosen',
+    'Multisensorische Integration (Duft), schaltbar über LAN-Steckdosen',
     ];
   
     const software = [
-    'Steam VR',
-    'Unity Engine 2021.???',
-    'Visual Studio 20??',
-    'HTC Vive Focus Trackingspace'
+    'SteamVR',
+    'Unity 2018.4 LTS',
+    'Visual Studio 2017',
     ];
 
   return (
@@ -28,20 +22,23 @@ function VodafoneGigacar() {
     <ProjectPage
       title ="Vodafone 5G Car"
       image={titleImage}
-      description="Lokaler VR-Multiplayer für bis zu vier Spielern, die in einer digitalen Arena in vier 
-      verschiedenen Leveln und jeweils vier verschiedenen Mechaniken um die meisten Punkte kämpfen müssen"
+      description="VR-Experience für Vodafone, in der Nutzer eine autonome Autofahrt erleben. 
+      Innerhalb des Autos liefert ein Display Echtzeitdaten, zielgerichtete Werbung und Sicherheitswarnungen. 
+      Zum Ende der Experience wird der Nutzer per Drohne in die Luft befördert und steuert ein Minispiel, bei dem er durch Ringe 
+      navigiert und Punkte sammeln kann."
            role = {[
-            "Programmierung unter Nutzung der implementierten MLAPI",
+            "Programmierung",
+            "Highscore-System",
             "UX/UI-Entwicklung und -Integration",
-            "Implementierung von Feedback auf der haptischen Weste",
-            "Technischer Support auf der OMR",
+            "Implementierung von Hand-Tracking-Interaktionen",
+            "Technischer Support auf den fünf Roadshow-Messe-Terminen",
             ]}
-      infoTexts={["0", "20xx - 20xx", "Unity Engine"]}
+      infoTexts={["7", "März 2019 - September 2019", "Unity Engine"]}
       hardware={hardware}
       software={software}
       sideImage={sideImage}
     />
-    <ImageCarousel images={[img1, img2, img3, img4]} maxWidth="1000px" />;
+    {/* <ImageCarousel images={[img1, img2, img3, img4]} maxWidth="1000px" />; */}
     </>
   );
 }

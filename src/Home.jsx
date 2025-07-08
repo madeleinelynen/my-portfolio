@@ -77,7 +77,7 @@ function Home() {
     { path: '/schumann', label: 'Schumann VR', img: schumannThumb, hoverImg: schumannHover },
     { path: '/essencityguide', label: 'Essen 1887', img: essenThumb, hoverImg: essenHover },
     { path: '/tirol', label: 'Experience Tirol', img: tirolThumb, hoverImg: tirolHover },
-    { path: '/thysseninfra', label: 'Thyssen Infrastructure', img: thyssenInfraThumb, hoverImg: thyssenInfraHover },
+    { path: '/terrainfra', label: 'Terra Infrastructure', img: thyssenInfraThumb, hoverImg: thyssenInfraHover },
     { path: '/trikottaufe', label: 'Fortuna Trikottaufe', img: trikottaufeThumb, hoverImg: trikottaufeHover }
   ];
 

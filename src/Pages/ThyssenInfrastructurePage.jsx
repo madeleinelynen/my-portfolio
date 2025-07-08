@@ -16,31 +16,35 @@ import img7 from '../assets/images/ThyssenInfrastructure/Screenshot_7.png';
 function ThyssenInfrastructurePage() {
     const hardware = [
     'VR-Brille mit Outside-in Tracking (Valve Index)',
-    'Taschenlampe mit Vive Tracker',
-    'Ultraleap',
+    'Modifizierte Taschenlampe mit Vive Tracker und digital steuerbaren Tasten für Unity',
+    'Hand-Tracking-Technologie (Ultraleap)',
+    'Multisensorische Integration (Wind), schaltbar über LAN-Steckdosen',
+    'Vive Tracker'
     ];
   
     const software = [
-    'Unity Engine 2021.???',
-    'Visual Studio 2022',
-    'Steam VR',
-    'Ultraleap'
+    'SteamVR',
+    'Unity 2021.3 LTS',
+    'Visual Studio 2019',
+    'Ultraleap Gemini v5'
     ];
 
-  return (
+    return (
     <>
     <ProjectPage
-      title ="Thyssen Infrastructure"
+      title ="Terra Infrastructure"
       image={titleImage}
-      description="Highscore-basierte VR-Anwendung zur Förderung und Training der Hand- und Augenkoordination 
-      von Patienten, möglichst nah am Prinzip der Spiegeltherapie, mit der Modifikation vom klassischen 
-      Hand-Tracking, sodass gezielt digitale Hände gespiegelt dargestellt werden können."
+      description="Interaktive VR-Experience zur Bohrung im Kappschen Meer für Terra Infrastructure. Die Nutzer:innen 
+      erleben eine Fahrt im virtuellen Transportkorb durch mehrere Stationen eines Forschungsschiffs bis zum Meeresgrund. 
+      Dort wird der Bohrvorgang – inklusive Sedimentauflockerung durch Vibration – immersiv dargestellt. 
+      Ein digitales Tablet mit Handtracking liefert begleitende Informationen und lädt zur Interaktion ein."
       role = {[
-      "Programmierung mit Fokus auf den reibungslosen Ablauf der Unity Timeline und die Entwicklung einer Hardware Taschenlampe, die in der Experience steuerbar ist",
-      "UX/UI-Integration und -Programmierung, sowohl World-Space als auch Overlay, interaktives Tablet",
-      "Implementierung von Hand-Tracking für interaktive Steuerung des digitalen Tablets",
+      "Programmierung mit Fokus auf den reibungslosen Ablauf der Unity Timeline und die Entwicklung von Mechaniken",
+      "Entwicklung einer modifizierten Taschenlampe mit Vive Tracker und digital steuerbaren Inputs für Unity",
+      "UX/UI-Design und -Implementierung – sowohl als World-Space-UI als auch als Overlay",
+      "Implementierung von Hand-Tracking zur intuitiven Steuerung eines digitalen Tablets",
       ]}
-      infoTexts={["8", "20?? - 20??", "Unity Engine"]}
+      infoTexts={["7", "Januar 2022 - Oktober 2022", "Unity Engine"]}
       hardware={hardware}
       software={software}
       sideImage={sideImage}

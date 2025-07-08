@@ -4,9 +4,12 @@ import ImageCarousel from '../components/ImageCarousel';
 import banner from '../assets/images/Aufwind/Banner.png';
 import sideImage from '../assets/images/Aufwind/Aufwind_keyvisual_Poster.jpg';
 
-import img1 from '../assets/images/Aufwind/Aufwind_keyvisual_Poster.jpg';
+import img1 from '../assets/images/Aufwind/vlcsnap-2025-07-08-15h07m49s889.png';
 import img2 from '../assets/images/Aufwind/Planetoy_Editor_2.png';
-import img3 from '../assets/images/Flamecoach2/Flamecoach2HoveringTile.png';
+import img3 from '../assets/images/Aufwind/Screenshot_aaa50705c.png';
+import img4 from '../assets/images/Aufwind/vlcsnap-2025-07-08-15h08m08s817.png';
+import img5 from '../assets/images/Aufwind/vlcsnap-2025-07-08-15h09m59s689.png';
+import img6 from '../assets/images/Aufwind/Screenshot_473ff.png';
 
 function AufwindPage() {
   const hardware = [
@@ -44,7 +47,7 @@ function AufwindPage() {
       websiteLink='https://www.aufwindvr.com/'
     />
 
-      <ImageCarousel images={[img1, img2, img3]} maxWidth="1000px" />;
+      <ImageCarousel images={[img1, img2, img3, img4, img5, img6]} maxWidth="1000px" />;
 
      {/* <div style={{ maxWidth: '1000px', margin: '2rem auto', fontFamily: "'Montserrat', sans-serif", textAlign:'center', }}>
       <h2 style={{ fontSize: '40px', marginBottom: '0.5rem' }}>Hand-Tracking Interaktionen</h2>

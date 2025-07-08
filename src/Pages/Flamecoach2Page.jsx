@@ -9,10 +9,8 @@ import './Flamecoach2Page.css';
 import titleImage from '../assets/images/Flamecoach2/Banner.jpg';
 import sideImage from '../assets/images/Flamecoach2/F2_modells.png';
 
-import img1 from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Cal_AWG.png';
-import img2 from '../assets/images/Flamecoach2/Flamecoach2HoveringTile.png';
-import img3 from '../assets/images/Flamecoach2/Flamecoach2HoveringTile.png';
-import img4 from '../assets/images/Flamecoach2/AwgInspector.png';
+import img1 from '../assets/images/Flamecoach2/Setup_Beispiel_01.png';
+import img2 from '../assets/images/Flamecoach2/AwgInspector.png';
 
 import imgUI_cal from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Cal_AWG.png';
 import imgUI_tracker from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Tracker_2.png';
@@ -91,7 +89,7 @@ function Flamecoach2Page() {
         sideImage={sideImage}
       />
 
-      <ImageCarousel images={[ img1, img2, img3, img4]} maxWidth="1000px" />;
+      <ImageCarousel images={[ img1, img2]} maxWidth="1000px" />;
       <ImageCarousel images={[ imgUI_Scenes, imgUI_cal, imgUI_tracker, imgUI_Pl_02, imgUI_Pl_04,imgUI_Pl_03]} maxWidth="1000px" />;
 
     {/* <div className="content-section">

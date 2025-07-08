@@ -1,8 +1,10 @@
 import ProjectPage from '../components/ProjectPage';
 import ImageCarousel from '../components/ImageCarousel';
-import titleImage from '../assets/images/Flamecoach/Banner.jpeg';
 
-import img1 from '../assets/images/Flamecoach/FC_Extinguisher.jpg';
+import titleImage from '../assets/images/Flamecoach/Banner.jpeg';
+import sideImage from '../assets/images/Flamecoach/FC_Extinguisher.jpg';
+
+import img1 from '../assets/images/Flamecoach/Screenshot_Office_5.jpeg';
 import img2 from '../assets/images/Flamecoach/Screenshot_Bus_Luxemburg.jpeg';
 import img3 from '../assets/images/Flamecoach/Flamecoach_2025-06-01_15-44-01.png';
 import img4 from '../assets/images/Flamecoach/Screenshot_Office_3.jpeg';
@@ -18,7 +20,7 @@ function FlamecoachPage() {
     'Windows Laptop',
     'VR-Brille mit Outside-in Tracking (Valve Index, ab 2023 Pimax Crystal)',
     'Multisensorische Integration (Duft, Hitze), schaltbar über LAN-Steckdosen',
-    'Hand-Tracking-Technologie (Leap, Ultraleap)',
+    'Hand-Tracking-Technologie (Leap Motion, Ultraleap)',
     'CodeMeter Lizenzstick',
     ];
   
@@ -28,7 +30,7 @@ function FlamecoachPage() {
     'Visual Studio (C#)',
     'CodeMeter License Editor',
     'Wibu',
-    'Leap Motion Software / Ultraleap',
+    'Leap Motion Software / Ultraleap SDK',
     ];
   
   return (
@@ -50,7 +52,7 @@ function FlamecoachPage() {
       infoTexts={["10", "2019 - heute", "Unity Engine"]}
       hardware={hardware}
       software={software}
-      sideImage={img1}
+      sideImage={sideImage}
       websiteLink='https://www.flamecoach.com'
     />
 

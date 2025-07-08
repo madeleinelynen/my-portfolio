@@ -31,7 +31,7 @@ function App() {
           <Route path="/schumann" element={<SchumannPage />} />
           <Route path="/essencityguide" element={<EssenCityguide />} />
           <Route path="/tirol" element={<TirolPage />} />
-          <Route path="/thysseninfra" element={<ThyssenInfrastructurePage />} />
+          <Route path="/terrainfra" element={<ThyssenInfrastructurePage />} />
           <Route path="/trikottaufe" element={<TrikottaufePage />} />
         </Routes>
       </div>

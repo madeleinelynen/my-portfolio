@@ -478,12 +478,13 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Mobile Anpassung */
 @media (max-width: 768px) {
   .content-wrapper {
     grid-template-columns: 1fr;
     height: auto !important;
     align-items: flex-start;
+    display: flex;
+    flex-direction: column;
   }
 
   .second-screen {
@@ -499,6 +500,19 @@ body {
   .card-tech-specs {
     max-height: none !important;
     overflow: visible !important;
+  }
+
+  .bottom-row {
+    order:3;
+  }
+
+  .top-left {
+    order: 1;
+  }
+
+  .top-right {
+    order: 2;
+    margin-top: 1.5rem;
   }
 }
 

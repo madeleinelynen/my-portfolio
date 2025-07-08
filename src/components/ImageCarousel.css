@@ -9,7 +9,6 @@
   justify-content: center;
   gap: 2px;
   height:100vh;
-  /* background-color: aqua; */
 }
 
 .carousel-container {
@@ -20,7 +19,6 @@
   border-radius: 8px;
   background: #000;
   user-select: none;
-  /* background-color: bisque; */
 }
 
 .carousel-track {
@@ -66,4 +64,11 @@
 
 .carousel-track.is-animating {
   transition: transform 0.45s ease;
+}
+
+@media (max-width: 1000px) {
+  .carousel-shell {
+    height: auto;         /* nimmt nur so viel Platz wie nötig */
+    padding: 1.5rem 0;    /* kleiner Abstand oben & unten */
+  }
 }

@@ -1,16 +1,16 @@
 import ProjectPage from '../components/ProjectPage';
 import titleImage from '../assets/images/Trikottaufe/Banner.png';
-import sideImage from '../assets/images/Trikottaufe/sideImage.jpg';
+import sideImage from '../assets/images/Trikottaufe/sideImage.png';
 import YoutubeEmbed from '../components/YoutubeEmbed';
 
 function TrikottaufePage() {
     const hardware = [
-    'Android Smartphone / Apple iPhone',
+    'Smartphone (Android & iOS)',
     ];
   
     const software = [
-    'Unity Engine 2017.???',
-    'Vuforia',
+    'Unity 2018.1.0f2',
+    'Vuforia Augmented Reality SDK',
     'Xcode'
     ];
 
@@ -28,7 +28,7 @@ function TrikottaufePage() {
       "Programmierung der Trikot-Animation und der UI-Funktionen",
       "Fristgerechte Veröffentlichung der App im Apple App Store",
       ]}
-      infoTexts={["3", "Juni - Juli 2018", "Unity Engine"]}
+      infoTexts={["3", "Juni 2018 - Juli 2018", "Unity Engine"]}
       hardware={hardware}
       software={software}
       sideImage={sideImage}

@@ -31,7 +31,7 @@ function EssenCityguide() {
       "Entwicklung interaktiver Mechaniken",
       "Verwaltung der vom Unternehmen für das Projekt genutzten Hardware durch das online Next-Gen Device Management Esper",
       ]}
-      infoTexts={["8", "2021 - 2023", "Unity Engine"]}
+      infoTexts={["16", "2021 - 2023", "Unity Engine"]}
       hardware={hardware}
       software={software}
       sideImage={sideImage}
