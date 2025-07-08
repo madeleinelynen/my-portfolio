@@ -1,6 +1,12 @@
 import ProjectPage from '../components/ProjectPage';
+import ImageCarousel from '../components/ImageCarousel';
 import titleImage from '../assets/images/Flamecoach/Banner.jpeg';
-import extinguisherCollection from '../assets/images/Flamecoach/FC_Extinguisher.jpg';
+
+import img1 from '../assets/images/Flamecoach/FC_Extinguisher.jpg';
+import img2 from '../assets/images/Flamecoach/Screenshot_Bus_Luxemburg.jpeg';
+import img3 from '../assets/images/Flamecoach/Flamecoach_2025-06-01_15-44-01.png';
+import img4 from '../assets/images/Flamecoach/Screenshot_Office_3.jpeg';
+import img5 from '../assets/images/Flamecoach/unknown3.png';
 
 function FlamecoachPage() {
     const hardware = [
@@ -20,21 +26,6 @@ function FlamecoachPage() {
     'Leap Motion Software / Ultraleap',
     ];
   
-    // const [code1, setCode1] = useState('');
-    // const [code2, setCode2] = useState('');
-  
-    // useEffect(() => {
-    //   fetch(process.env.PUBLIC_URL + '/code/Flamecoach2/Extinguisher/ExtinguisherInputManager.cs')
-    //     .then(res => res.text())
-    //     .then(setCode1)
-    //     .catch(err => console.error('Fehler beim Laden von code1:', err));
-  
-    //   fetch(process.env.PUBLIC_URL + '/code/Flamecoach2/ExtinguisherTrackerIdManager.cs')
-    //     .then(res => res.text())
-    //     .then(setCode2)
-    //     .catch(err => console.error('Fehler beim Laden von code2:', err));
-    // }, []);
-
   return (
     <>
     <ProjectPage
@@ -45,8 +36,8 @@ function FlamecoachPage() {
       sodass er in der virtuellen Umgebung ebenso sichtbar und steuerbar ist wie in der realen Welt. 
       Das System wurde bereits an mehr als 30 Kunden verkauft, darunter BMW, Daimler, Securitas und Commerzbank."
       role = {[
-      "Programmierung",
-      "UX/UI-Entwicklung und -Integration",
+      "Programmierung, inklusive Integration von Inputs der firmeneigenen Hardware",
+      "Verantwortung für UX/UI-Entwicklung und -Integration",
       "Erstellung von Animationen innerhalb der Engine",
       "Implementierung von Hand-Tracking-Interaktionen",
       "Einrichtung für Neukunden und Versionsverwaltung mit regelmäßigen Updates für Bestandskunden"
@@ -54,9 +45,11 @@ function FlamecoachPage() {
       infoTexts={["10", "2019 - heute", "Unity Engine"]}
       hardware={hardware}
       software={software}
-      sideImage={extinguisherCollection}
+      sideImage={img1}
       websiteLink='https://www.flamecoach.com'
     />
+
+    <ImageCarousel images={[img1, img2, img3, img4, img5]} maxWidth="1000px" />;
     </> 
   );
 }

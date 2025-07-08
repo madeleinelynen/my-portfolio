@@ -8,14 +8,11 @@ function ScrollToTopButton({ scrollTriggerFactor = 1.8 }) {
     const handleScroll = () => {
       const scrolledPx = window.scrollY;
       const viewportHeight = window.innerHeight;
-
-      // Dynamisch berechneter Schwellenwert
       const triggerPx = viewportHeight * scrollTriggerFactor;
 
       setIsVisible(scrolledPx >= triggerPx);
     };
 
-    // Initial einmal ausführen
     handleScroll();
 
     window.addEventListener("scroll", handleScroll, { passive: true });

@@ -1,6 +1,12 @@
 import ProjectPage from '../components/ProjectPage';
+import ImageCarousel from '../components/ImageCarousel';
+
 import banner from '../assets/images/Aufwind/Banner.png';
 import sideImage from '../assets/images/Aufwind/Aufwind_keyvisual_Poster.jpg';
+
+import img1 from '../assets/images/Aufwind/Aufwind_keyvisual_Poster.jpg';
+import img2 from '../assets/images/Aufwind/Planetoy_Editor_2.png';
+import img3 from '../assets/images/Flamecoach2/Flamecoach2HoveringTile.png';
 
 function AufwindPage() {
   const hardware = [
@@ -34,6 +40,8 @@ function AufwindPage() {
       sideImage={sideImage}
       websiteLink='https://www.aufwindvr.com/'
     />
+
+      <ImageCarousel images={[img1, img2, img3]} maxWidth="1000px" />;
 
      <div style={{ maxWidth: '1000px', margin: '2rem auto', fontFamily: "'Montserrat', sans-serif", textAlign:'center', }}>
       <h2 style={{ fontSize: '40px', marginBottom: '0.5rem' }}>Hand-Tracking Interaktionen</h2>

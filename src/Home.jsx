@@ -1,9 +1,10 @@
+import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import './style.css';
 import About from './About';
 import AnimatedNumberBlock from './components/AnimatedNumberBlock';
-import { useRef, useEffect, useState } from 'react';
+import HomeSelection from './HomeSelection';
 
 import flamecoachThumb from './assets/images/Flamecoach/Tile.png';
 import flamecoach2Thumb from './assets/images/Flamecoach2/Flamecoach2Tile.png';
@@ -27,31 +28,39 @@ import essenHover from './assets/images/EssenCityguide/Tile.png';
 import tirolHover from './assets/images/Tirol/HoveringTile.png';
 import trikottaufeHover from './assets/images/Trikottaufe/HoverTile.png';
 
-import HomeSelection from './HomeSelection';
-
 function Home() {
-  const aboutScrollRef = useRef();
-  const gridRef = useRef();
-  const headingRef = useRef();
+  const aboutScrollRef = useRef(null);
+  const projectsSectionRef = useRef(null); // Ref for the entire projects section
+  const gridRef = useRef(null);
 
-  const [columns, setColumns] = useState(4);
-  const [tileSize, setTileSize] = useState(150);
+  const cols = 4;
+  const gap = 16;
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (!gridRef.current) return;
+      const gridWidth = gridRef.current.offsetWidth;
+      const totalGap = gap * (cols - 1);
+      const tileSize = (gridWidth - totalGap) / cols;
+      gridRef.current.style.setProperty('--tile-size', `${tileSize}px`);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const scrollToProjectGrid = () => {
-    gridRef.current?.scrollIntoView({ behavior: 'smooth' });
+    projectsSectionRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
   };
 
   const scrollToAbout = () => {
     aboutScrollRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
-
-//   const scrollToAbout = () => {
-//   const isMobile = window.innerWidth < 600;
-//   aboutScrollRef.current?.scrollIntoView({
-//     behavior: 'smooth',
-//     block: isMobile ? 'nearest' : 'start',
-//   });
-// };
 
   const projects = [
     { path: '/flamecoach', label: 'Flamecoach', img: flamecoachThumb, hoverImg: flamecoachHover },
@@ -66,63 +75,19 @@ function Home() {
     { path: '/trikottaufe', label: 'Fortuna Trikottaufe', img: trikottaufeThumb, hoverImg: trikottaufeHover }
   ];
 
-  useEffect(() => {
-    const updateTileSize = () => {
-      if (!gridRef.current || !headingRef.current) return;
-
-      const viewportHeight = window.innerHeight;
-      const viewportWidth = window.innerWidth;
-
-      const headingHeight = headingRef.current.offsetHeight;
-      const availableHeight = viewportHeight - headingHeight - 32; // Padding
-      const availableWidth = viewportWidth - 32; // Padding
-
-      const gap = 16;
-      const minSize = 100;
-      const projectCount = projects.length;
-
-      let bestCols = 1;
-      let bestRows = projectCount;
-      let bestSize = minSize;
-
-      for (let cols = 1; cols <= projectCount; cols++) {
-        const rows = Math.ceil(projectCount / cols);
-
-        const totalGapWidth = gap * (cols - 1);
-        const totalGapHeight = gap * (rows - 1);
-
-        const maxWidth = (availableWidth - totalGapWidth) / cols;
-        const maxHeight = (availableHeight - totalGapHeight) / rows;
-        const tileSizeCandidate = Math.floor(Math.min(maxWidth, maxHeight));
-
-        if (tileSizeCandidate >= minSize && tileSizeCandidate > bestSize) {
-          bestSize = tileSizeCandidate;
-          bestCols = cols;
-          bestRows = rows;
-        }
-      }
-
-      setColumns(bestCols);
-      setTileSize(bestSize);
-    };
-
-    updateTileSize();
-    window.addEventListener('resize', updateTileSize);
-    return () => window.removeEventListener('resize', updateTileSize);
-  }, [projects.length]);
-
   return (
     <>
       <div className="hero-section">
         <div className="hero-screen">
           <div className="hero-left">
-            <HomeSelection onClickProjekte={scrollToProjectGrid} onClickAbout={scrollToAbout}/> 
+            <HomeSelection onClickProjekte={scrollToProjectGrid} onClickAbout={scrollToAbout} />
           </div>
-
           <div className="hero-right">
             <div className="hero-text-block">
               <p className="hero-headline">Madeleine Lynen</p>
-              <p className="hero-subline">Software Developer mit Fokus auf die Unity Engine und die Entwicklung von XR- und Mobile Projekten</p>
+              <p className="hero-subline">
+                Software Developer mit Fokus auf die Unity Engine und die Entwicklung von XR- und Mobile Projekten
+              </p>
             </div>
             <div className="stats-row">
               <AnimatedNumberBlock
@@ -141,19 +106,15 @@ function Home() {
       </div>
 
       <div ref={aboutScrollRef}>
-          <About/>
+        <About />
       </div>
 
-      <div ref={gridRef} className="projects-section">
-        <h2 ref={headingRef} className="projects-heading">Projektauszug</h2>
-        <div
-          className="projects-grid"
-          style={{
-            gridTemplateColumns: `repeat(${columns}, ${tileSize}px)`,
-            gridAutoRows: `${tileSize}px`,
-            gap: '16px'
-          }}
-        >
+      <div className="projects-section" ref={projectsSectionRef}>
+        <h2 className="projects-heading">
+          Projektauszug
+        </h2>
+
+        <div className="projects-grid" ref={gridRef}>
           {projects.map((proj, i) => (
             <Link to={proj.path} key={i} className="home-tile">
               <img src={proj.img} alt={proj.label} className="tile-img default" />

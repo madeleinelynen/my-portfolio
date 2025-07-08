@@ -1,3 +1,7 @@
+:root {
+  --dark-text: #1a1a1a;
+}
+
 .about-section {
   height: 100vh;
   display: flex;
@@ -6,7 +10,7 @@
   padding: 0;
   margin: 0;
   font-family: 'Inter', sans-serif;
-  color: #000;
+  color: var( --dark-text);
 }
 
 

@@ -8,9 +8,6 @@
 
 body.project-bg-dark {
   background:  var(--dark-bg);
-                /* url("https://www.transparenttextures.com/patterns/concrete-wall.png")
-                repeat; */
-  background-size: 320px 320px;
 }
 
 body {
@@ -160,18 +157,16 @@ body {
 }
 
 .description {
-  max-width: 600px;         /* schön begrenzte Spaltenbreite */
   width: 100%;
+  margin-left: 0;
   margin: 0 auto;
-
-  max-height: 50vh;         /* HÖHENBEGRENZUNG auf halbe Bildschirmhöhe */
-  overflow: hidden;         /* NICHT überlaufen lassen */
-  text-align: justify;      /* saubere linke/rechte Kante */
-  line-height: 1.5;         /* lesbare Zeilenhöhe */
-
+  max-height: 50vh;
+  overflow: hidden;   
+  text-align: justify;   
+  line-height: 1.5;        
+  color:white;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--dark-text);
   font-family: var(--font-family);
 }
 
@@ -214,14 +209,6 @@ body {
   max-width: 1000px;
   margin: 0 auto 3rem auto;
   align-items: stretch;
-}
-
-.side-image {
-  width: 45%;
-  border-radius: 8px;
-  object-fit: cover;
-  height: auto;
-  display: block;
 }
 
 .tech-specs-box {
@@ -286,7 +273,7 @@ body {
 .project-home-link {
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  left: 0.4rem;
   z-index: 2000;
   font-size: clamp(1rem, 2vw, 2rem);
   text-decoration: none;
@@ -294,7 +281,6 @@ body {
   font-family: 'Grayson', 'Inter', sans-serif;
   opacity: 0.85;
   transition: color 0.2s ease, letter-spacing 0.3s ease, opacity 0.3s;
-
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
@@ -318,7 +304,13 @@ body {
 }
 
 .project-website-link {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #ee9f89;
+}
+.project-website-link a {
+  color: #ee9f89;
+  text-decoration: none;
 }
 
 .project-website-link a:link,
@@ -336,9 +328,11 @@ body {
 }
 
 .role-section {
-  margin-top: 2rem;  /* Abstand zur Description */
+  margin-top: 2rem;
   max-width: 600px;
   width: 100%;
+  margin-top: auto; 
+  margin-bottom: 0; 
 }
 
 .section-heading {
@@ -349,7 +343,7 @@ body {
 }
 
 .role-list {
-  list-style-type: disc;
+  list-style-type: square;
   padding-left: 1.5rem;
   margin: 0;
   display: flex;
@@ -367,23 +361,55 @@ body {
 
 .second-screen {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: stretch;
-  overflow: visible;
 }
 
 .content-wrapper {
   display: grid;
+  grid-template-areas:
+    "top-left  top-right"
+    "bottom    bottom";
   grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
   gap: clamp(2rem, 6vw, 4rem);
-  margin: 5% 5%;
-  height: auto;
+  margin: 3% 5%;
+  width: 100%;
+  max-width: 1400px;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
+.top-left   { 
+  grid-area: top-left;  
+  display: flex; 
+  flex-direction: column; 
+  gap: 1.5rem;
+  height: 100%; 
+}
+
+.top-right  { 
+  grid-area: top-right; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+}
+
+.side-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  object-fit: cover;
+  height: auto;
+  display: block;
+}
+
+.bottom-row { 
+  grid-area: bottom; 
+    background-color: #ee9f89;
+}
 
 .left-column {
   display: flex;
@@ -391,6 +417,8 @@ body {
   gap: 1.5rem;
   max-width: 600px;
   width: 100%;
+  overflow-y: auto;
+  background-color: #e8e8e8;
 }
 
 .left-column .description {
@@ -400,73 +428,75 @@ body {
   max-height: 100%;
 }
 
-/* Rechte Seite: Zwei Cards */
 .right-column {
   display: flex;
+  background-color: aqua;
   flex-direction: column;
   gap: 2rem;
-  overflow: auto;                  /* falls notwendig */
-}
-
-/* Beide Karten gleich gestalten */
-.card {
-  flex: 1 1 0;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
-  border-radius: 1.2rem;
-  padding: 1.5rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
-  color: #fff;
   overflow: auto;
 }
 
-/* Titel + Text */
+.card-tech-specs {
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 0.2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.35);
+  color: #fff;
+  max-height: 40vh;     /* Scroll-Barriere */
+  overflow-y: auto;
+  font-size: clamp(0.9rem, 2.5vh, 1rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.spec-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-tech-specs h4 {
+  margin: 0 0 0.5rem 0;
+}
+.card-tech-specs h4:not(:first-child) {
+  margin-top: 0;  
+}
+.card-tech-specs ul {
+  list-style: square;
+  padding-left: 1.2rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
 .section-heading {
   margin-top: 0;
   font-size: clamp(1.3rem, 3vw, 1.8rem);
   letter-spacing: 0.03em;
 }
 
-.card-tech-specs h4 {
-  margin-top: 1rem;
-  font-weight: 600;
-}
-
-.card-tech-specs ul {
-  padding-left: 1.2rem;
-  list-style: square;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-
 /* Mobile Anpassung */
 @media (max-width: 768px) {
   .content-wrapper {
     grid-template-columns: 1fr;
-    height: 100vh; /* nicht 90, sondern ganz */
+    height: auto !important;
+    align-items: flex-start;
+  }
+
+  .second-screen {
+    min-height: 100vh;
+    height: auto !important;
   }
 
   .right-column {
     margin-top: 2rem;
-  }
-}
-
-
-@media (max-width: 600px) {
-  .hero-info-group {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    overflow: visible;
   }
 
-  .hero-info-item {
-    font-size: 1rem;
-  }
-
-  .hero-title {
-    font-size: clamp(2rem, 6vw, 4rem);
+  .card-tech-specs {
+    max-height: none !important;
+    overflow: visible !important;
   }
 }
 
