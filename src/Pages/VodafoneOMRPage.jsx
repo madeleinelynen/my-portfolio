@@ -1,6 +1,13 @@
 import ProjectPage from '../components/ProjectPage';
-import titleImage from '../assets/images/VodafoneOMR/Branding_Lvl04.PNG';
+import ImageCarousel from '../components/ImageCarousel';
+
+import titleImage from '../assets/images/VodafoneOMR/Title.jpg';
 import sideImage from '../assets/images/VodafoneOMR/Lvl01.PNG';
+
+import img1 from '../assets/images/VodafoneOMR/Lvl01.PNG';
+import img2 from '../assets/images/VodafoneOMR/Lvl01_Game.PNG';
+import img3 from '../assets/images/VodafoneOMR/Lvl04_Game.PNG';
+import img4 from '../assets/images/VodafoneOMR/Branding_Lvl04.PNG';
 
 function VodafoneOMRPage() {
     const hardware = [
@@ -16,6 +23,7 @@ function VodafoneOMRPage() {
     ];
 
   return (
+    <>
     <ProjectPage
       title ="Vodafone OMR"
       image={titleImage}
@@ -32,6 +40,8 @@ function VodafoneOMRPage() {
       software={software}
       sideImage={sideImage}
     />
+    <ImageCarousel images={[img1, img2, img3, img4]} maxWidth="1000px" />;
+    </>
   );
 }
 

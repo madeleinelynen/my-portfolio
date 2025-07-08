@@ -1,60 +1,61 @@
+:root {
+  --base-white: rgb(255, 255, 255);
+  --highlight-beige: #ee9f89;
+}
 
 .scroll-to-top-button {
   position: fixed;
   bottom: 1rem;
-  left: 1rem;
+  left: 2.5%;
+  background-color: transparent;
   display: inline-flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 0.6rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.4rem 0.8rem;
-  z-index: 2000;
+    border: none;         
+  outline: none;      
+  box-shadow: none; 
+ z-index: 2000;
 
+  transform: translateX(-50%) translateY(10px);
+  transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
 .scroll-to-top-button.visible {
-  opacity: 0.85;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.scroll-to-top-button.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-}
-
-.scroll-to-top-button:hover {
+  transform: translateX(-50%) translateY(0);
   opacity: 1;
+  visibility: visible;
 }
 
 .scroll-line {
-  display: block;
   width: 2px;
-  height: 3rem;  /* Länge wie oben beim Home-Button */
-  background-color: white;
+  height: 3rem;
+  background-color: var(--base-white);
   opacity: 0.7;
-  transition: background-color 0.3s, opacity 0.3s;
 }
 
 .scroll-arrow {
   font-size: clamp(1rem, 2vw, 2rem);
-  color: white;
+  color: var(--base-white);
   font-family: 'Grayson', 'Inter', sans-serif;
-  transition: color 0.2s ease;
+  transition: transform 0.4s ease, color 0.4s ease;
 }
 
 .scroll-to-top-button:hover .scroll-arrow {
-  color: #ee9f89;
+  color: var(--highlight-beige);
+  transform: translateY(-4px);
 }
 
-.scroll-to-top-button:hover .scroll-line {
-  background-color: #ee9f89;
-  opacity: 1;
+/* ——— Mobile ——— */
+@media (max-width: 900px) {
+  .scroll-to-top-button {
+    padding: 0.5rem;
+  }
+  .scroll-to-top-button .scroll-line {
+    display: none;
+  }
+  .scroll-to-top-button .scroll-arrow {
+    font-size: 1.8rem;
+  }
 }

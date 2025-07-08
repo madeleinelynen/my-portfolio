@@ -1,0 +1,88 @@
+/* === Seitenstruktur === */
+.page-container {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Inhalt: Allgemein === */
+.content-section {
+  margin: 5% 5%;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 28px;
+  color: #888;
+  margin-top: 1.5rem;
+}
+
+/* === Integration der Feuerlöscher-Controller === */
+.integration-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.integration-points {
+  list-style-position: inside;
+  text-align: left;
+  line-height: 1.8;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  max-width: 600px;
+}
+
+/* === Utility-Klassen für weitere Abschnitte === */
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.list-inside {
+  list-style-position: inside;
+  text-align: left;
+  line-height: 1.8;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  max-width: 600px;
+}
+
+/* === Bilder (Full Width) === */
+.full-width-image {
+  width: 100%;
+  display: block;
+  margin: 2rem 0;
+}
+
+/* === Responsives Verhalten === */
+@media (max-width: 900px) {
+  .integration-column {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-subtitle {
+    font-size: 22px;
+  }
+
+  .integration-points,
+  .list-inside {
+    max-width: 100%;
+  }
+}

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from "react-router-dom";
+import ImageCarousel from '../components/ImageCarousel';
 import iconGroup from '../assets/images/Icons/GroupIcon_black.png';
 import iconClock from '../assets/images/Icons/ClockIcon_black.png';
 import iconEngine from '../assets/images/Icons/UnityIcon_black.png';
@@ -31,11 +32,9 @@ title,
   }, []);
 
   return (
-    <>
-    <div className="project-page">
-      <Link to="/" className="project-home-link">
-        Home
-      </Link>
+  <>
+  <div className="project-page">
+      <Link to="/" className="project-home-link"> Home </Link>
 
 <div className="project-page-container">
   {/* OBERER TEIL: horizontal angeordnet */}
@@ -64,57 +63,70 @@ title,
     </div>
   </div>
 
-  {/* ---------- SECOND SCREEN ---------- */}
 <section className="second-screen">
   <div className="content-wrapper">
 
-    {/* Linke Spalte: Beschreibung */}
-<div className="left-column">
-  <p className="description">{description}</p>
+   {/* ---------- TOP‑ROW ---------- */}
+    {/* linke Spalte */}
+    <div className="top-left">
+      <div className="description">
+        {description}
+      </div>
 
-  {websiteLink && (
-    <div className="project-website-link">
-      <a href={websiteLink} target="_blank" rel="noopener noreferrer">
-        Zur Projektwebsite →
-      </a>
-    </div>
-  )}
-
-  <div className="role-section">
-    <h3 className="section-heading">Meine Beteiligung</h3>
-    <ul className="role-list">
-      {role.map((item, i) => (
-        <li key={`role-${i}`}>{item}</li>
-      ))}
-    </ul>
-  </div>
-</div>
-
-    {/* Rechte Spalte: zwei gestapelte Karten */}
-    <div className="right-column">
-      {(hardware.length > 0 || software.length > 0) && (
-        <div className="card card-tech-specs">
-          {hardware.length > 0 && (
-            <>
-              <h4>Verwendete Hardware</h4>
-              <ul>{hardware.map((item, i) => <li key={`hw-${i}`}>{item}</li>)}</ul>
-            </>
-          )}
-          {software.length > 0 && (
-            <>
-              <h4>Verwendete Software</h4>
-              <ul>{software.map((item, i) => <li key={`sw-${i}`}>{item}</li>)}</ul>
-            </>
-          )}
+      {websiteLink && (
+        <div className="project-website-link">
+          <a href={websiteLink} target="_blank" rel="noopener noreferrer">
+            Zur Projektwebsite →
+          </a>
         </div>
       )}
 
+      <div className="role-section">
+        <h3 className="section-heading">Meine Beteiligung</h3>
+        <ul className="role-list">
+          {role.map((item, i) => (
+            <li key={`role-${i}`}>{item}</li>
+          ))}
+        </ul>
+      </div>
     </div>
 
+{/* rechte Spalte */}
+    <div className="top-right">
+      {sideImage && (
+        <img src={sideImage} alt="Side visual" className="side-image" />
+      )}
+    </div>
+
+{/* ---------- BOTTOM‑ROW ---------- */}
+{(hardware.length > 0 || software.length > 0) && (
+  <div className="bottom-row card-tech-specs">
+    {hardware.length > 0 && (
+      <div className="spec-column">
+        <h4>Hardware</h4>
+        <ul>
+          {hardware.map((item, i) => (
+            <li key={`hw-${i}`}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    {software.length > 0 && (
+      <div className="spec-column">
+        <h4>Software</h4>
+        <ul>
+          {software.map((item, i) => (
+            <li key={`sw-${i}`}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    )}
   </div>
+)}
+
+      </div>
 </section>
-
-
 </div>
 </div>
 <ScrollToTopButton scrollTriggerFactor={0.9} />

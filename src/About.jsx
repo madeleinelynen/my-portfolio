@@ -2,11 +2,10 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div className="about-section">
-      <h1 className="about-heading">ABOUT</h1>
-
-      <div className="about-columns">
-        <div className="about-column">
+<div className="about-section">
+  <h1 className="about-heading">ABOUT</h1>
+  <div className="about-grid">
+    
           <section>
             <h2 className="about-subheading">Über mich</h2>
             <p>
@@ -23,9 +22,7 @@ const About = () => {
               <li>Mentoring & Leadership</li>
             </ul>
           </section>
-        </div>
 
-        <div className="about-column">
           <section>
             <h2 className="about-subheading">Kompetenzen</h2>
             <ul>
@@ -45,12 +42,11 @@ const About = () => {
             </p>
             <ul>
               <li>Schwerpunkt: Programmierung</li>
-              <li>Bachelorarbeit: AR in der Medizin (Note 1.0)</li>
+              <li>Bachelorarbeit: Experimentelles Game Design: Zum Einsatz von Augmented Reality als
+medizinische Behandlungsform | Note: 1.0 </li>
             </ul>
           </section>
-        </div>
 
-        <div className="about-column">
           <section>
             <h2 className="about-subheading">Schlüsselerfolge</h2>
             <ul>
@@ -74,9 +70,9 @@ const About = () => {
               <li>Technischer Messe-Support</li>
             </ul>
           </section>
-        </div>
-      </div>
+
     </div>
+  </div>
   );
 };
 

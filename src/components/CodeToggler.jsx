@@ -3,68 +3,38 @@ import './CodeToggler.css';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-function CodeToggler({ code, label = "Codeblock" }) {
+function CodeToggler({ code, label = 'Codeblock' }) {
   const [visible, setVisible] = useState(false);
 
   return (
-  <div style={{ marginBottom: '1rem' }}>
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '1rem',
-      marginBottom: '1rem'
-    }}>
-      <span style={{ fontFamily: "'Montserrat', sans-serif", color: 'white', lineHeight: '1' }}>
-        {label}
-      </span>
-      <button
-        onClick={() => setVisible(!visible)}
-        style={{
-          padding: '0.4rem 0.8rem',
-          fontSize: '0.9rem',
-          lineHeight: '1',
-          borderRadius: '4px',
-          border: 'none',
-          cursor: 'pointer',
-          backgroundColor: '#444',
-          color: 'white',
-        }}
-      >
-        {visible ? 'Code ausblenden' : 'Code anzeigen'}
-      </button>
-    </div>
+    <div className="code-toggler">
+      <div className="code-toggler__header">
+        <span className="code-toggler__label">{label}</span>
 
-    {visible && (
-      <div style={{ 
-            width: '100vw',          
-            position: 'relative',
-            left: '50%',
-            right: '50%',
-            marginLeft: '-50vw',
-            marginRight: '-50vw',
-            padding: '2rem 0',
-        }}>
-        <SyntaxHighlighter
-          language="csharp"
-          style={atomDark}
-          showLineNumbers
-          wrapLines
-          customStyle={{
-            borderRadius: '6px',
-            width: '100%',
-            padding: '1rem',
-            fontSize: '14px',
-            fontSize: '14px',
-          }}
+        <button
+          className="code-toggler__button"
+          onClick={() => setVisible(!visible)}
         >
-          {code}
-        </SyntaxHighlighter>
+          {visible ? 'Code ausblenden' : 'Code anzeigen'}
+        </button>
       </div>
-    )}
-  </div>
-);
 
+      {visible && (
+        <div className="code-toggler__code-wrapper">
+          <SyntaxHighlighter
+            language="csharp"
+            style={atomDark}
+            showLineNumbers
+            wrapLines
+            className="code-toggler__code-block"
+          >
+            {code}
+          </SyntaxHighlighter>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default CodeToggler;
+
