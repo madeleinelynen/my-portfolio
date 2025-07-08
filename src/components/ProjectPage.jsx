@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
 import ImageCarousel from '../components/ImageCarousel';
 import iconGroup from '../assets/images/Icons/GroupIcon_black.png';
@@ -24,6 +24,7 @@ title,
   }, []);
 
   const icons = [iconGroup, iconClock, iconEngine];
+const secondScreenRef = useRef(null);
 
   useEffect(() => {
     document.body.classList.add("project-bg-dark");
@@ -53,9 +54,9 @@ title,
 
       <h1
         className="hero-title"
-        onClick={() =>
-          window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })
-        }
+        onClick={() => {
+          secondScreenRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }}
       >
         {title}
       </h1>
@@ -63,7 +64,7 @@ title,
     </div>
   </div>
 
-<section className="second-screen">
+<section className="second-screen" ref={secondScreenRef}>
   <div className="content-wrapper">
 
    {/* ---------- TOP‑ROW ---------- */}

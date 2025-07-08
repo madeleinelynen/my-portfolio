@@ -305,6 +305,7 @@ body {
 
 .project-website-link {
   margin-top: 0.5rem;
+  width: 100%;
   font-size: 1rem;
   color: #ee9f89;
 }
@@ -329,9 +330,7 @@ body {
 
 .role-section {
   margin-top: 2rem;
-  max-width: 600px;
   width: 100%;
-  margin-top: auto; 
   margin-bottom: 0; 
 }
 
@@ -385,7 +384,10 @@ body {
   grid-area: top-left;  
   display: flex; 
   flex-direction: column; 
-  gap: 1.5rem;
+   justify-content: center;
+  gap: 0.5rem;
+   align-items: center;
+   text-align: left;
   height: 100%; 
 }
 
@@ -404,11 +406,11 @@ body {
   object-fit: cover;
   height: auto;
   display: block;
+    z-index: 100;
 }
 
 .bottom-row { 
   grid-area: bottom; 
-    background-color: #ee9f89;
 }
 
 .left-column {
@@ -418,7 +420,6 @@ body {
   max-width: 600px;
   width: 100%;
   overflow-y: auto;
-  background-color: #e8e8e8;
 }
 
 .left-column .description {
@@ -445,6 +446,7 @@ body {
   box-shadow: 0 0 20px rgba(0,0,0,0.35);
   color: #fff;
   max-height: 40vh;     /* Scroll-Barriere */
+  align-items: center;
   overflow-y: auto;
   font-size: clamp(0.9rem, 2.5vh, 1rem);
   display: grid;

@@ -9,15 +9,18 @@ import './Flamecoach2Page.css';
 import titleImage from '../assets/images/Flamecoach2/Banner.jpg';
 import sideImage from '../assets/images/Flamecoach2/F2_modells.png';
 
-import streamnozzle from '../assets/images/Flamecoach2/AwgInspector.png';
-import streamnozzleCal from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Cal_AWG.png';
-import trackerUI from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Tracker_2.png';
-import sceneUI from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Scenes.png';
-import playlist1 from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Playlist_1.1.png';
-import playlist2 from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Playlist_1.2.png';
-
+import img1 from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Cal_AWG.png';
 import img2 from '../assets/images/Flamecoach2/Flamecoach2HoveringTile.png';
 import img3 from '../assets/images/Flamecoach2/Flamecoach2HoveringTile.png';
+import img4 from '../assets/images/Flamecoach2/AwgInspector.png';
+
+import imgUI_cal from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Cal_AWG.png';
+import imgUI_tracker from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Tracker_2.png';
+import imgUI_Scenes from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Scenes.png';
+import imgUI_Pl_01 from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Playlist_1.1.png';
+import imgUI_Pl_02 from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Playlist_1.2.png';
+import imgUI_Pl_03 from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Playlist_1.3.png';
+import imgUI_Pl_04 from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Playlist_1.4.png';
 
 function Flamecoach2Page() {
 
@@ -31,6 +34,7 @@ function Flamecoach2Page() {
   ];
 
   const software = [
+    'Steam VR',
     'Unity Engine 2023.2',
     'Visual Studio (C#)', 
     'CodeMeter License Editor',
@@ -87,9 +91,10 @@ function Flamecoach2Page() {
         sideImage={sideImage}
       />
 
-      <ImageCarousel images={[ img2, img3]} maxWidth="1000px" />;
+      <ImageCarousel images={[ img1, img2, img3, img4]} maxWidth="1000px" />;
+      <ImageCarousel images={[ imgUI_Scenes, imgUI_cal, imgUI_tracker, imgUI_Pl_02, imgUI_Pl_04,imgUI_Pl_03]} maxWidth="1000px" />;
 
-    <div className="content-section">
+    {/* <div className="content-section">
           
   <h2 className="section-title">Integration der Feuerlöscher-Controller</h2>
   <h3 className="section-subtitle">Integrationsbeispiel am Strahlrohr</h3>
@@ -105,7 +110,6 @@ function Flamecoach2Page() {
     </ul>
 
     {awg1 && <CodeToggler code={awg1} label="AWGNozzleInputManager.cs" />}
-    {/* {awg2 && <CodeToggler code={awg2} label="AWGNozzleInputVisuals.cs" />} */}
   </div>
 
 
@@ -163,7 +167,7 @@ function Flamecoach2Page() {
           src={streamnozzleCal} 
           alt="streamnozzlecalibration"
         />
-      </div>
+      </div>*/}
     </div>
   );
 }

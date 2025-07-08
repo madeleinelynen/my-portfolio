@@ -9,18 +9,8 @@ const About = () => {
           <section>
             <h2 className="about-subheading">Über mich</h2>
             <p>
-              Über fünf Jahre Erfahrung in der Softwareentwicklung mit fundierter Expertise in C# und C++, spezialisiert auf XR, App-Entwicklung und Games. Technische Präzision trifft auf ästhetische UX.
+              Über fünf Jahre Erfahrung in der Softwareentwicklung mit fundierter Expertise in C# und C++, spezialisiert auf XR, App-Entwicklung und Games.
             </p>
-          </section>
-
-          <section>
-            <h2 className="about-subheading">Kooperationsfähigkeiten</h2>
-            <ul>
-              <li>Multitasking & Teamarbeit</li>
-              <li>Verantwortungsübernahme</li>
-              <li>Kontinuierliche Weiterbildung</li>
-              <li>Mentoring & Leadership</li>
-            </ul>
           </section>
 
           <section>
@@ -36,23 +26,21 @@ const About = () => {
           </section>
 
           <section>
-            <h2 className="about-subheading">Ausbildung</h2>
-            <p className="font-semibold">
-              Game Design B.Sc.<br />Mediadesign Hochschule, Düsseldorf (2015–2019)
-            </p>
+            <h2 className="about-subheading">Schlüsselerfolge</h2>
             <ul>
-              <li>Schwerpunkt: Programmierung</li>
-              <li>Bachelorarbeit: Experimentelles Game Design: Zum Einsatz von Augmented Reality als
-medizinische Behandlungsform | Note: 1.0 </li>
+              <li>Zentrale Rolle bei der Entwicklung eines VR-Feuerlöschtrainingssystems (seit 2019)</li>
+              <li>Zentrale Rolle bei der Entwicklung öffentlich zugänglicher VR-Erlebnisse (seit 2021)</li>
+              <li>Lead Programmierer für ein Puzzle-basiertes Multiplayer-Spiels (2021–2024)</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="about-subheading">Schlüsselerfolge</h2>
+            <h2 className="about-subheading">Kooperationsfähigkeiten</h2>
             <ul>
-              <li>VR-Feuerlöschtraining (seit 2019)</li>
-              <li>VR-Erlebnisse mit Neonreal (seit 2021)</li>
-              <li>Puzzle-Multiplayer mit Android & Quest 2 (2021–2024)</li>
+              <li>Multitasking & Teamarbeit</li>
+              <li>Verantwortungsübernahme</li>
+              <li>Kontinuierliche Weiterbildung</li>
+              <li>Mentoring & Leadership</li>
             </ul>
           </section>
 
@@ -68,6 +56,19 @@ medizinische Behandlungsform | Note: 1.0 </li>
               <li>UI/UX-Konzeption & Integration</li>
               <li>SDK/Hardware-Einbindung</li>
               <li>Technischer Messe-Support</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="about-subheading">Ausbildung</h2>
+            <p className="font-semibold">
+              Game Design B.Sc.<br />Mediadesign Hochschule, Düsseldorf (2015–2019)
+            </p>
+            <ul>
+              <li>Abschluss in Regelstudienzeit</li>
+              <li>Schwerpunkt: Programmierung</li>
+              <li>Bachelorarbeit: Experimentelles Game Design: Zum Einsatz von Augmented Reality als
+medizinische Behandlungsform | Note: 1.0 </li>
             </ul>
           </section>
 

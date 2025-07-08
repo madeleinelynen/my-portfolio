@@ -11,8 +11,8 @@ import img3 from '../assets/images/Flamecoach2/Flamecoach2HoveringTile.png';
 function AufwindPage() {
   const hardware = [
   'Varjo Aero',
-  'Yaw Motion Seat',
-  'Game Controller Lenkrad',
+  'YAW VR Motion Seat',
+  'Game-Controller Lenkrad',
   'Hand-Tracking-Technologie (Ultraleap)',
   'Multisensorische Integration (Duft, Hitze), schaltbar über LAN-Steckdosen'
   ];
@@ -20,6 +20,9 @@ function AufwindPage() {
   const software = [
   'Unity Engine 2021.3',
   'Visual Studio 2022',
+  'YAW VR Motion Simulator',
+  'Ultraleap Software',
+  'Varjo Base',
   ];
 
   return (
@@ -43,7 +46,7 @@ function AufwindPage() {
 
       <ImageCarousel images={[img1, img2, img3]} maxWidth="1000px" />;
 
-     <div style={{ maxWidth: '1000px', margin: '2rem auto', fontFamily: "'Montserrat', sans-serif", textAlign:'center', }}>
+     {/* <div style={{ maxWidth: '1000px', margin: '2rem auto', fontFamily: "'Montserrat', sans-serif", textAlign:'center', }}>
       <h2 style={{ fontSize: '40px', marginBottom: '0.5rem' }}>Hand-Tracking Interaktionen</h2>
 
       <h3 style={{ fontSize: '28px', color: '#888',textAlign:'center', }}>Custom Greifpositionen</h3>
@@ -62,7 +65,7 @@ function AufwindPage() {
         //hier script 
       </p>
     
-     </div>
+     </div> */}
     </>   
 
   );
