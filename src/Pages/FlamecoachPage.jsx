@@ -1,13 +1,13 @@
 import ProjectPage from '../components/ProjectPage';
 import ImageCarousel from '../components/ImageCarousel';
 
-import titleImage from '../assets/images/Flamecoach/Banner.jpeg';
+import titleImage from '../assets/images/Flamecoach/Banner.png';
 import sideImage from '../assets/images/Flamecoach/FC_Extinguisher.jpg';
 
-import img1 from '../assets/images/Flamecoach/Screenshot_Office_5.jpeg';
-import img2 from '../assets/images/Flamecoach/Screenshot_Bus_Luxemburg.jpeg';
+import img1 from '../assets/images/Flamecoach/Screenshot_Office_5.png';
+import img2 from '../assets/images/Flamecoach/Screenshot_Bus_Luxemburg.png';
 import img3 from '../assets/images/Flamecoach/Flamecoach_2025-06-01_15-44-01.png';
-import img4 from '../assets/images/Flamecoach/Screenshot_Office_3.jpeg';
+import img4 from '../assets/images/Flamecoach/Screenshot_Office_3.png';
 import img5 from '../assets/images/Flamecoach/unknown3.png';
 
 import imgUI1 from '../assets/images/Flamecoach/Flamecoach_UI_2025-05-24_20-37-09.png';

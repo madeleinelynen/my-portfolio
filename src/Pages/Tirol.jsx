@@ -1,7 +1,7 @@
 import ProjectPage from '../components/ProjectPage';
 import ImageCarousel from '../components/ImageCarousel';
 
-import titleImage from '../assets/images/Tirol/Banner.png';
+import titleImage from '../assets/images/Tirol/Banner.jpg';
 import sideImage from '../assets/images/Tirol/sideImage.jpg';
 
 import img1 from '../assets/images/Tirol/vlcsnap-2025-07-08-11h25m00s791.png';
