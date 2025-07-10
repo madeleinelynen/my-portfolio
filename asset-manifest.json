@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-portfolio/static/css/main.73794a33.css",
-    "main.js": "/my-portfolio/static/js/main.9c981a71.js",
+    "main.js": "/my-portfolio/static/js/main.8cdd4a84.js",
     "static/js/453.41811d64.chunk.js": "/my-portfolio/static/js/453.41811d64.chunk.js",
     "static/media/Screenshot_Ocean_2.png": "/my-portfolio/static/media/Screenshot_Ocean_2.075c3ceda819594e8c31.png",
     "static/media/Banner.png": "/my-portfolio/static/media/Banner.08a9bed93ac469b597f9.png",
@@ -51,6 +51,7 @@
     "static/media/Bildschirmfoto+2023-03-02+um+17.05.03.png": "/my-portfolio/static/media/Bildschirmfoto+2023-03-02+um+17.05.03.607824ea24426c18e4ba.png",
     "static/media/vlcsnap-2025-07-08-11h26m27s257.png": "/my-portfolio/static/media/vlcsnap-2025-07-08-11h26m27s257.73026accf2e09b694490.png",
     "static/media/Oddy-14.jpg": "/my-portfolio/static/media/Oddy-14.ec9d54dedf166ce1e725.jpg",
+    "static/media/sideImage.png": "/my-portfolio/static/media/sideImage.deb48493a6ab5a8e5858.png",
     "static/media/Lvl02_Tutorial.PNG": "/my-portfolio/static/media/Lvl02_Tutorial.4cd28b8a7146c19a0427.PNG",
     "static/media/AwgInspector.png": "/my-portfolio/static/media/AwgInspector.7b66dd05b5e1a3e3119b.png",
     "static/media/Tile.png": "/my-portfolio/static/media/Tile.07c66c7fc4af2e73d35f.png",
@@ -69,7 +70,6 @@
     "static/media/Softrevision_Web3.jpg": "/my-portfolio/static/media/Softrevision_Web3.576f7a01f16bc0e968d2.jpg",
     "static/media/Title.jpg": "/my-portfolio/static/media/Title.fe3d0334561e7adc4ffa.jpg",
     "static/media/Screenshot_Level_01_105524.png": "/my-portfolio/static/media/Screenshot_Level_01_105524.432f80d05a5442d97f62.png",
-    "static/media/sideImage.png": "/my-portfolio/static/media/sideImage.deb48493a6ab5a8e5858.png",
     "static/media/Terra_infrastructure.jpg": "/my-portfolio/static/media/Terra_infrastructure.925da6b2856ca80b6fd2.jpg",
     "static/media/Screenshot_Ocean_3.png": "/my-portfolio/static/media/Screenshot_Ocean_3.543ca6bde6a9f6d7fe53.png",
     "static/media/FC_Extinguisher.jpg": "/my-portfolio/static/media/FC_Extinguisher.fe1db145e80dc462d792.jpg",
@@ -80,11 +80,11 @@
     "static/media/Grayson-Regular.woff2": "/my-portfolio/static/media/Grayson-Regular.1151ab218cc57402e44c.woff2",
     "index.html": "/my-portfolio/index.html",
     "main.73794a33.css.map": "/my-portfolio/static/css/main.73794a33.css.map",
-    "main.9c981a71.js.map": "/my-portfolio/static/js/main.9c981a71.js.map",
+    "main.8cdd4a84.js.map": "/my-portfolio/static/js/main.8cdd4a84.js.map",
     "453.41811d64.chunk.js.map": "/my-portfolio/static/js/453.41811d64.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.73794a33.css",
-    "static/js/main.9c981a71.js"
+    "static/js/main.8cdd4a84.js"
   ]
 }
