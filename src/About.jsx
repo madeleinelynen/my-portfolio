@@ -3,9 +3,8 @@ import "./About.css";
 const About = () => {
   return (
 <div className="about-section">
-  <h1 className="about-heading">ABOUT</h1>
+  <h1 className="about-heading"></h1>
   <div className="about-grid">
-    
           <section>
             <h2 className="about-subheading">Über mich</h2>
             <p>
@@ -20,6 +19,7 @@ const About = () => {
               <li>Unity, Unreal, Visual Studio</li>
               <li>GitHub, SourceTree, Perforce</li>
               <li>Android & iOS (Flutter, Unity)</li>
+              <li>React & Node.js</li>
               <li>VR/AR: SteamVR, Varjo, Pico, Meta, Vuforia</li>
               <li>SDK & Hardwareintegration</li>
             </ul>

@@ -37,21 +37,30 @@ function Home() {
   const projectsSectionRef = useRef(null); // Ref for the entire projects section
   const gridRef = useRef(null);
 
-  const cols = 4;
-  const gap = 16;
-
   useEffect(() => {
-    const handleResize = () => {
-      if (!gridRef.current) return;
-      const gridWidth = gridRef.current.offsetWidth;
-      const totalGap = gap * (cols - 1);
-      const tileSize = (gridWidth - totalGap) / cols;
-      gridRef.current.style.setProperty('--tile-size', `${tileSize}px`);
+    const updateTileSize = () => {
+      const grid = gridRef.current;
+      if (!grid) return;
+
+      const gridWidth = grid.offsetWidth;
+      const computedStyle = window.getComputedStyle(grid);
+
+      const colCount = computedStyle
+        .getPropertyValue("grid-template-columns")
+        .split(" ")
+        .length;
+
+      const gap = parseFloat(computedStyle.getPropertyValue("gap")) || 0;
+      const totalGap = gap * (colCount - 1);
+      const tileSize = (gridWidth - totalGap) / colCount;
+
+      grid.style.setProperty("--tile-size", `${tileSize}px`);
     };
 
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    updateTileSize();
+
+    window.addEventListener("resize", updateTileSize);
+    return () => window.removeEventListener("resize", updateTileSize);
   }, []);
 
   const scrollToProjectGrid = () => {
@@ -97,7 +106,7 @@ function Home() {
             </div>
             <div className="stats-row">
               <AnimatedNumberBlock
-                max={30}
+                max={20}
                 suffix="+"
                 text="Projekte erfolgreich abgeschlossen"
               />
@@ -120,17 +129,18 @@ function Home() {
           Projektauszug
         </h2>
 
-        <div className="projects-grid" ref={gridRef}>
-          {projects.map((proj, i) => (
-            <Link to={proj.path} key={i} className="home-tile">
-              <img src={proj.img} alt={proj.label} className="tile-img default" />
-              <img src={proj.hoverImg} alt={`${proj.label} Hover`} className="tile-img hover" />
-              <div className="tile-overlay">
-                <span className="tile-label">{proj.label}</span>
-              </div>
-            </Link>
-          ))}
-        </div>
+<div className="projects-grid" ref={gridRef}>
+  {projects.map((proj, i) => (
+    <Link to={proj.path} key={i} className="home-tile">
+      <img src={proj.img} alt={proj.label} className="tile-img default" />
+      <img src={proj.hoverImg} alt={`${proj.label} Hover`} className="tile-img hover" />
+      <div className="tile-overlay">
+        <span className="tile-label">{proj.label}</span>
+      </div>
+    </Link>
+  ))}
+</div>
+       
       </div>
     </>
   );
