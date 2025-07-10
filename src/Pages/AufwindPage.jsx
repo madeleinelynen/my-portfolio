@@ -5,7 +5,7 @@ import banner from '../assets/images/Aufwind/Banner.png';
 import sideImage from '../assets/images/Aufwind/Aufwind_keyvisual_Poster.jpg';
 
 import img1 from '../assets/images/Aufwind/vlcsnap-2025-07-08-15h07m49s889.png';
-import img2 from '../assets/images/Aufwind/Planetoy_Editor_2.png';
+import img2 from '../assets/images/Aufwind/Planetoy_Editor_2.PNG';
 import img3 from '../assets/images/Aufwind/Screenshot_aaa50705c.png';
 import img4 from '../assets/images/Aufwind/vlcsnap-2025-07-08-15h08m08s817.png';
 import img5 from '../assets/images/Aufwind/vlcsnap-2025-07-08-15h09m59s689.png';
