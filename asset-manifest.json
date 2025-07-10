@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.a4140112.css",
-    "main.js": "/my-portfolio/static/js/main.6153117d.js",
+    "main.css": "/my-portfolio/static/css/main.73794a33.css",
+    "main.js": "/my-portfolio/static/js/main.78df8c63.js",
     "static/js/453.41811d64.chunk.js": "/my-portfolio/static/js/453.41811d64.chunk.js",
     "static/media/Flamecoach2_UI_Cal_AWG.png": "/my-portfolio/static/media/Flamecoach2_UI_Cal_AWG.2860de1e6d8f2324f978.png",
     "static/media/Flamecoach2_UI_Tracker_2.png": "/my-portfolio/static/media/Flamecoach2_UI_Tracker_2.e9592d5b727dadaae801.png",
@@ -80,12 +80,12 @@
     "static/media/Grayson-Regular.woff": "/my-portfolio/static/media/Grayson-Regular.0ed4c3925a5391db0291.woff",
     "static/media/Grayson-Regular.woff2": "/my-portfolio/static/media/Grayson-Regular.1151ab218cc57402e44c.woff2",
     "index.html": "/my-portfolio/index.html",
-    "main.a4140112.css.map": "/my-portfolio/static/css/main.a4140112.css.map",
-    "main.6153117d.js.map": "/my-portfolio/static/js/main.6153117d.js.map",
+    "main.73794a33.css.map": "/my-portfolio/static/css/main.73794a33.css.map",
+    "main.78df8c63.js.map": "/my-portfolio/static/js/main.78df8c63.js.map",
     "453.41811d64.chunk.js.map": "/my-portfolio/static/js/453.41811d64.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4140112.css",
-    "static/js/main.6153117d.js"
+    "static/css/main.73794a33.css",
+    "static/js/main.78df8c63.js"
   ]
 }
