@@ -1,6 +1,6 @@
 import ProjectPage from '../components/ProjectPage';
 import titleImage from '../assets/images/EssenCityguide/sideImage.jpg';
-import sideImage from '../assets/images/EssenCityguide/sideImage.jpg';
+import sideImage from '../assets/images/EssenCityguide/sideImage.png';
 import YoutubeEmbed from '../components/YoutubeEmbed';
 
 function EssenCityguide() {
@@ -15,7 +15,7 @@ function EssenCityguide() {
     'Device Management Tool (Esper)'
     ];
 
-        const myVideoId = "iqLJLlujaTw";
+    const myVideoId = "iqLJLlujaTw";
 
 
   return (
