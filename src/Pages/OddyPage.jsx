@@ -4,11 +4,12 @@ import ImageCarousel from '../components/ImageCarousel';
 import titleImage from '../assets/images/Oddy/Banner.png';
 import sideImage from '../assets/images/Oddy/Screenshot_Level00_Tutorial_164845.png';
 
+// #region ImageCarousel Imports
 import img1 from '../assets/images/Oddy/Screenshot_Level00_Tutorial_164845.png';
 import img2 from '../assets/images/Oddy/Bildschirmfoto+2023-03-02+um+17.05.03.png';
 import img3 from '../assets/images/Oddy/Oddy-07.jpg';
 import img4 from '../assets/images/Oddy/Oddy-14.jpg';
-
+// endregion
 
 function OddyPage() {
     const hardware = [
@@ -24,7 +25,6 @@ function OddyPage() {
 
   return (
      <>
-   
     <ProjectPage
       title ="Oddy VR"
       image={titleImage}

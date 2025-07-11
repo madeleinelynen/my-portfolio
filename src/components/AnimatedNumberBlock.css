@@ -2,6 +2,7 @@
   --black_t: #1f1f1f;
   --darkblue_n: #112A51;
   --dark-green: #1a3b2a;
+  --apricot: #ee9f89;
 }
 
 .number-block {
@@ -21,7 +22,7 @@
   font-size: clamp(2rem, 5vw, 8rem);
   font-weight: 300;
   font-family: 'Grayson', serif;
-  background: linear-gradient(to right,var(--dark-green), #ee9f89);
+  background: linear-gradient(to right,var(--dark-green), var(--apricot));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   word-break: break-word;

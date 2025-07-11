@@ -4,7 +4,7 @@ function FullWidthImage({ src, alt = '' }) {
       src={src}
       alt={alt}
       style={{
-        width: 'calc(100% - 10vw)', // 5vw links + 5vw rechts
+        width: 'calc(100% - 10vw)',
         margin: '0 5vw',
         display: 'block',
         height: 'auto'

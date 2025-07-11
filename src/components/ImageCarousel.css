@@ -17,7 +17,7 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 8px;
-  background: #000;
+  background: var(--dark-text);
   user-select: none;
 }
 
@@ -68,7 +68,7 @@
 
 @media (max-width: 1000px) {
   .carousel-shell {
-    height: auto;         /* nimmt nur so viel Platz wie nötig */
-    padding: 1.5rem 0;    /* kleiner Abstand oben & unten */
+    height: auto;
+    padding: 1.5rem 0;  
   }
 }

@@ -26,7 +26,6 @@
   line-height: 1;
 }
 
-/* ▸ Toggle‑Button */
 .code-toggler__button {
   padding: 0.4rem 0.8rem;
   font-size: 0.9rem;
@@ -44,15 +43,14 @@
   border-radius: 6px;
   padding: 1rem;
   font-size: 14px;
-  background-color: #1f1f1f; /* falls Prism‑Theme es nicht überschreibt */
+  background-color: #1f1f1f;
   color: #f8f8f2;
-  overflow-x: auto;          /* horizontales Scrollen bei langen Zeilen */
+  overflow-x: auto;
   text-align: left;
   white-space: pre-wrap;
   font-family: 'Courier New', Courier, monospace;
 }
 
-/* Optional: globaler Button‑Cursor‑Fallback */
 button {
   cursor: pointer;
 }

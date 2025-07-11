@@ -1,11 +1,9 @@
-import React from "react";
-
 const FadingImage = ({
   src,
   alt = "",
   style = {},
   imageStyle = {},
-  fadeStart = "90%", // Stelle, ab der der Fade beginnt
+  fadeStart = "90%",
 }) => {
   return (
     <div style={{ width: "100%", ...style }}>

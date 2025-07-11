@@ -74,7 +74,7 @@
   justify-content: center;
   align-items: center;
 
-  scroll-snap-align: start;        /* Snap-Punkt oben anreißen */
+  scroll-snap-align: start;
 }
 
 .tile-img {
@@ -203,7 +203,6 @@
   align-items: flex-end;
   box-sizing: border-box;
   position: relative;
-  /* transition: gap 0.4s ease, padding 0.4s ease; */
 }
 
 .hero-left {
@@ -214,7 +213,6 @@
   justify-content: flex-end;
   align-items: flex-end;
   box-sizing: border-box;
-  /* transition: padding 0.4s ease; */
 }
 
 .hero-right {
@@ -229,7 +227,6 @@
   align-items: flex-start;
   text-align: left;
   margin-left: 2rem;
-  /* transition: padding 0.4s ease; */
 }
 
 .hero-text-block {
@@ -291,7 +288,6 @@
 }
 
 
-/* ----------- Mobile Layout ---------- */
 @media (max-width: 1200px) {
   .hero-screen {
     opacity: 0.95;

@@ -47,20 +47,17 @@
   white-space: nowrap;
 }
 
-/* Hover state */
 .nav-link.hovered {
   color: var(--color-hover);
   letter-spacing: -0.01em;
 }
 
-/* Divider line */
 .hero-nav-divider {
   width: var(--line-width);
   background-color: var(--color-text);
   align-self: stretch;
 }
 
-/* --- Responsive Mobile --- */
 @media (max-width: 1200px) {
  .hero-nav-content {
     display: flex;
@@ -86,8 +83,7 @@
   }
 
   .nav-link {
-    /* max-height: calc((100% - 1rem) / 2); */
-      cursor: pointer;
+    cursor: pointer;
     height:100%;
     width: 100%;
     padding: 0;

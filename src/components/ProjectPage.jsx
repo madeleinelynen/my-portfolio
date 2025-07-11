@@ -38,7 +38,6 @@ const secondScreenRef = useRef(null);
       <Link to="/" className="project-home-link"> Home </Link>
 
 <div className="project-page-container">
-  {/* OBERER TEIL: horizontal angeordnet */}
 <div className="hero-fullscreen">
   <img src={image} alt={imageAlt} className="hero-fullscreen-image" />
   <div className="hero-overlay">
@@ -66,9 +65,6 @@ const secondScreenRef = useRef(null);
 
 <section className="second-screen" ref={secondScreenRef}>
   <div className="content-wrapper">
-
-   {/* ---------- TOP‑ROW ---------- */}
-    {/* linke Spalte */}
     <div className="top-left">
       <div className="description">
         {description}
@@ -92,14 +88,12 @@ const secondScreenRef = useRef(null);
       </div>
     </div>
 
-{/* rechte Spalte */}
     <div className="top-right">
       {sideImage && (
         <img src={sideImage} alt="Side visual" className="side-image" />
       )}
     </div>
 
-{/* ---------- BOTTOM‑ROW ---------- */}
 {(hardware.length > 0 || software.length > 0) && (
   <div className="bottom-row card-tech-specs">
     {hardware.length > 0 && (

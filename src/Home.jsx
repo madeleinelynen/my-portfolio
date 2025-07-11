@@ -34,7 +34,7 @@ import trikottaufeHover from './assets/images/Trikottaufe/HoverTile.png';
 
 function Home() {
   const aboutScrollRef = useRef(null);
-  const projectsSectionRef = useRef(null); // Ref for the entire projects section
+  const projectsSectionRef = useRef(null);
   const gridRef = useRef(null);
 
   useEffect(() => {

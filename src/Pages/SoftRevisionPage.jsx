@@ -4,10 +4,12 @@ import ImageCarousel from '../components/ImageCarousel';
 import titleImage from '../assets/images/SoftRevision/Banner.jpg';
 import sideImage from '../assets/images/SoftRevision/Screenshot_Level_03.png';
 
+// #region ImageCarousel Imports
 import img1 from '../assets/images/SoftRevision/Screenshot_Level_01_105524.png';
 import img2 from '../assets/images/SoftRevision/Screenshot_Level_01_.png';
 import img3 from '../assets/images/SoftRevision/Screenshot_Level_01_113810.png';
 import img4 from '../assets/images/SoftRevision/Softrevision_Web3.jpg';
+//endregion
 
 function SoftRevisionPage() {
     const hardware = [

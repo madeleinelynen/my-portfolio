@@ -1,6 +1,4 @@
 import ProjectPage from '../components/ProjectPage';
-import ImageCarousel from '../components/ImageCarousel';
-
 import titleImage from '../assets/images/5GCar/Banner.png';
 import sideImage from '../assets/images/5GCar/Bildschirmfoto 2020-01-30 um 12.24.14.png';
 
@@ -18,7 +16,6 @@ function VodafoneGigacar() {
     ];
 
   return (
-    <>
     <ProjectPage
       title ="Vodafone 5G Car"
       image={titleImage}
@@ -38,8 +35,6 @@ function VodafoneGigacar() {
       software={software}
       sideImage={sideImage}
     />
-    {/* <ImageCarousel images={[img1, img2, img3, img4]} maxWidth="1000px" />; */}
-    </>
   );
 }
 

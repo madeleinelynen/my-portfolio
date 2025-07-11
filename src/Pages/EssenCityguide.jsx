@@ -17,7 +17,6 @@ function EssenCityguide() {
 
     const myVideoId = "iqLJLlujaTw";
 
-
   return (
     <>
     <ProjectPage
@@ -40,8 +39,7 @@ essen_1887___eine_mixed_reality_zeitreise/essen_1887.de.html'
     />
 
     <div style={{ marginTop: "5rem" }}></div>
-    <YoutubeEmbed videoId={myVideoId} />
-    
+    <YoutubeEmbed videoId={myVideoId} />  
     </>
   );
 }

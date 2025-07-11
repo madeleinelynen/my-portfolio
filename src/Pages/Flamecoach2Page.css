@@ -1,4 +1,3 @@
-/* === Seitenstruktur === */
 .page-container {
   width: 100%;
   box-sizing: border-box;
@@ -6,7 +5,6 @@
   flex-direction: column;
 }
 
-/* === Inhalt: Allgemein === */
 .content-section {
   margin: 5% 5%;
   font-family: 'Inter', sans-serif;
@@ -25,7 +23,6 @@
   margin-top: 1.5rem;
 }
 
-/* === Integration der Feuerlöscher-Controller === */
 .integration-column {
   display: flex;
   flex-direction: column;
@@ -44,7 +41,6 @@
   max-width: 600px;
 }
 
-/* === Utility-Klassen für weitere Abschnitte === */
 .flex-center {
   display: flex;
   justify-content: center;
@@ -60,14 +56,12 @@
   max-width: 600px;
 }
 
-/* === Bilder (Full Width) === */
 .full-width-image {
   width: 100%;
   display: block;
   margin: 2rem 0;
 }
 
-/* === Responsives Verhalten === */
 @media (max-width: 900px) {
   .integration-column {
     padding: 0 1rem;

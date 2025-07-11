@@ -17,7 +17,7 @@ import TrikottaufePage from './Pages/TrikottaufePage';
 
 function App() {
   return (
-    <Router basename="/my-portfolio">
+    <Router>
       <div className="main-layout-wrapper">
         <Routes>
           <Route path="/" element={<Home />} />

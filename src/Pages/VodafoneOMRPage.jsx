@@ -4,23 +4,27 @@ import ImageCarousel from '../components/ImageCarousel';
 import titleImage from '../assets/images/VodafoneOMR/Title.jpg';
 import sideImage from '../assets/images/VodafoneOMR/vlcsnap-2025-07-08-15h26m50s248.png';
 
+// #region ImageCarousel Imports
 import img1 from '../assets/images/VodafoneOMR/Lvl02_Tutorial.PNG';
 import img2 from '../assets/images/VodafoneOMR/vlcsnap-2025-07-08-15h25m55s803.png';
 import img3 from '../assets/images/VodafoneOMR/vlcsnap-2025-07-08-15h26m01s907.png';
 import img4 from '../assets/images/VodafoneOMR/Branding_Lvl04.PNG';
 import img5 from '../assets/images/VodafoneOMR/vlcsnap-2025-07-08-15h27m02s036.png';
 import img6 from '../assets/images/VodafoneOMR/vlcsnap-2025-07-08-15h27m42s845.png';
+//endregion
 
 function VodafoneOMRPage() {
     const hardware = [
     'HTC Vive Focus 2',
-    'Tactical Haptics Controller',
+    'TactSuit (haptische Weste)',
     'Multisensorische Integration (Duft, Hitze), schaltbar über LAN-Steckdosen',
     ];
   
     const software = [
     'Unity 2021.3 LTS',
     'Visual Studio 2022',
+    'bHaptics',
+    'IK',
     'HTC Vive Focus Trackingspace'
     ];
 

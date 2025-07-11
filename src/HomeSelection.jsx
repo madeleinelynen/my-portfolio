@@ -12,16 +12,14 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [hovered, setHovered] = useState(null);
 
-  const lineWidth = 2; // Outline width in px if used for spacing
+  const lineWidth = 2;
 
-  // Update window width on resize
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Dynamic font scaling
   useEffect(() => {
     const container = containerRef.current;
     const test = testRef.current;
@@ -36,7 +34,6 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
     const SAFETY = isMobile ? 0.10 : 0.05;
     perLinkH *= (1 - SAFETY);
 
-    // Prepare test element
     const style = getComputedStyle(container);
     const longest = selections.reduce((a, b) => (a.length > b.length ? a : b));
     test.textContent = longest;

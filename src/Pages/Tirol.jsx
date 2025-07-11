@@ -4,6 +4,7 @@ import ImageCarousel from '../components/ImageCarousel';
 import titleImage from '../assets/images/Tirol/Banner.jpg';
 import sideImage from '../assets/images/Tirol/sideImage.jpg';
 
+// #region ImageCarousel Imports
 import img1 from '../assets/images/Tirol/vlcsnap-2025-07-08-11h25m00s791.png';
 import img2 from '../assets/images/Tirol/vlcsnap-2025-07-08-11h23m16s961.png';
 import img3 from '../assets/images/Tirol/vlcsnap-2025-07-08-11h29m49s586.png';
@@ -11,7 +12,7 @@ import img4 from '../assets/images/Tirol/vlcsnap-2025-07-08-11h26m27s257.png';
 import img5 from '../assets/images/Tirol/vlcsnap-2025-07-08-11h26m56s850.png';
 import img6 from '../assets/images/Tirol/vlcsnap-2025-07-08-11h27m42s671.png';
 import img7 from '../assets/images/Tirol/vlcsnap-2025-07-08-11h28m33s982.png';
-
+//endregion
 
 function TirolPage() {
     const hardware = [
