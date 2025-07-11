@@ -20,43 +20,65 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+
   useEffect(() => {
-    const container = containerRef.current;
-    const test = testRef.current;
-    if (!container || !test) return;
+  const container = containerRef.current;
+  if (!container) return;
 
-    const remToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
-    const isMobile = windowWidth < 1200;
-    const gapPx = isMobile ? 0 : 1.5 * remToPx;
-    const { width: availW, height: availH } = container.getBoundingClientRect();
+  const resize = () => {
+  const container = containerRef.current;
+  const test = testRef.current;
+  if (!container || !test) return;
 
-    let perLinkH = (availH - gapPx) / selections.length;
-    const SAFETY = isMobile ? 0.10 : 0.05;
-    perLinkH *= (1 - SAFETY);
+  const remToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  const isMobile = window.innerWidth < 1200;
+  const gapPx = isMobile ? 0 : 1.5 * remToPx;
+  const { width: availW, height: availH } = container.getBoundingClientRect();
 
-    const style = getComputedStyle(container);
-    const longest = selections.reduce((a, b) => (a.length > b.length ? a : b));
-    test.textContent = longest;
-    ['fontFamily','fontWeight','letterSpacing','textTransform','lineHeight'].forEach(prop => {
-      test.style[prop] = style[prop];
-    });
-    test.style.whiteSpace = 'nowrap';
+  if (availW === 0 || availH === 0) {
+    // Noch keine gültige Größe – nochmal in 50ms probieren
+    setTimeout(resize, 50);
+    return;
+  }
 
-    let min = 8, max = 1000, best = min;
-    while (min <= max) {
-      const mid = Math.floor((min + max) / 2);
-      test.style.fontSize = `${mid}px`;
-      const { width: w, height: h } = test.getBoundingClientRect();
-      if (w <= availW - gapPx - lineWidth && h <= perLinkH) {
-        best = mid;
-        min = mid + 1;
-      } else {
-        max = mid - 1;
-      }
+  // Dein bestehender resize-Code hier, z.B. Berechnung Font-Size
+  let perLinkH = (availH - gapPx) / selections.length;
+  const SAFETY = isMobile ? 0.10 : 0.05;
+  perLinkH *= (1 - SAFETY);
+
+  const style = getComputedStyle(container);
+  const longest = selections.reduce((a, b) => (a.length > b.length ? a : b));
+  test.textContent = longest;
+  ['fontFamily','fontWeight','letterSpacing','textTransform','lineHeight'].forEach(prop => {
+    test.style[prop] = style[prop];
+  });
+  test.style.whiteSpace = 'nowrap';
+
+  let min = 8, max = 1000, best = min;
+  while (min <= max) {
+    const mid = Math.floor((min + max) / 2);
+    test.style.fontSize = `${mid}px`;
+    const { width: w, height: h } = test.getBoundingClientRect();
+    if (w <= availW - gapPx - lineWidth && h <= perLinkH) {
+      best = mid;
+      min = mid + 1;
+    } else {
+      max = mid - 1;
     }
+  }
 
-    setFontSize(best);
-  }, [windowWidth, selections]);
+  setFontSize(best);
+};
+
+
+  const observer = new ResizeObserver(resize);
+  observer.observe(container);
+
+  resize(); // initial
+
+  return () => observer.disconnect();
+}, [selections]);
+
 
   return (
     <div ref={containerRef} className="hero-nav">

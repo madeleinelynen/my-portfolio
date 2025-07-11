@@ -37,31 +37,37 @@ function Home() {
   const projectsSectionRef = useRef(null);
   const gridRef = useRef(null);
 
-  useEffect(() => {
-    const updateTileSize = () => {
-      const grid = gridRef.current;
-      if (!grid) return;
+ useEffect(() => {
+  const grid = gridRef.current;
+  if (!grid) return;
 
-      const gridWidth = grid.offsetWidth;
-      const computedStyle = window.getComputedStyle(grid);
+  const updateTileSize = () => {
+    const gridWidth = grid.offsetWidth;
+    const computedStyle = window.getComputedStyle(grid);
 
-      const colCount = computedStyle
-        .getPropertyValue("grid-template-columns")
-        .split(" ")
-        .length;
+    const colCount = computedStyle
+      .getPropertyValue("grid-template-columns")
+      .split(" ")
+      .length;
 
-      const gap = parseFloat(computedStyle.getPropertyValue("gap")) || 0;
-      const totalGap = gap * (colCount - 1);
-      const tileSize = (gridWidth - totalGap) / colCount;
+    const gap = parseFloat(computedStyle.getPropertyValue("gap")) || 0;
+    const totalGap = gap * (colCount - 1);
+    const tileSize = (gridWidth - totalGap) / colCount;
 
+    requestAnimationFrame(() => {
       grid.style.setProperty("--tile-size", `${tileSize}px`);
-    };
+    });
+  };
 
-    updateTileSize();
+  updateTileSize();
 
-    window.addEventListener("resize", updateTileSize);
-    return () => window.removeEventListener("resize", updateTileSize);
-  }, []);
+  const resizeObserver = new ResizeObserver(() => updateTileSize());
+  resizeObserver.observe(grid);
+
+  return () => resizeObserver.disconnect();
+}, []);
+
+
 
   const scrollToProjectGrid = () => {
     projectsSectionRef.current?.scrollIntoView({
