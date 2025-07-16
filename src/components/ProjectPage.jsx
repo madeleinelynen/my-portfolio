@@ -1,10 +1,12 @@
+import './ProjectPage.css';
 import { useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
-import ImageCarousel from '../components/ImageCarousel';
+import { useLanguage } from '../LanguageContext';
+
 import iconGroup from '../assets/images/Icons/GroupIcon_black.png';
 import iconClock from '../assets/images/Icons/ClockIcon_black.png';
 import iconEngine from '../assets/images/Icons/UnityIcon_black.png';
-import './ProjectPage.css';
+
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
 function ProjectPage({ 
@@ -19,18 +21,19 @@ title,
   sideImage = null,
   websiteLink = '' }) {
 
+  const {t} = useLanguage();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const icons = [iconGroup, iconClock, iconEngine];
-const secondScreenRef = useRef(null);
+  const secondScreenRef = useRef(null);
 
   useEffect(() => {
     document.body.classList.add("project-bg-dark");
 
-    return () => document.body.classList.remove("project-bg-dark");
-  }, []);
+    return () => document.body.classList.remove("project-bg-dark"); }, []);
 
   return (
   <>
@@ -73,13 +76,13 @@ const secondScreenRef = useRef(null);
       {websiteLink && (
         <div className="project-website-link">
           <a href={websiteLink} target="_blank" rel="noopener noreferrer">
-            Zur Projektwebsite →
+            {t('basePage', 'websiteLink')} →
           </a>
         </div>
       )}
 
       <div className="role-section">
-        <h3 className="section-heading">Meine Beteiligung</h3>
+        <h3 className="section-heading">{t('basePage', 'contributionHeader')}</h3>
         <ul className="role-list">
           {role.map((item, i) => (
             <li key={`role-${i}`}>{item}</li>

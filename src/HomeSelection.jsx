@@ -1,13 +1,18 @@
-import React, { useRef, useState, useLayoutEffect } from 'react';
+import { useRef, useState, useLayoutEffect } from 'react';
+import { useLanguage } from './LanguageContext';
 import './HomeSelection.css';
 
 function HomeSelection({ onClickAbout, onClickProjekte }) {
-  const projekteRef = useRef(null);
+  const { t } = useLanguage();
+  const projectsRef = useRef(null);
   const aboutRef = useRef(null);
   const containerRef = useRef(null);
   const testRef = useRef(null);
 
-  const selections = ['PROJEKTE', 'ABOUT'];
+const selections = [
+  t('homeselection', 'projects'),
+  t('homeselection', 'about'),
+];
   const [fontSize, setFontSize] = useState(0);
   const [ready, setReady] = useState(false);
   const [hovered, setHovered] = useState(null);
@@ -90,7 +95,7 @@ function HomeSelection({ onClickAbout, onClickProjekte }) {
         {ready && (
           <div className="hero-nav-links">
             <span
-              ref={projekteRef}
+              ref={projectsRef}
               onClick={onClickProjekte}
               onMouseEnter={() => setHovered('projekte')}
               onMouseLeave={() => setHovered(null)}

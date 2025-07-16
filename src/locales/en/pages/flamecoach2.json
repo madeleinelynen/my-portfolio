@@ -1,0 +1,28 @@
+{
+  "hardware": [
+    "In-house developed fire extinguisher controller",
+    "Windows laptop",
+    "VR headset with outside-in tracking (Pimax Crystal)",
+    "Multisensory integration (scent, heat), controllable via LAN sockets",
+    "Hand-tracking technology (Ultraleap)",
+    "CodeMeter license dongle"
+  ],
+
+  "software": [
+    "SteamVR",
+    "Unity Engine 2023.2",
+    "Visual Studio (C#)",
+    "CodeMeter License Editor",
+    "Wibu",
+    "Ultraleap SDK"
+  ],
+
+  "description": "VR simulation for firefighting in various scenarios. A real fire extinguisher is equipped with proprietary hardware and trackers, making it visible and operable in the virtual environment just like in the real world. The system has already been sold to more than 30 clients, including BMW, Daimler, Securitas, and Commerzbank.",
+
+  "role": [
+    "Programming, including integration of inputs from proprietary hardware",
+    "UX/UI development and integration, creation of animations within the engine",
+    "Integration of the extinguisher hardware (including in-house developments)",
+    "Implementation of hand-tracking interactions"
+  ]
+}

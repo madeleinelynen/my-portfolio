@@ -1,0 +1,22 @@
+.language-switcher {
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.lang-button {
+  padding-top:0.5rem;
+  cursor: pointer;
+  transition: letter-spacing 0.3 ease;
+  font-family:'Inter';
+  text-transform: uppercase;
+  background: none;  
+  border: none;
+  outline: none;
+  font-size: .9rem; 
+  color: grey;
+}
+
+.lang-button.active {
+   color:#1f1f1f;
+}

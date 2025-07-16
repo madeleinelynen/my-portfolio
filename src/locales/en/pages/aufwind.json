@@ -1,0 +1,25 @@
+{
+    "hardware": [
+        "Varjo Aero",
+        "YAW VR Motion Seat",
+        "Game controller steering wheel",
+        "Hand-tracking technology (Ultraleap)",
+        "Multisensory integration (scent, heat), switchable via LAN sockets"
+    ],
+
+    "software": [
+        "Unity Engine 2021.3",
+        "Visual Studio 2022",
+        "YAW VR Motion Simulator",
+        "Ultraleap Software",
+        "Varjo Base"
+    ],
+
+    "description": "Multisensory, immersive VR experience. This project tells the story of the first female pilots in Germany and is permanently exhibited for visitors in Essen.",
+
+    "role": [
+        "Programming",
+        "Creating animations within the engine",
+        "Implementing hand-tracking interactions"
+    ]
+}

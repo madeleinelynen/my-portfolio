@@ -1,0 +1,21 @@
+{
+  "hardware": [
+    "Meta Quest 2",
+    "Android smartphones",
+    "Mobile router for local network"
+  ],
+
+  "software": [
+    "Unity Engine 2021.1",
+    "Visual Studio 2022"
+  ],
+
+  "description": "A puzzle-based game for five players, where four interact via smartphones and the fifth player uses a VR headset in a local multiplayer experience. As a multi-platform couch co-op indie game, Oddy is used in youth centers across Germany supported by the afj.",
+
+  "role": [
+    "Assumed lead programming responsibilities",
+    "Programming of game mechanics using the integrated MLAPI",
+    "Game design / level design",
+    "UI integration and programming"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+    "hardware": [
+        "In-house developed fire extinguisher controller",
+        "Windows laptop",
+        "VR headset with outside-in tracking (Valve Index, from 2023 Pimax Crystal)",
+        "Multisensory integration (scent, heat), controlled via LAN sockets",
+        "Hand-tracking technology (Leap Motion, Ultraleap)",
+        "CodeMeter license dongle"
+    ],
+
+    "software": [
+        "SteamVR",
+        "Unity Engine 2019.4",
+        "Visual Studio (C#)",
+        "CodeMeter License Editor",
+        "Wibu",
+        "Leap Motion Software / Ultraleap SDK"
+    ],
+
+    "description": "VR simulation for firefighting in various scenarios. A real fire extinguisher is equipped with proprietary hardware and trackers, making it visible and operable in the virtual environment just like in the real world. The system has already been sold to over 30 clients, including BMW, Daimler, Securitas, and Commerzbank.",
+
+    "role": [
+        "Programming, including integration of inputs from proprietary hardware",
+        "Responsible for UX/UI development and integration",
+        "Creation of animations within the engine",
+        "Implementation of hand-tracking interactions",
+        "Setup for new clients and version management with regular updates for existing customers"
+    ]
+}

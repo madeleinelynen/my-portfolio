@@ -1,66 +1,60 @@
 import "./About.css";
+import { useLanguage } from './LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
+
   return (
-<div className="about-section">
-  <h1 className="about-heading"></h1>
-  <div className="about-grid">
+  <div className="about-section">
+    <h1 className="about-heading"></h1>
+      <div className="about-grid">
           <section>
-            <h2 className="about-subheading">Über mich</h2>
-            <p>
-              Über fünf Jahre Erfahrung in der Softwareentwicklung mit fundierter Expertise in C# und C++, spezialisiert auf XR, App-Entwicklung und Games.
-            </p>
+            <h1 className="about-subheading">{t('about', 'subheaderAbout')}</h1>
+            <p>{t('about', 'descriptionAbout')}</p>
           </section>
 
           <section>
-            <h2 className="about-subheading">Kompetenzen</h2>
+            <h2 className="about-subheading">{t('about', 'subheaderCompetencies')}</h2>
             <ul>
-              <li>C#, C++, Python, Dart</li>
-              <li>Unity, Unreal, Visual Studio</li>
-              <li>GitHub, SourceTree, Perforce</li>
-              <li>Android & iOS (Flutter, Unity)</li>
-              <li>React & Node.js</li>
-              <li>VR/AR: SteamVR, Varjo, Pico, Meta, Vuforia</li>
-              <li>SDK & Hardwareintegration</li>
+                {t('about', 'descriptionCompetencies').map((descr, i) => (
+                  <li key={i}>{descr}</li>
+                ))}   
             </ul>
           </section>
 
           <section>
-            <h2 className="about-subheading">Schlüsselerfolge</h2>
+            <h3 className="about-subheading">{t('about', 'subheaderAchievements')}</h3>
             <ul>
-              <li>Zentrale Rolle bei der Entwicklung eines VR-Feuerlöschtrainingssystems (seit 2019)</li>
-              <li>Zentrale Rolle bei der Entwicklung öffentlich zugänglicher VR-Erlebnisse (seit 2021)</li>
-              <li>Lead Programmierer für ein Puzzle-basiertes Multiplayer-Spiels (2021–2024)</li>
+              {t('about', 'descriptionAchievements').map((descr, i) => (
+                  <li key={i}>{descr}</li>
+                ))}   
             </ul>
           </section>
 
           <section>
-            <h2 className="about-subheading">Kooperationsfähigkeiten</h2>
+            <h4 className="about-subheading">{t('about', 'subheaderCollaborationSkills')}</h4>
             <ul>
-              <li>Multitasking & Teamarbeit</li>
-              <li>Verantwortungsübernahme</li>
-              <li>Kontinuierliche Weiterbildung</li>
-              <li>Mentoring & Leadership</li>
+              {t('about', 'descriptionCollaborationSkills').map((descr, i) => (
+                  <li key={i}>{descr}</li>
+                ))}   
             </ul>
           </section>
 
           <section>
-            <h2 className="about-subheading">Berufserfahrung</h2>
+            <h2 className="about-subheading">{t('about', 'subheaderExperiences')}</h2>
             <p className="font-semibold">
-              Software Developer<br />A4VR GmbH | Mai 2019 – heute
+              {t('about', 'position')}<br />
+              {t('about', 'company')} | {t('about', 'date')}
             </p>
             <ul>
-              <li>Unity/C# für interaktive VR/AR-Projekte</li>
-              <li>Unreal Engine & C++ Grundlagen</li>
-              <li>App-Entwicklung Android/iOS</li>
-              <li>UI/UX-Konzeption & Integration</li>
-              <li>SDK/Hardware-Einbindung</li>
-              <li>Technischer Messe-Support</li>
+              {t('about', 'descriptionExperiences').map((descr, i) => (
+                  <li key={i}>{descr}</li>
+                ))}  
             </ul>
           </section>
 
           <section>
-            <h2 className="about-subheading">Ausbildung</h2>
+            <h2 className="about-subheading">{t('about', 'subheaderEducation')}</h2>
             <p className="font-semibold">
               Game Design B.Sc.<br />Mediadesign Hochschule, Düsseldorf (2015–2019)
             </p>

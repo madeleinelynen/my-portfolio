@@ -1,3 +1,4 @@
+import { useLanguage } from '../LanguageContext';
 import ProjectPage from '../components/ProjectPage';
 import ImageCarousel from '../components/ImageCarousel';
 
@@ -17,40 +18,18 @@ import imgUI3 from '../assets/images/Flamecoach/Flamecoach_UI_2025-05-24_20-38-1
 // endregion
 
 function FlamecoachPage() {
-    const hardware = [
-    'Inhouse entwickelter Feuerlöscher Controller',
-    'Windows Laptop',
-    'VR-Brille mit Outside-in Tracking (Valve Index, ab 2023 Pimax Crystal)',
-    'Multisensorische Integration (Duft, Hitze), schaltbar über LAN-Steckdosen',
-    'Hand-Tracking-Technologie (Leap Motion, Ultraleap)',
-    'CodeMeter Lizenzstick',
-    ];
-  
-    const software = [
-    'Steam VR',
-    'Unity Engine 2019.4',
-    'Visual Studio (C#)',
-    'CodeMeter License Editor',
-    'Wibu',
-    'Leap Motion Software / Ultraleap SDK',
-    ];
+  const {t} = useLanguage();
+
+  const hardware = t('flamecoach', 'hardware');
+  const software = t('flamecoach', 'software');
   
   return (
     <>
     <ProjectPage
     title ="Flamecoach"
       image={titleImage}
-      description="VR-Simulation zur Brandbekämpfung in verschiedenen Szenarien.
-      Ein realer Feuerlöscher wird mit firmeneigener Hardware und Trackern ausgestattet, 
-      sodass er in der virtuellen Umgebung ebenso sichtbar und steuerbar ist wie in der realen Welt. 
-      Das System wurde bereits an mehr als 30 Kunden verkauft, darunter BMW, Daimler, Securitas und Commerzbank."
-      role = {[
-      "Programmierung, inklusive Integration von Inputs der firmeneigenen Hardware",
-      "Verantwortung für UX/UI-Entwicklung und -Integration",
-      "Erstellung von Animationen innerhalb der Engine",
-      "Implementierung von Hand-Tracking-Interaktionen",
-      "Einrichtung für Neukunden und Versionsverwaltung mit regelmäßigen Updates für Bestandskunden"
-      ]}
+      description= {t('flamecoach', 'description')}
+      role = {t('flamecoach', 'role')}
       infoTexts={["10", "2019 - heute", "Unity Engine"]}
       hardware={hardware}
       software={software}

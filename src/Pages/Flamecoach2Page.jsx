@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import ProjectPage from '../components/ProjectPage';
 import ImageCarousel from '../components/ImageCarousel';
 import './Flamecoach2Page.css';
+import { useLanguage } from '../LanguageContext';
 
 import titleImage from '../assets/images/Flamecoach2/Banner.jpg';
 import sideImage from '../assets/images/Flamecoach2/F2_modells.png';
@@ -19,23 +20,10 @@ import imgUI_Pl_04 from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Playlist
 // endregion
 
 function Flamecoach2Page() {
-  const hardware = [
-    'Inhouse entwickelter Feuerlöscher Controller',
-    'Windows Laptop',
-    'VR-Brille mit Outside-in Tracking (Pimax Crystal)',
-    'Multisensorische Integration (Duft, Hitze), schaltbar über LAN-Steckdosen',
-    'Hand-Tracking-Technologie (Ultraleap)',
-    'CodeMeter Lizenzstick',
-  ];
+  const {t} = useLanguage();
 
-  const software = [
-    'Steam VR',
-    'Unity Engine 2023.2',
-    'Visual Studio (C#)', 
-    'CodeMeter License Editor',
-    'Wibu',
-    'Ultraleap',
-  ];
+  const hardware = t('flamecoach2', 'hardware');
+  const software = t('flamecoach2', 'software')
 
   const [setInput1] = useState('');
   const [setTracker2] = useState('');
@@ -69,17 +57,8 @@ function Flamecoach2Page() {
       <ProjectPage
         title="Flamecoach 2"
         image={titleImage}
-        description="Erweiterte VR-Brandbekämpfungssimulation mit neuen Funktionen und realitätsnahen Szenarien.
-        Basierend auf dem Projekt Flamecoach bietet diese erweiterte Simulation eine realistische Trainingsumgebung 
-        zur Brandbekämpfung. Zu den Verbesserungen zählen ein überarbeitetes Feuersystem und User Interface, erweiterte Szenarien 
-        sowie die Möglichkeit, mehrere Feuerlöscher gleichzeitig einzusetzen. Ziel ist es, das Trainingserlebnis 
-        noch praxisnäher und flexibler zu gestalten."
-        role={[
-          "Programmierung",
-          "UX/UI-Entwicklung und -Integration, Erstellung von Animationen innerhalb der Engine",
-          "Integration der Löscher-Hardware (einschließlich firmeneigener Entwicklungen)",
-          "Implementierung von Hand-Tracking-Interaktionen",
-        ]}
+        description= {t('flamecoach2', 'description')}
+        role={t('flamecoach2', 'role')}
         infoTexts={["9", "2023 - heute", "Unity Engine"]}
         hardware={hardware}
         software={software}

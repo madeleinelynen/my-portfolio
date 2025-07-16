@@ -2,18 +2,23 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import './App.css';
 import './style.css';
-import FlamecoachPage from './Pages/FlamecoachPage';
-import Flamecoach2Page from './Pages/Flamecoach2Page';
-import AufwindPage from './Pages/AufwindPage';
-import OddyPage from './Pages/OddyPage';
-import VodafoneOMRPage from './Pages/VodafoneOMRPage';
-import VodafoneGigacarPage from './Pages/VodafoneGigacar';
-import SoftRevisionPage from './Pages/SoftRevisionPage';
-import SchumannPage from './Pages/SchumannPage';
-import EssenCityguide from './Pages/EssenCityguide';
-import TirolPage from './Pages/Tirol';
-import ThyssenInfrastructurePage from './Pages/ThyssenInfrastructurePage';
-import TrikottaufePage from './Pages/TrikottaufePage';
+
+import FlamecoachPage from './pages/FlamecoachPage';
+import Flamecoach2Page from './pages/Flamecoach2Page';
+import AufwindPage from './pages/AufwindPage';
+import OddyPage from './pages/OddyPage';
+import VodafoneOMRPage from './pages/VodafoneOMRPage';
+import VodafoneGigacarPage from './pages/VodafoneGigacar';
+import SoftRevisionPage from './pages/SoftRevisionPage';
+import SchumannPage from './pages/SchumannPage';
+import EssenCityguide from './pages/EssenCityguide';
+import TirolPage from './pages/Tirol';
+import ThyssenInfrastructurePage from './pages/ThyssenInfrastructurePage';
+import TrikottaufePage from './pages/TrikottaufePage';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 
 function App() {
   return (

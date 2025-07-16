@@ -1,5 +1,6 @@
 import ProjectPage from '../components/ProjectPage';
 import ImageCarousel from '../components/ImageCarousel';
+import { useLanguage } from '../LanguageContext'; 
 
 import banner from '../assets/images/Aufwind/Banner.png';
 import sideImage from '../assets/images/Aufwind/Aufwind_keyvisual_Poster.jpg';
@@ -14,34 +15,18 @@ import img6 from '../assets/images/Aufwind/Screenshot_473ff.png';
 // endregion
 
 function AufwindPage() {
-  const hardware = [
-  'Varjo Aero',
-  'YAW VR Motion Seat',
-  'Game-Controller Lenkrad',
-  'Hand-Tracking-Technologie (Ultraleap)',
-  'Multisensorische Integration (Duft, Hitze), schaltbar über LAN-Steckdosen'
-  ];
+  const {t} = useLanguage();
 
-  const software = [
-  'Unity Engine 2021.3',
-  'Visual Studio 2022',
-  'YAW VR Motion Simulator',
-  'Ultraleap Software',
-  'Varjo Base',
-  ];
+  const hardware = t('aufwind', 'hardware');
+  const software = t('aufwind', 'software');
 
   return (
     <>
     <ProjectPage
       title ="Aufwind"
       image={banner}
-      description="Multisensorisches, immersives VR-Erlebnis. In diesem Projekt wird die Geschichte der ersten deutschen Pilotinnen erzählt, 
-      dauerhaft für Besucher ausgestellt in Essen."
-      role = {[
-      "Programmierung",
-      "Erstellung von Animationen innerhalb der Engine",
-      "Implementierung von Hand-Tracking-Interaktionem",
-      ]}
+      description= {t('aufwind', 'description')}
+      role = {t('aufwind', 'role')}
       infoTexts={["22", "2021 - 2024", "Unity Engine"]}
       software={software}
       hardware={hardware}

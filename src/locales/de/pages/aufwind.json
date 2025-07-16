@@ -1,0 +1,25 @@
+{
+    "hardware": [
+        "Varjo Aero",
+        "YAW VR Motion Seat",
+        "Game-Controller Lenkrad",
+        "Hand-Tracking-Technologie (Ultraleap)",
+        "Multisensorische Integration (Duft, Hitze), schaltbar über LAN-Steckdosen"
+    ],
+
+    "software": [
+        "Unity Engine 2021.3",
+        "Visual Studio 2022",
+        "YAW VR Motion Simulator",
+        "Ultraleap Software",
+        "Varjo Base"
+    ],
+
+    "description": "Multisensorisches, immersives VR-Erlebnis. In diesem Projekt wird die Geschichte der ersten deutschen Pilotinnen erzählt, dauerhaft für Besucher ausgestellt in Essen.", 
+    
+    "role": [
+        "Programmierung",
+        "Erstellung von Animationen innerhalb der Engine",
+        "Implementierung von Hand-Tracking-Interaktionen"
+    ]
+}

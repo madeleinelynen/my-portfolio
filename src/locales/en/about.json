@@ -1,0 +1,50 @@
+{
+    "subheaderAbout": "About Me",
+    "descriptionAbout": "Over five years of experience in software development with solid expertise in C# and C++, specializing in XR, app development, and games.",
+
+    "subheaderCompetencies": "Competencies",
+    "descriptionCompetencies": [
+        "C#, C++, Python, Dart",
+        "Unity, Unreal, Visual Studio",
+        "GitHub, SourceTree, Perforce",
+        "Android & iOS (Flutter, Unity)",
+        "React & Node.js",
+        "VR/AR: SteamVR, Varjo, Pico, Meta, Vuforia",
+        "SDK & Hardwareintegration"
+    ],
+
+    "subheaderAchievements": "Key Achivements",
+    "descriptionAchievements": [
+        "Playing a key role in the development of VR Fire Extinguisher training systems (2019 - present)",
+        "Core Programmer for VR Experiences available to the public (2021-present)",
+        "Lead Programmer for a puzzle-based game (2021-2024)"
+    ],
+
+    "subheaderCollaborationSkills": "Collaboration Skills",
+    "descriptionCollaborationSkills": [
+        "Multitasking & Teamwork",
+        "Taking Responsibility",
+        "Continuous Learning",
+        "Mentoring & Leadership"
+    ],
+
+    "subheaderExperiences": "Work Experience",
+    "position": "Software Developer",
+    "company": "A4VR GmbH",
+    "date": "May 2019 – Present",
+    "descriptionExperiences": [
+        "Unity/C# for interactive VR/AR projects",
+        "Basics of Unreal Engine & C++",
+        "App development for Android/iOS",
+        "UI/UX design & integration",
+        "SDK/hardware integration",
+        "Technical trade fair support"
+    ],
+
+  "subheaderEducation": "Education",
+  "descriptionEducation": [
+    "Graduated within the standard period of study",
+    "Focus: Programming",
+    "Bachelor’s thesis: Experimental Game Design: The Use of Augmented Reality as a Medical Treatment Method | Grade: 1.0"
+  ]
+}

@@ -3,33 +3,22 @@ import titleImage from '../assets/images/EssenCityguide/sideImage.jpg';
 import sideImage from '../assets/images/EssenCityguide/sideImage.png';
 import YoutubeEmbed from '../components/YoutubeEmbed';
 
-function EssenCityguide() {
-    const hardware = [
-    'xReal (heute: nReal)',
-    'Android Smartphone'
-    ];
-  
-    const software = [
-    'Unity Engine 2021.2',
-    'Visual Studio',
-    'Device Management Tool (Esper)'
-    ];
+import { useLanguage } from '../LanguageContext';
 
-    const myVideoId = "iqLJLlujaTw";
+function EssenCityguide() {
+  const {t} = useLanguage();
+  
+  const hardware = t('essen1887', 'hardware');
+  const software = t('essen1887', 'software');
+  const myVideoId = "iqLJLlujaTw";
 
   return (
     <>
     <ProjectPage
       title ="Essen 1887"
       image={titleImage}
-      description="Eine Mixed-Reality-Zeitreise durch die Geschichte Essens, bei der Besucher mittels einer 
-      Mixed-Reality-Brille und Android-Smartphone durch die Innenstadt navigieren und an GPS-gestützten 
-      Punkten historische Stadtansichten sowie Ereignisse in AR erleben können."
-      role = {[
-      "Programmierung",
-      "Entwicklung interaktiver Mechaniken",
-      "Verwaltung der vom Unternehmen für das Projekt genutzten Hardware durch das online Next-Gen Device Management Esper",
-      ]}
+      description= {t('essen1887', 'description')}
+      role= {t('essen1887', 'role')}
       infoTexts={["16", "2021 - 2023", "Unity Engine"]}
       hardware={hardware}
       software={software}

@@ -1,0 +1,20 @@
+{
+    "hardware": [
+        "XREAL",
+        "Android smartphone"
+    ],
+
+    "software": [
+        "Unity Engine 2021.2",
+        "Visual Studio",
+        "Device Management Tool (Esper)"
+    ],
+
+    "description": "A mixed reality journey through the history of Essen, where visitors navigate the city center using a mixed reality headset and Android smartphone. At GPS-based locations, they experience historical city views and events in augmented reality.",
+
+    "role": [
+        "Programming",
+        "Development of interactive mechanics",
+        "Management of the hardware used by the company for this project via the online next-gen device management tool Esper"
+    ]
+}

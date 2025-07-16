@@ -38,6 +38,19 @@
   100% { background-position: 0 0; }
 }
 
+.language-controller-bar {
+  position: relative;
+  top: 0;
+  left: 0;
+  right:0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  padding: 2px 20px;
+  box-sizing: border-box;
+}
+
 .projects-section {
   padding: 1rem;
   box-sizing: border-box;
@@ -73,7 +86,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   scroll-snap-align: start;
 }
 
