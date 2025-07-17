@@ -21,7 +21,8 @@
     
     "role": [
         "Programmierung, inklusive Integration von Inputs der firmeneigenen Hardware",
-        "UX/UI-Entwicklung und -Integration, Erstellung von Animationen innerhalb der Engine",
+        "UX/UI-Entwicklung und -Integration", 
+        "Erstellung von Animationen innerhalb der Engine",
         "Integration der Löscher-Hardware (einschließlich firmeneigener Entwicklungen)",
         "Implementierung von Hand-Tracking-Interaktionen"
     ]

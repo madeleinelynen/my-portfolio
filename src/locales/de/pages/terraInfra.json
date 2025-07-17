@@ -1,0 +1,25 @@
+{
+    "hardware": [
+        "VR-Brille mit Outside-in Tracking (Valve Index)",
+        "Modifizierte Taschenlampe mit Vive Tracker und digital steuerbaren Tasten für Unity",
+        "Hand-Tracking-Technologie (Ultraleap)",
+        "Multisensorische Integration (Wind), schaltbar über LAN-Steckdosen",
+        "Vive Tracker"
+    ],
+
+    "software": [
+        "SteamVR",
+        "Unity 2021.3 LTS",
+        "Visual Studio 2019",
+        "Ultraleap Gemini v5"
+    ],
+
+    "description": "Interaktive VR-Experience zur Bohrung im Kappschen Meer für Terra Infrastructure. Die Nutzer erleben eine Fahrt im virtuellen Transportkorb durch mehrere Stationen eines Forschungsschiffs bis zum Meeresgrund. Dort wird der Bohrvorgang – inklusive Sedimentauflockerung durch Vibration – immersiv dargestellt. Ein digitales, interaktives Tablet mit Handtracking liefert begleitende Informationen.",
+    
+    "role": [
+        "Programmierung mit Fokus auf den reibungslosen Ablauf der Unity Timeline und die Entwicklung von Mechaniken",
+        "Entwicklung einer modifizierten Taschenlampe mit Vive Tracker und digital steuerbaren Inputs für Unity",
+        "UX/UI-Design und -Implementierung – sowohl als World-Space-UI als auch als Overlay",
+        "Implementierung von Hand-Tracking zur intuitiven Steuerung eines digitalen Tablets"
+    ]
+}

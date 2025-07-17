@@ -18,8 +18,20 @@ import flamecoach_de from './locales/de/pages/flamecoach.json';
 import flamecoach_en from './locales/en/pages/flamecoach.json';
 import flamecoach2_de from './locales/de/pages/flamecoach2.json';
 import flamecoach2_en from './locales/en/pages/flamecoach2.json';
-import oddy_de from './locales/de/pages/oddy.json';
-import oddy_en from './locales/en/pages/oddy.json';
+import oddyVR_de from './locales/de/pages/oddyVR.json';
+import oddyVR_en from './locales/en/pages/oddyVR.json';
+import schumannVR_de from './locales/de/pages/schumannVR.json';
+import schumannVR_en from './locales/en/pages/schumannVR.json';
+import softRevision_de from './locales/de/pages/softRevision.json';
+import softRevision_en from './locales/en/pages/softRevision.json';
+import terraInfra_de from './locales/de/pages/terraInfra.json';
+import terraInfra_en from './locales/en/pages/terraInfra.json';
+import trikottaufe_de from './locales/de/pages/trikottaufe.json';
+import trikottaufe_en from './locales/en/pages/trikottaufe.json';
+import vodafone5GCar_de from './locales/de/pages/vodafone5GCar.json';
+import vodafone5GCar_en from './locales/en/pages/vodafone5GCar.json';
+import vodafoneOMR_de from './locales/de/pages/vodafoneOMR.json';
+import vodafoneOMR_en from './locales/en/pages/vodafoneOMR.json';
 
 const translations = {
   de: {
@@ -31,7 +43,13 @@ const translations = {
     essen1887: essen1887_de,
     flamecoach: flamecoach_de,
     flamecoach2: flamecoach2_de,
-    oddy: oddy_de,
+    oddyVR: oddyVR_de,
+    schumannVR: schumannVR_de,
+    softRevision: softRevision_de,
+    terraInfra: terraInfra_de,
+    trikottaufe: trikottaufe_de,
+    vodafone5GCar: vodafone5GCar_de,
+    vodafoneOMR: vodafoneOMR_de,
   },
   en: {
     home: home_en,
@@ -42,7 +60,13 @@ const translations = {
     essen1887: essen1887_en,
     flamecoach: flamecoach_en,
     flamecoach2: flamecoach2_en,
-    oddy: oddy_en,
+    oddyVR: oddyVR_en,
+    schumannVR: schumannVR_en,
+    softRevision: softRevision_en,
+    terraInfra: terraInfra_en,
+    trikottaufe: trikottaufe_en,
+    vodafone5GCar: vodafone5GCar_en,
+    vodafoneOMR: vodafoneOMR_en,
   },
 };
 

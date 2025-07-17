@@ -14,20 +14,18 @@ import img4 from '../assets/images/Oddy/Oddy-14.jpg';
 
 function OddyPage() {
   const {t} = useLanguage();
-
-  const hardware = t('oddy', 'hardware');
-  const software = t('oddy', 'software');
+  const langKey = "oddyVR";
 
   return (
      <>
     <ProjectPage
       title ="Oddy VR"
       image={titleImage}
-      description= {t('oddy', 'description')}
-      role = {t('oddy', 'role')}
+      description= {t(langKey, 'description')}
+      role = {t(langKey, 'role')}
       infoTexts={["8", "2021 - 2024", "Unity Engine"]}
-      hardware={hardware}
-      software={software}
+      hardware={t(langKey, 'hardware')}
+      software={t(langKey, 'software')}
       sideImage={sideImage}
       websiteLink='https://jugendpastoral.de/news-und-tipps/253-oddy'
     />

@@ -1,0 +1,24 @@
+{
+  "hardware": [
+    "Vive Pro Eye",
+    "Tactical Haptics Controller",
+    "Hand-tracking technology (Leap Motion)"
+  ],
+
+  "software": [
+    "SteamVR",
+    "Unity 2021.3 LTS",
+    "Visual Studio 2019",
+    "Vive Input Utility (VIU)",
+    "SRanipal SDK (for Eye Tracking)",
+    "Ultraleap Gemini v5"
+  ],
+
+  "description": "High score–based VR application designed to promote and train patients’ hand-eye coordination, closely aligned with the principles of mirror therapy, with modifications to traditional hand tracking to allow for specifically mirrored digital hand representations.",
+
+  "role": [
+    "Programming with a focus on developing a customized hand-grabbing system and high score system",
+    "UX/UI integration and programming",
+    "Hand-tracking implementation"
+  ]
+}

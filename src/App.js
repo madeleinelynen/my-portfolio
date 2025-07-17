@@ -3,22 +3,18 @@ import Home from './Home';
 import './App.css';
 import './style.css';
 
-import FlamecoachPage from './pages/FlamecoachPage';
-import Flamecoach2Page from './pages/Flamecoach2Page';
-import AufwindPage from './pages/AufwindPage';
-import OddyPage from './pages/OddyPage';
-import VodafoneOMRPage from './pages/VodafoneOMRPage';
-import VodafoneGigacarPage from './pages/VodafoneGigacar';
-import SoftRevisionPage from './pages/SoftRevisionPage';
-import SchumannPage from './pages/SchumannPage';
-import EssenCityguide from './pages/EssenCityguide';
-import TirolPage from './pages/Tirol';
-import ThyssenInfrastructurePage from './pages/ThyssenInfrastructurePage';
-import TrikottaufePage from './pages/TrikottaufePage';
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-
+import Flamecoach from './pages/Flamecoach';
+import Flamecoach2 from './pages/Flamecoach2';
+import Aufwind from './pages/Aufwind';
+import OddyVR from './pages/OddyVR';
+import VodafoneOMR from './pages/VodafoneOMR';
+import Vodafone5GCar from './pages/Vodafone5GCar';
+import SoftRevision from './pages/SoftRevision';
+import SchumannVR from './pages/SchumannVR';
+import Essen1887 from './pages/Essen1887';
+import ExperienceTirol from './pages/ExperienceTirol';
+import TerraInfrastructure from './pages/TerraInfrastructure';
+import Trikottaufe from './pages/Trikottaufe';
 
 function App() {
   return (
@@ -26,18 +22,18 @@ function App() {
       <div className="main-layout-wrapper">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/flamecoach" element={<FlamecoachPage />} />
-          <Route path="/flamecoach2" element={<Flamecoach2Page />} />
-          <Route path="/aufwind" element={<AufwindPage />} />
-          <Route path="/oddy" element={<OddyPage />} />
-          <Route path="/vodafoneomr" element={<VodafoneOMRPage />} />
-          <Route path="/vodafonegigacar" element={<VodafoneGigacarPage />} />
-          <Route path="/softrevision" element={<SoftRevisionPage />} />
-          <Route path="/schumann" element={<SchumannPage />} />
-          <Route path="/essencityguide" element={<EssenCityguide />} />
-          <Route path="/tirol" element={<TirolPage />} />
-          <Route path="/terrainfra" element={<ThyssenInfrastructurePage />} />
-          <Route path="/trikottaufe" element={<TrikottaufePage />} />
+          <Route path="/flamecoach" element={<Flamecoach/>} />
+          <Route path="/flamecoach2" element={<Flamecoach2 />} />
+          <Route path="/aufwind" element={<Aufwind />} />
+          <Route path="/oddy" element={<OddyVR />} />
+          <Route path="/vodafoneomr" element={<VodafoneOMR />} />
+          <Route path="/vodafonegigacar" element={<Vodafone5GCar />} />
+          <Route path="/softrevision" element={<SoftRevision />} />
+          <Route path="/schumann" element={<SchumannVR />} />
+          <Route path="/essencityguide" element={<Essen1887 />} />
+          <Route path="/tirol" element={<ExperienceTirol />} />
+          <Route path="/terrainfra" element={<TerraInfrastructure />} />
+          <Route path="/trikottaufe" element={<Trikottaufe />} />
         </Routes>
       </div>
     </Router>

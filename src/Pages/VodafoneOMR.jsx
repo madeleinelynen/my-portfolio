@@ -13,37 +13,22 @@ import img5 from '../assets/images/VodafoneOMR/vlcsnap-2025-07-08-15h27m02s036.p
 import img6 from '../assets/images/VodafoneOMR/vlcsnap-2025-07-08-15h27m42s845.png';
 //endregion
 
+import { useLanguage } from '../LanguageContext';
+
 function VodafoneOMRPage() {
-    const hardware = [
-    'HTC Vive Focus 2',
-    'TactSuit (haptische Weste)',
-    'Multisensorische Integration (Duft, Hitze), schaltbar über LAN-Steckdosen',
-    ];
-  
-    const software = [
-    'Unity 2021.3 LTS',
-    'Visual Studio 2022',
-    'bHaptics',
-    'IK',
-    'HTC Vive Focus Trackingspace'
-    ];
+  const {t} = useLanguage();
+  const langKey = "vodafoneOMR";
 
   return (
     <>
     <ProjectPage
       title ="Vodafone OMR"
       image={titleImage}
-      description="Lokaler VR-Multiplayer für bis zu vier Spielern, die in einer digitalen Arena in vier 
-      verschiedenen Leveln und jeweils vier verschiedenen Mechaniken um die meisten Punkte kämpfen müssen"
-           role = {[
-            "Programmierung unter Nutzung der implementierten MLAPI",
-            "UX/UI-Entwicklung und -Integration",
-            "Implementierung von Feedback auf der haptischen Weste",
-            "Technischer Support auf der OMR",
-            ]}
+      description= {t(langKey, 'description')}
+      role = {t(langKey, 'role')}
       infoTexts={["8", "Januar 2022 - Mai 2022", "Unity Engine"]}
-      hardware={hardware}
-      software={software}
+      hardware={t(langKey, 'hardware')}
+      software={t(langKey, 'software')}
       sideImage={sideImage}
     />
     <ImageCarousel images={[img1, img2, img3, img4, img5, img6]} maxWidth="1000px" />;

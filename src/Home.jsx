@@ -76,20 +76,23 @@ const projects = [
 return (
   <>
   <div className="hero-section">      
-    <div className="language-controller-bar">
-      <LanguageController /> 
-    </div>
-        
     <div className="hero-screen">
+
+      <div className="language-controller-bar">
+      <LanguageController /> 
+      </div>
+
+    <div className="hero-body">
       <div className="hero-left">
         <HomeSelection onClickProjekte={scrollToProjectGrid} onClickAbout={scrollToAbout} />
       </div>
       <div className="hero-right">
-        <div className="hero-text-block">
+        <div className="hero-right-block">
+          <div className="hero-text-block">
           <p className="hero-headline">Madeleine Lynen</p>
-          <p className="hero-subline"> {t('home', 'subline')} </p>
-        </div>
-        <div className="stats-row">
+           <p className="hero-subline"> {t('home', 'subline')} </p>
+          </div>
+          <div className="stats-row">
           <AnimatedNumberBlock
             max={20}
             suffix="+"
@@ -100,8 +103,11 @@ return (
             suffix="+"
             text={t('home', 'numberBlockExperience')}
           />
+          </div> 
         </div>
       </div>
+    </div>
+
     </div>
   </div>
 

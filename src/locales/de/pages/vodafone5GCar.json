@@ -1,0 +1,23 @@
+{
+    "hardware": [
+        "VR-Brille mit Outside-in Tracking (Valve Index)",
+        "Motion Seat",
+        "Multisensorische Integration (Duft), schaltbar über LAN-Steckdosen"
+    ],
+
+    "software": [
+        "SteamVR",
+        "Unity 2018.4 LTS",
+        "Visual Studio 2017"
+    ],
+
+    "description": "VR-Experience für Vodafone Business, in der Nutzer eine autonome Autofahrt erleben. Innerhalb des Autos liefert ein Display Echtzeitdaten, zielgerichtete Werbung und Sicherheitswarnungen. Zum Ende der Experience wird der Nutzer per Drohne in die Luft befördert und steuert ein Minispiel, bei dem er durch Ringe navigiert und Punkte sammeln kann.",
+    
+    "role": [
+        "Programmierung",
+        "Highscore-System",
+        "UX/UI-Entwicklung und -Integration",
+        "Implementierung von Hand-Tracking-Interaktionen",
+        "Technischer Support auf den fünf Roadshow-Messe-Terminen"
+    ]
+}

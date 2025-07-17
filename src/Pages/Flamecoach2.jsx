@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ProjectPage from '../components/ProjectPage';
 import ImageCarousel from '../components/ImageCarousel';
-import './Flamecoach2Page.css';
+import './Flamecoach2.css';
 import { useLanguage } from '../LanguageContext';
 
 import titleImage from '../assets/images/Flamecoach2/Banner.jpg';
@@ -21,9 +21,7 @@ import imgUI_Pl_04 from '../assets/images/Flamecoach2/UI/Flamecoach2_UI_Playlist
 
 function Flamecoach2Page() {
   const {t} = useLanguage();
-
-  const hardware = t('flamecoach2', 'hardware');
-  const software = t('flamecoach2', 'software')
+  const langKey = "flamecoach2";
 
   const [setInput1] = useState('');
   const [setTracker2] = useState('');
@@ -57,11 +55,11 @@ function Flamecoach2Page() {
       <ProjectPage
         title="Flamecoach 2"
         image={titleImage}
-        description= {t('flamecoach2', 'description')}
-        role={t('flamecoach2', 'role')}
+        description= {t(langKey, 'description')}
+        role={t(langKey, 'role')}
         infoTexts={["9", "2023 - heute", "Unity Engine"]}
-        hardware={hardware}
-        software={software}
+        hardware={t(langKey, 'hardware')}
+        software={t(langKey, 'software')}
         sideImage={sideImage}
       />
 

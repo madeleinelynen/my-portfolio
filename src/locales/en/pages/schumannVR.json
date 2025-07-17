@@ -1,0 +1,22 @@
+{
+  "hardware": [
+    "Valve Index",
+    "Multisensory integration (scent), switchable via LAN sockets",
+    "Hand-tracking technology (Leap Motion)"
+  ],
+
+  "software": [
+    "SteamVR",
+    "Unity 2018.4 LTS",
+    "Visual Studio 2017",
+    "Leap Motion Orion SDK v4"
+  ],
+
+  "description": "Multisensory VR experience with immersive storytelling about the life of Robert Schumann, which was temporarily exhibited as a paid attraction in Düsseldorf.",
+
+  "role": [
+    "Programming, including scene management and interactive mechanics across various scenes",
+    "Implementation and technical integration of user interface",
+    "Hand-tracking implementation and development of interactive hand mechanics"
+  ]
+}

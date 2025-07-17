@@ -16,20 +16,18 @@ import img6 from '../assets/images/Aufwind/Screenshot_473ff.png';
 
 function AufwindPage() {
   const {t} = useLanguage();
-
-  const hardware = t('aufwind', 'hardware');
-  const software = t('aufwind', 'software');
+  const langKey = "aufwind";
 
   return (
     <>
     <ProjectPage
       title ="Aufwind"
       image={banner}
-      description= {t('aufwind', 'description')}
-      role = {t('aufwind', 'role')}
+      description= {t(langKey, 'description')}
+      role = {t(langKey, 'role')}
       infoTexts={["22", "2021 - 2024", "Unity Engine"]}
-      software={software}
-      hardware={hardware}
+      hardware={t(langKey, 'hardware')}
+      software={t(langKey, 'software')}
       sideImage={sideImage}
       websiteLink='https://www.aufwindvr.com/'
     />

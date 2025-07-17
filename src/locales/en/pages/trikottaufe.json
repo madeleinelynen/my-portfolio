@@ -1,0 +1,18 @@
+{
+    "hardware": [
+        "Smartphone (Android & iOS)"
+    ],
+
+    "software": [
+        "Unity 2018.1",
+        "Vuforia Augmented Reality SDK",
+        "Xcode"
+    ],
+
+    "description": "An AR experience app created for the 2018 Rheinkirmes in Düsseldorf. Precisely timed with the start of the fireworks, the app unveiled Fortuna Düsseldorf’s new jersey design by having a massive virtual jersey rise out of the Rhine River in augmented reality.",
+
+    "role": [
+        "Programming of the jersey animation and UI functionality",
+        "Timely release of the app on the Apple App Store"
+    ]
+}

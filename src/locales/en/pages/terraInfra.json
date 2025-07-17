@@ -1,0 +1,25 @@
+{
+  "hardware": [
+    "VR headset with outside-in tracking (Valve Index)",
+    "Modified flashlight with Vive Tracker and digitally controllable buttons for Unity",
+    "Hand-tracking technology (Ultraleap)",
+    "Multisensory integration (wind), controllable via LAN power sockets",
+    "Vive Tracker"
+  ],
+
+  "software": [
+    "SteamVR",
+    "Unity 2021.3 LTS",
+    "Visual Studio 2019",
+    "Ultraleap Gemini v5"
+  ],
+
+  "description": "Interactive VR experience simulating the drilling process in the Kapp Sea for Terra Infrastructure. Users ride a virtual transport cage through several stations aboard a research vessel down to the seafloor, where the drilling process—including sediment loosening via vibration—is presented immersively. A digital, interactive tablet with hand tracking provides accompanying information.",
+
+  "role": [
+    "Programming with a focus on smooth Unity Timeline execution and development of mechanics",
+    "Development of a modified flashlight with Vive Tracker and digitally controllable inputs for Unity",
+    "UX/UI design and implementation – both as world-space UI and as an overlay",
+    "Implementation of hand tracking for intuitive control of a digital tablet"
+  ]
+}

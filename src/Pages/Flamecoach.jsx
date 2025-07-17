@@ -19,20 +19,18 @@ import imgUI3 from '../assets/images/Flamecoach/Flamecoach_UI_2025-05-24_20-38-1
 
 function FlamecoachPage() {
   const {t} = useLanguage();
+  const langKey = "flamecoach";
 
-  const hardware = t('flamecoach', 'hardware');
-  const software = t('flamecoach', 'software');
-  
   return (
     <>
     <ProjectPage
     title ="Flamecoach"
       image={titleImage}
-      description= {t('flamecoach', 'description')}
-      role = {t('flamecoach', 'role')}
+      description= {t(langKey, 'description')}
+      role = {t(langKey, 'role')}
       infoTexts={["10", "2019 - heute", "Unity Engine"]}
-      hardware={hardware}
-      software={software}
+      hardware={t(langKey, 'hardware')}
+      software={t(langKey, 'software')}
       sideImage={sideImage}
       websiteLink='https://www.flamecoach.com'
     />

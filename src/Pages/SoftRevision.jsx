@@ -1,5 +1,6 @@
 import ProjectPage from '../components/ProjectPage';
 import ImageCarousel from '../components/ImageCarousel';
+import { useLanguage } from '../LanguageContext';
 
 import titleImage from '../assets/images/SoftRevision/Banner.jpg';
 import sideImage from '../assets/images/SoftRevision/Screenshot_Level_03.png';
@@ -12,38 +13,19 @@ import img4 from '../assets/images/SoftRevision/Softrevision_Web3.jpg';
 //endregion
 
 function SoftRevisionPage() {
-    const hardware = [
-    'Vive Pro Eye',
-    'Tactical Haptics Controller',
-    'Hand-Tracking-Technologie (Ultraleap)',
-    'Ultraleap',
-    ];
-  
-    const software = [
-    'Unity 2021.3 LTS',
-    'Visual Studio 2019',
-    'SteamVR',
-    'Vive Input Utility (VIU)',
-    'SRanipal SDK (für Eye Tracking)',
-    'Ultraleap Gemini v5'
-    ];
+  const {t} = useLanguage();
+  const langKey = 'softRevision';
 
   return (
     <>
     <ProjectPage
       title ="Soft Revision"
       image={titleImage}
-      description="Highscore-basierte VR-Anwendung zur Förderung und Training der Hand- und Augenkoordination 
-      von Patienten, möglichst nah am Prinzip der Spiegeltherapie, mit der Modifikation vom klassischen 
-      Hand-Tracking, sodass gezielt digitale Hände gespiegelt dargestellt werden können."
-      role = {[
-      "Programmierung mit Fokus auf der Entwicklung eines angepassten Hand-Greifsystems und Highscore Systems",
-      " UX/UI-Integration und -Programmierung",
-      "Hand-Tracking Implementierung",
-      ]}
+      description={t(langKey, 'description')}
+      role ={t(langKey, 'role')}
       infoTexts={["8", "2021 - 2022", "Unity Engine"]}
-      hardware={hardware}
-      software={software}
+      hardware={t(langKey, 'hardware')}
+      software={t(langKey, 'software')}
       sideImage={sideImage}
     />
 

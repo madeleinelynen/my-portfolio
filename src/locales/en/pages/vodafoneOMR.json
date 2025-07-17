@@ -1,0 +1,24 @@
+{
+  "hardware": [
+    "HTC Vive Focus 2",
+    "TactSuit (haptic vest)",
+    "Multisensory integration (scent, heat), controllable via LAN sockets"
+  ],
+
+  "software": [
+    "Unity 2021.3 LTS",
+    "Visual Studio 2022",
+    "bHaptics",
+    "IK",
+    "HTC Vive Focus tracking space"
+  ],
+
+  "description": "Local VR multiplayer experience for up to four players who compete in a digital arena across four different levels and four distinct mechanics to score the most points.",
+
+  "role": [
+    "Programming using the implemented MLAPI",
+    "UX/UI development and integration",
+    "Implementation of feedback for the haptic vest",
+    "Technical support at the OMR event"
+  ]
+}
