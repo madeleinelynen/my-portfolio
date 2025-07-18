@@ -84,7 +84,7 @@ const selections = [
 
   return (
     <div ref={containerRef} className="hero-nav">
-      {/* Hidden test span for sizing, inheriting nav-link styles */}
+
       <span
         ref={testRef}
         className="hero-nav-test nav-link"
@@ -92,34 +92,34 @@ const selections = [
       />
 
       <div className="hero-nav-content">
-        {ready && (
-          <div className="hero-nav-links">
-            <span
-              ref={projectsRef}
-              onClick={onClickProjekte}
-              onMouseEnter={() => setHovered('projekte')}
-              onMouseLeave={() => setHovered(null)}
-              className={`nav-link ${hovered === 'projekte' ? 'hovered' : ''}`}
-              style={{ fontSize: fontSize + 'px', paddingBottom: window.innerWidth > 1200 ? '3rem' : undefined }}
-            >
-              {selections[0]}
-            </span>
+    {ready && (
+    <div className="hero-nav-links">
+      <span
+        ref={projectsRef}
+        className={`nav-link projects-text ${hovered === 'projekte' ? 'hovered' : ''}`}
+        onClick={onClickProjekte}
+        onMouseEnter={() => setHovered('projekte')}
+        onMouseLeave={() => setHovered(null)}
+        style={{ fontSize: fontSize + 'px' }}
+      >
+        {selections[0]}
+      </span>
 
-            <span
-              ref={aboutRef}
-              onClick={onClickAbout}
-              onMouseEnter={() => setHovered('about')}
-              onMouseLeave={() => setHovered(null)}
-              className={`nav-link ${hovered === 'about' ? 'hovered' : ''}`}
-              style={{ fontSize: fontSize + 'px', paddingBottom: window.innerWidth > 1200 ? '3rem' : undefined }}
-            >
-              {selections[1]}
-            </span>
-          </div>
-        )}
+      <span
+        ref={aboutRef}
+        className={`nav-link about-text ${hovered === 'about' ? 'hovered' : ''}`}
+        onClick={onClickAbout}
+        onMouseEnter={() => setHovered('about')}
+        onMouseLeave={() => setHovered(null)}
+        style={{ fontSize: fontSize + 'px' }}
+      >
+        {selections[1]}
+      </span>
+    </div>
+  )}
 
         <div className="hero-nav-divider" />
-      </div>
+      </div> 
     </div>
   );
 }
