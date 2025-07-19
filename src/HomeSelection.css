@@ -74,32 +74,31 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    justify-content: flex-start;
   }
 
   .hero-nav-test {
-  position: absolute;
-  visibility: hidden;
-  pointer-events: none;
-  white-space: nowrap;
-  height: auto;
-  font-family: 'Grayson', sans-serif;
-  letter-spacing: normal;
-  line-height: 1;
-  font-weight: normal;
-  text-transform: uppercase;
-}
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+    white-space: nowrap;
+    height: auto;
+    font-family: 'Grayson', sans-serif;
+    letter-spacing: normal;
+    line-height: 1;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
 
   .hero-nav-content {
     width: 100%;
     display: flex;
-    margin-right: 0;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .hero-nav-links {
