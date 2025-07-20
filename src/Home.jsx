@@ -103,7 +103,7 @@ return (
             suffix="+"
             text={t('home', 'numberBlockExperience')}
           />
-          </div>
+          </div> 
         </div>
       </div>
     </div>
