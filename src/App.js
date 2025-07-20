@@ -3,7 +3,7 @@ import RouteSet from './RouteSet';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<Navigate to="/de" replace />} />
         <Route path="/:lang/*" element={<RouteSet />} />
