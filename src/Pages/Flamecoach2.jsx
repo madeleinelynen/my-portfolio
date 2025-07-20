@@ -57,7 +57,7 @@ function Flamecoach2Page() {
         image={titleImage}
         description= {t(langKey, 'description')}
         role={t(langKey, 'role')}
-        infoTexts={["9", "2023 - heute", "Unity Engine"]}
+        infoTexts={["9", `2023 - ${t(langKey, 'timeIcon')}`, "Unity Engine"]}
         hardware={t(langKey, 'hardware')}
         software={t(langKey, 'software')}
         sideImage={sideImage}

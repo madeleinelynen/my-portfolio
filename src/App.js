@@ -1,42 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Home';
-import './App.css';
-import './style.css';
-
-import Flamecoach from './pages/Flamecoach.jsx';
-import Flamecoach2 from './pages/Flamecoach2.jsx';
-import Aufwind from './pages/Aufwind.jsx';
-import OddyVR from './pages/OddyVR.jsx';
-import VodafoneOMR from './pages/VodafoneOMR.jsx';
-import Vodafone5GCar from './pages/Vodafone5GCar.jsx';
-import SoftRevision from './pages/SoftRevision.jsx';
-import SchumannVR from './pages/SchumannVR.jsx';
-import Essen1887 from './pages/Essen1887.jsx';
-import ExperienceTirol from './pages/ExperienceTirol.jsx';
-import TerraInfrastructure from './pages/TerraInfrastructure.jsx';
-import Trikottaufe from './pages/Trikottaufe.jsx';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import RouteSet from './RouteSet';
 
 function App() {
   return (
     <Router>
-      <div className="main-layout-wrapper">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/flamecoach" element={<Flamecoach/>} />
-          <Route path="/flamecoach2" element={<Flamecoach2 />} />
-          <Route path="/aufwind" element={<Aufwind />} />
-          <Route path="/oddy" element={<OddyVR />} />
-          <Route path="/vodafoneomr" element={<VodafoneOMR />} />
-          <Route path="/vodafonegigacar" element={<Vodafone5GCar />} />
-          <Route path="/softrevision" element={<SoftRevision />} />
-          <Route path="/schumann" element={<SchumannVR />} />
-          <Route path="/essencityguide" element={<Essen1887 />} />
-          <Route path="/tirol" element={<ExperienceTirol />} />
-          <Route path="/terrainfra" element={<TerraInfrastructure />} />
-          <Route path="/trikottaufe" element={<Trikottaufe />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Navigate to="/de" replace />} />
+        <Route path="/:lang/*" element={<RouteSet />} />
+      </Routes>
     </Router>
   );
 }
+
 export default App;

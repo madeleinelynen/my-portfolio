@@ -1,12 +1,18 @@
 import './LanguageController.css';
 import { useLanguage } from './LanguageContext';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const LanguageController = () => {
-  const { language, setLanguage } = useLanguage();
+  const { language } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleLanguageChange = (lang) => {
-    setLanguage(lang);
-    localStorage.setItem('language', lang);
+  const handleLanguageChange = (newLang) => {
+    if (newLang === language) 
+      return;
+
+    const pathWithoutLang = location.pathname.replace(/^\/(en|de)/, '');
+    navigate(`/${newLang}${pathWithoutLang}`);
   };
 
   return (
@@ -28,3 +34,4 @@ const LanguageController = () => {
 };
 
 export default LanguageController;
+
