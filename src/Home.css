@@ -5,10 +5,13 @@
   --accent-orange: #f85b00;
   --dark-text: #1a1a1a;
   --dark-green: #1a3b2a;
+
+  --language-bar-height: .75rem;
 }
 
 .language-controller-bar {
   width: 100%;
+  flex: 0 0 auto;
   display: flex;
   justify-content: flex-end;
   padding: .75rem 3rem; 
@@ -181,7 +184,7 @@
 
 .hero-body {
   display: flex;
-  height: 100vh;
+  flex: 1 1 auto;
   margin: 0;
 }
 
@@ -300,8 +303,8 @@
   }
 
 .language-controller-bar {
-    height: auto;                      /* falls Sprache mal mehr Raum braucht */
-    padding: 0.25rem 1rem;              /* statt 2px → leserlich & fingerfreundlich */
+    padding: 0.25rem 1rem;
+    flex: 0 0 auto;
     box-sizing: border-box;
     display: flex;
     justify-content: flex-end;
@@ -312,7 +315,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 30px);
+    height: auto;
     box-sizing: border-box;
   }
 
