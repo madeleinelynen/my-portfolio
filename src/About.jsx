@@ -59,10 +59,7 @@ const About = () => {
               Game Design B.Sc.<br />Mediadesign Hochschule, Düsseldorf (2015–2019)
             </p>
             <ul>
-              <li>Abschluss in Regelstudienzeit</li>
-              <li>Schwerpunkt: Programmierung</li>
-              <li>Bachelorarbeit: Experimentelles Game Design: Zum Einsatz von Augmented Reality als
-medizinische Behandlungsform | Note: 1.0 </li>
+              {t('about', 'descriptionEducation').map((descr, i) => (<li key={i}>{descr}</li>))}
             </ul>
           </section>
 

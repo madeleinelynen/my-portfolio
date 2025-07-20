@@ -11,7 +11,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 2px 20px;
+  padding: .75rem 3rem; 
   box-sizing: border-box;
 }
 
@@ -300,10 +300,12 @@
   }
 
 .language-controller-bar {
-    width: 100%;
-    height: 30px;
-    z-index: 1000;
-    padding: 2px;
+    height: auto;                      /* falls Sprache mal mehr Raum braucht */
+    padding: 0.25rem 1rem;              /* statt 2px → leserlich & fingerfreundlich */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   .hero-body {
