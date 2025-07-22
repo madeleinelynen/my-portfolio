@@ -19,7 +19,9 @@
     
     "role": [
         "Programmierung",
+        "Entwicklung spezifischer Komponenten für die Unity-Timeline, Verantwortung für den reibungslosen Ablauf und das präzise Timing des Zusammenspiels von SFX, VFX, Szenenübergängen und Volucaps.",
+        "Konzeption und Programmierung des SzenenManagers zur Steuerung der Projektstruktur, Szenenlogik und Zustandswechsel.",
         "Erstellung von Animationen innerhalb der Engine",
-        "Implementierung von Hand-Tracking-Interaktionen"
+        "Implementierung von Hand-Tracking-Interaktionen wie z.B. ein Spielzeugflugzeug, eine tragbare Lampe oder einen werfbaren Rettungsring"
     ]
 }

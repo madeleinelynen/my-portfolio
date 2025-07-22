@@ -21,7 +21,7 @@ title,
   sideImage = null,
   websiteLink = '' }) {
 
-  const {t} = useLanguage();
+const { t, language } = useLanguage();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -37,8 +37,8 @@ title,
 
   return (
   <>
-  <div className="project-page">
-      <Link to="/" className="project-home-link"> Home </Link>
+  <div className="project-page">    
+    <Link to={`/${language}`} className="project-home-link">Home</Link>
 
 <div className="project-page-container">
 <div className="hero-fullscreen">
