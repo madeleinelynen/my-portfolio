@@ -6,6 +6,7 @@ import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 function CodeToggler({ code, label = 'Codeblock' }) {
   const [visible, setVisible] = useState(false);
   const codeWrapperRef = useRef(null);
+    const codeBlockRef = useRef(null);
   const [inView, setInView] = useState(false);
 
   const scrollTo = (direction) => {
@@ -22,23 +23,55 @@ function CodeToggler({ code, label = 'Codeblock' }) {
     }
   };
 
- useEffect(() => {
+useEffect(() => {
   if (!visible) {
     setInView(false);
     return;
   }
+
   const handler = () => {
+    if (!codeWrapperRef.current) return;
+
     const rect = codeWrapperRef.current.getBoundingClientRect();
-    // Sichtbar, wenn irgendein Teil zwischen oberer und unterer Viewport‑Kante liegt
-    const isVisible = rect.bottom > 0 && rect.top < window.innerHeight;
-    setInView(isVisible);
+
+    const isInViewport = rect.bottom > 0 && rect.top < window.innerHeight;
+
+    // Neu: sichtbare (gerenderte) Höhe
+    const visibleHeight = rect.height;
+    const meetsHeightCondition = visibleHeight >= window.innerHeight * 0.8;
+
+    setInView(isInViewport && meetsHeightCondition);
   };
-  handler();  // Status direkt beim Einblenden prüfen
+
+  handler();
   window.addEventListener('scroll', handler, { passive: true });
-  return () => window.removeEventListener('scroll', handler);
+  window.addEventListener('resize', handler);
+
+  return () => {
+    window.removeEventListener('scroll', handler);
+    window.removeEventListener('resize', handler);
+  };
 }, [visible]);
 
+
+
+//  useEffect(() => {
+//   if (!visible) {
+//     setInView(false);
+//     return;
+//   }
+//   const handler = () => {
+//     const rect = codeWrapperRef.current.getBoundingClientRect();
+//     const isVisible = rect.bottom > 0 && rect.top < window.innerHeight;
+//     setInView(isVisible);
+//   };
+//   handler();
+//   window.addEventListener('scroll', handler, { passive: true });
+//   return () => window.removeEventListener('scroll', handler);
+// }, [visible]);
+
   return (
+     <>
     <div className="code-toggler">
       <div className="code-header">
         <span className="code-label">{label}</span>
@@ -52,7 +85,7 @@ function CodeToggler({ code, label = 'Codeblock' }) {
       </div>
 
       {visible && (
-        <>
+
   <div className="code-content">
     <div className="code-toggler__code-wrapper" ref={codeWrapperRef}>
           <SyntaxHighlighter
@@ -66,16 +99,18 @@ function CodeToggler({ code, label = 'Codeblock' }) {
           </SyntaxHighlighter>
     </div>
   </div>
-  
-   {inView && (
-            <div className="code-scrollbutton">
+
+  )}
+    </div>
+
+       {visible && inView && (
+        <div className="code-scrollbutton">
               <button onClick={() => scrollTo('up')}   aria-label="Scroll Up">↑</button>
               <button onClick={() => scrollTo('down')} aria-label="Scroll Down">↓</button>
             </div>
           )}
-  </>
-  )}
-    </div>
+
+          </>
   );
 }
 
