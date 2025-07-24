@@ -60,9 +60,7 @@ function Flamecoach2Page() {
         sideImage={sideImage}
       />
 
-      <ImageCarousel images={[ img1, img2]} maxWidth="1000px" />;
-      <ImageCarousel images={[ imgUI_Scenes, imgUI_cal, imgUI_tracker, imgUI_Pl_02, imgUI_Pl_04,imgUI_Pl_03]} maxWidth="1000px" />;
-
+      {/* <ImageCarousel images={[ img1, img2]} maxWidth="1000px" />; */}
     <div className="section-container">
       <h2 className="section-title">Integration der Feuerlöscher-Controller</h2>
       <h3 className="section-subtitle">Integrationsbeispiel am Strahlrohr</h3>
@@ -81,7 +79,8 @@ function Flamecoach2Page() {
             {awgInput && <CodeToggler code={awgInput} label="AWGNozzleInputManager.cs" />}
     </div>
     </div>
-    
+          <ImageCarousel images={[ imgUI_Scenes, imgUI_cal, imgUI_tracker, imgUI_Pl_02, imgUI_Pl_04,imgUI_Pl_03]} maxWidth="1000px" />;
+
     </div>
   );
 }

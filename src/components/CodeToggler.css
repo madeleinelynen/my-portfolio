@@ -20,28 +20,38 @@
 
 .code-content {
   display: flex;
-  border: 5px solid white;
   flex-direction: row;
-  align-items: stretch;
+  border: none;
 }
 
 .code-toggler__code-wrapper {
-  box-sizing: border-box;
+  position: relative;   /* damit absolute-Kinder sich darauf beziehen */
   width: 98%;
-  border:10px solid purple;
-  margin:0;
-  padding:0;
+  border: 10px solid purple;
+  margin: 0;
+  padding: 0;
 }
 
 .code-scrollbutton {
-  display: flex;
-  width: 2%;
-  cursor: pointer;
-  position: sticky;
+  position: fixed;     /* relativ zum Viewport */
+  bottom: 16px;        /* 16px Abstand unten */
+  right: 1rem;         /* 16px Abstand rechts */
+  display: flex;       /* Buttons nebeneinander */
   flex-direction: column;
-  border: 5px solid pink;
+  border: 5px solid red;
+  gap: 4px;
+  padding: 4px;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;       /* über dem Code */
 }
 
+.code-scrollbutton button {
+  cursor: pointer;
+  background: none;
+  color: #fff;
+  width: auto;
+  margin: 2px 0;
+}
 .code-toggler__button {
   padding: 0.4rem 0.8rem;
   font-size: 0.9rem;
