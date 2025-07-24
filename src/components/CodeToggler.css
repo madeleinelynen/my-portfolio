@@ -1,11 +1,10 @@
 .code-toggler {
-  margin-left: -5vw;
-  margin-right: -5vw;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  width: 100%;
+  box-sizing: border-box;
+  border: 5px solid yellow;
 }
 
-.code-toggler__header {
+.code-header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,17 +12,34 @@
   margin-bottom: 1rem;
 }
 
-.code-toggler__code-wrapper {
+.code-label {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.code-content {
   display: flex;
-  width: 100%;
+  border: 5px solid white;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.code-toggler__code-wrapper {
+  box-sizing: border-box;
+  width: 98%;
+  border:10px solid purple;
   margin:0;
   padding:0;
 }
 
-.code-toggler__label {
-  font-family: 'Montserrat', sans-serif;
-  color: #ffffff;
-  line-height: 1;
+.code-scrollbutton {
+  display: flex;
+  width: 2%;
+  cursor: pointer;
+  position: sticky;
+  flex-direction: column;
+  border: 5px solid pink;
 }
 
 .code-toggler__button {
@@ -37,15 +53,12 @@
   color: #ffffff;
 }
 
-
 .code-toggler__code-block {
+  box-sizing: border-box;
   width: 100%;
   border-radius: 6px;
-  padding: 1rem;
   font-size: 14px;
-  background-color: #1f1f1f;
   color: #f8f8f2;
-  overflow-x: auto;
   text-align: left;
   white-space: pre-wrap;
   font-family: 'Courier New', Courier, monospace;

@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import ProjectPage from '../components/ProjectPage';
 import ImageCarousel from '../components/ImageCarousel';
+import CodeToggler from '../components/CodeToggler';
+import FullWidthImage from '../components/FullWidthImage';
+
 import './Flamecoach2.css';
 import { useLanguage } from '../LanguageContext';
 
@@ -23,31 +26,25 @@ function Flamecoach2Page() {
   const {t} = useLanguage();
   const langKey = "flamecoach2";
 
-  const [setInput1] = useState('');
-  const [setTracker2] = useState('');
-  const [setAwg1] = useState('');
-  const [setAwg2] = useState('');
+  const [setInputExtinguisher] = useState('');
+  const [setTrackerManager] = useState('');
+  const [awgInput, setAwgInput] = useState('');
 
   useEffect(() => {
     fetch(process.env.PUBLIC_URL + '/code/Flamecoach2/Extinguisher/ExtinguisherInputManager.cs')
       .then(res => res.text())
-      .then(setInput1)
+      .then(setInputExtinguisher)
       .catch(err => console.error('Error loading ExtinguisherInputManager', err));
 
     fetch(process.env.PUBLIC_URL + '/code/Flamecoach2/ExtinguisherTrackerIdManager.cs')
       .then(res => res.text())
-      .then(setTracker2)
+      .then(setTrackerManager)
       .catch(err => console.error('Error loading ExtinguisherTrackerIdManager', err));
 
     fetch(process.env.PUBLIC_URL + '/code/Flamecoach2/Extinguisher/AWG/AWGNozzleInputManager.cs')
       .then(res => res.text())
-      .then(setAwg1)
+      .then(setAwgInput)
       .catch(err => console.error('Error loading AWGNozzleInputManager', err));
-
-    fetch(process.env.PUBLIC_URL + '/code/Flamecoach2/Extinguisher/AWG/AWGNozzleInputVisuals.cs')
-      .then(res => res.text())
-      .then(setAwg2)
-      .catch(err => console.error('Error loading AWGNozzleInputVisuals', err));
   }, []);
 
   return (
@@ -65,6 +62,26 @@ function Flamecoach2Page() {
 
       <ImageCarousel images={[ img1, img2]} maxWidth="1000px" />;
       <ImageCarousel images={[ imgUI_Scenes, imgUI_cal, imgUI_tracker, imgUI_Pl_02, imgUI_Pl_04,imgUI_Pl_03]} maxWidth="1000px" />;
+
+    <div className="section-container">
+      <h2 className="section-title">Integration der Feuerlöscher-Controller</h2>
+      <h3 className="section-subtitle">Integrationsbeispiel am Strahlrohr</h3>
+        <FullWidthImage src={img2} alt="img2"/>
+
+        <div className="integration-column">
+        <ul className="integration-points">
+          <li>Unterstützung der drei benötigten Eingangskanäle (Hall-Sensoren)</li>
+          <li>Kontrolle und Testbarkeit der Inputs im Game Mode</li>
+          <li>Werte werden im Game Mode über Events weitergegeben</li>
+          <li>Debug-Modus, mit dem man Inputs imitieren und Funktionen ohne Hardware testen kann</li>
+          <li>Speicherung und Auslesung der Grenzwerte im JSON</li>
+          <li>Modularisierung durch Vererbung von ExtinguisherInputManager&lt;T&gt;</li>
+        </ul>
+
+            {awgInput && <CodeToggler code={awgInput} label="AWGNozzleInputManager.cs" />}
+    </div>
+    </div>
+    
     </div>
   );
 }

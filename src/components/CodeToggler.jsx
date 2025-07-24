@@ -1,15 +1,30 @@
-import React, { useState } from 'react';
 import './CodeToggler.css';
+import { useRef, useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 function CodeToggler({ code, label = 'Codeblock' }) {
   const [visible, setVisible] = useState(false);
+  const codeWrapperRef = useRef(null);
+
+  const scrollTo = (direction) => {
+    if(codeWrapperRef.current) {
+      const rect = codeWrapperRef.current.getBoundingClientRect();
+      const scrollTargetY =
+        direction === 'down'
+        ? window.scrollY + rect.bottom - window.innerHeight
+        : window.scrollY + rect.top;
+      window.scrollTo({
+        top:scrollTargetY,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
     <div className="code-toggler">
-      <div className="code-toggler__header">
-        <span className="code-toggler__label">{label}</span>
+      <div className="code-header">
+        <span className="code-label">{label}</span>
 
         <button
           className="code-toggler__button"
@@ -20,7 +35,8 @@ function CodeToggler({ code, label = 'Codeblock' }) {
       </div>
 
       {visible && (
-        <div className="code-toggler__code-wrapper">
+        <div className="code-content"> 
+          <div className="code-toggler__code-wrapper" ref={codeWrapperRef}>
           <SyntaxHighlighter
             language="csharp"
             style={atomDark}
@@ -30,6 +46,26 @@ function CodeToggler({ code, label = 'Codeblock' }) {
           >
             {code}
           </SyntaxHighlighter>
+          </div>
+            
+          <div className="code-scrollbutton"> 
+            <button
+              onClick={()=> scrollTo('up')}
+              aria-label="Scroll Up"
+              className="scoll-button"
+            >
+              ↑
+            </button>
+            <button
+              onClick={()=> scrollTo('down')}
+              aria-label="Scroll Down"
+              className="scroll-button"
+            >
+              ↓
+            </button>
+
+          </div>
+
         </div>
       )}
     </div>
