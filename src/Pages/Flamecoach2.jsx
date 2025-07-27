@@ -60,25 +60,20 @@ function Flamecoach2Page() {
         sideImage={sideImage}
       />
 
-      {/* <ImageCarousel images={[ img1, img2]} maxWidth="1000px" />; */}
     <div className="section-container">
-      <h2 className="section-title">Integration der Feuerlöscher-Controller</h2>
-      <h3 className="section-subtitle">Integrationsbeispiel am Strahlrohr</h3>
+      <h2 className="section-title">{t(langKey, 'awgInputTitle')}</h2>
+      <h3 className="section-subtitle">{t(langKey, 'awgInputSubtitle')}</h3>
         <FullWidthImage src={img2} alt="img2"/>
 
         <div className="integration-column">
-        <ul className="integration-points">
-          <li>Unterstützung der drei benötigten Eingangskanäle (Hall-Sensoren)</li>
-          <li>Kontrolle und Testbarkeit der Inputs im Game Mode</li>
-          <li>Werte werden im Game Mode über Events weitergegeben</li>
-          <li>Debug-Modus, mit dem man Inputs imitieren und Funktionen ohne Hardware testen kann</li>
-          <li>Speicherung und Auslesung der Grenzwerte im JSON</li>
-          <li>Modularisierung durch Vererbung von ExtinguisherInputManager&lt;T&gt;</li>
-        </ul>
+          <ul className="integration-points">
+            {t(langKey, 'awgInputScript').map((descr, i) => (<li key={i}>{descr}</li>))}
+          </ul>
+          {awgInput && <CodeToggler code={awgInput} label="AWGNozzleInputManager.cs" />}
+        </div>
 
-            {awgInput && <CodeToggler code={awgInput} label="AWGNozzleInputManager.cs" />}
     </div>
-    </div>
+
           <ImageCarousel images={[ imgUI_Scenes, imgUI_cal, imgUI_tracker, imgUI_Pl_02, imgUI_Pl_04,imgUI_Pl_03]} maxWidth="1000px" />;
 
     </div>

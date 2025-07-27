@@ -1,10 +1,12 @@
 import about_de from './locales/de/about.json';
 import home_de from './locales/de/home.json';
 import homeselection_de from './locales/de/homeselection.json';
+import codeToggler_de from './locales/de/codeToggler.json';
 
 import about_en from './locales/en/about.json';
 import home_en from './locales/en/home.json';
 import homeselection_en from './locales/en/homeselection.json';
+import codeToggler_en from './locales/en/codeToggler.json';
 
 import basePage_de from './locales/de/pages/basePage.json';
 import basePage_en from './locales/en/pages/basePage.json';
@@ -36,6 +38,8 @@ const translations = {
     home: home_de,
     about: about_de,
     homeselection: homeselection_de,
+    codeToggler: codeToggler_de,
+
     basePage: basePage_de,
     aufwind: aufwind_de,
     essen1887: essen1887_de,
@@ -53,6 +57,8 @@ const translations = {
     home: home_en,
     about: about_en,
     homeselection: homeselection_en,
+    codeToggler: codeToggler_en,
+
     basePage: basePage_en,
     aufwind: aufwind_en,
     essen1887: essen1887_en,

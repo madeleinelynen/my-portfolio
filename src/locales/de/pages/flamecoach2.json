@@ -27,6 +27,19 @@
         "Erstellung von Animationen innerhalb der Engine",
         "Integration der Löscher-Hardware (einschließlich firmeneigener Entwicklungen)",
         "Implementierung von Hand-Tracking-Interaktionen"
+    ],
+
+    "awgInputTitle": "Integration der Feuerlöscher-Controller",
+  
+    "awgInputSubtitle": "Integrationsbeispiel am Strahlrohr",
+
+    "awgInputScript": [
+          "Unterstützung der drei benötigten Eingangskanäle (Hall-Sensoren)",
+          "Kontrolle und Testbarkeit der Inputs im Game Mode",
+          "Werte werden im Game Mode über Events weitergegeben",
+          "Debug-Modus, mit dem man Inputs imitieren und Funktionen ohne Hardware testen kann",
+          "Speicherung und Auslesung der Grenzwerte im JSON",
+          "Modularisierung durch Vererbung von ExtinguisherInputManager<T>"
     ]
 }    
     

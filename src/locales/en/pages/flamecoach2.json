@@ -26,5 +26,18 @@
     "UX/UI development and integration, creation of animations within the engine",
     "Integration of the extinguisher hardware (including in-house developments)",
     "Implementation of hand-tracking interactions"
+  ],
+
+  "awgInputTitle": "Integration of Fire Extinguisher Controllers",
+
+  "awgInputSubtitle": "Integration Example on the Stream Nozzle",
+
+  "awgInputScript": [
+    "Support for the three required input channels (Hall sensors)",
+    "Control and testability of inputs in Game Mode",
+    "Values in Game Mode are passed via events",
+    "Debug mode for emulating inputs and testing functions without hardware",
+    "Storage and retrieval of threshold values in JSON",
+    "Modularization via inheritance from ExtinguisherInputManager<T>"
   ]
 }

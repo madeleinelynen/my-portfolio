@@ -2,12 +2,15 @@ import './CodeToggler.css';
 import { useRef, useState, useEffect   } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { useLanguage } from '../LanguageContext';
 
 function CodeToggler({ code, label = 'Codeblock' }) {
   const [visible, setVisible] = useState(false);
   const codeWrapperRef = useRef(null);
-    const codeBlockRef = useRef(null);
   const [inView, setInView] = useState(false);
+
+  const {t} = useLanguage();
+  const langKey = 'codeToggler';
 
   const scrollTo = (direction) => {
     if(codeWrapperRef.current) {
@@ -30,13 +33,11 @@ useEffect(() => {
   }
 
   const handler = () => {
-    if (!codeWrapperRef.current) return;
+    if (!codeWrapperRef.current) 
+      return;
 
     const rect = codeWrapperRef.current.getBoundingClientRect();
-
     const isInViewport = rect.bottom > 0 && rect.top < window.innerHeight;
-
-    // Neu: sichtbare (gerenderte) Höhe
     const visibleHeight = rect.height;
     const meetsHeightCondition = visibleHeight >= window.innerHeight * 0.8;
 
@@ -53,23 +54,6 @@ useEffect(() => {
   };
 }, [visible]);
 
-
-
-//  useEffect(() => {
-//   if (!visible) {
-//     setInView(false);
-//     return;
-//   }
-//   const handler = () => {
-//     const rect = codeWrapperRef.current.getBoundingClientRect();
-//     const isVisible = rect.bottom > 0 && rect.top < window.innerHeight;
-//     setInView(isVisible);
-//   };
-//   handler();
-//   window.addEventListener('scroll', handler, { passive: true });
-//   return () => window.removeEventListener('scroll', handler);
-// }, [visible]);
-
   return (
      <>
     <div className="code-toggler">
@@ -80,7 +64,7 @@ useEffect(() => {
           className="code-toggler__button"
           onClick={() => setVisible(!visible)}
         >
-          {visible ? 'Code ausblenden' : 'Code anzeigen'}
+          {visible ? t(langKey, 'hideCode') : t(langKey, 'showCode')}
         </button>
       </div>
 
