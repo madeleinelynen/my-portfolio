@@ -1,0 +1,26 @@
+{
+    "hardware": [
+        "Oculus Quest",
+        "Motion Seats",
+        "Optitrack",
+        "Experimentelles Oculus Wireless System",
+        "Multisensorische Integration (Duft, Hitze), schaltbar über LAN-Steckdosen"
+    ],
+
+    "software": [
+        "Unity 2021.3 LTS",
+        "Visual Studio 2022",
+        "IK"
+    ],
+
+    "description": "In einem digital exakt nachgebildeten Gelände wurden bis zu vier Besucher gleichzeitig von einem Guide durch die vier Industriezeitalter geführt. Höhepunkte bildeten die Fahrt über die Mondoberfläche auf einem MotionSeat sowie eine abschließende Mission im virtuellen Mond-Rover. Ziel der Installation war es, die Potenziale von 5G und vernetzter Zukunftstechnologie erlebbar zu machen.",
+    
+    "role": [
+        "Programmierung, insbesondere des Übergangseffektes der Industrieszenen",
+        "Levelmanager",
+        "Animation innerhalb der Engine",
+        "Integration von Screen-Space UI",
+        "Konzeption und Umsetzung der Optik der transparenten Industrie 4.0 Halle",
+        "Technischer Support auf der CeBit"
+    ]
+} 

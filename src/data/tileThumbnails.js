@@ -11,6 +11,7 @@ import essenThumb from '../assets/images/EssenCityguide/Tile.png';
 import tirolThumb from '../assets/images/Tirol/Tile.png';
 import thyssenInfraThumb from '../assets/images/ThyssenInfrastructure/Tile.png';
 import trikottaufeThumb from '../assets/images/Trikottaufe/Tile.png';
+import vodafone5GHyperRealityThumb from '../assets/images/Vodafone5GHyperReality/Tile.png';
 
 // hovered tile
 import flamecoachHover from '../assets/images/Flamecoach/HoverTile.png';
@@ -25,6 +26,7 @@ import essenHover from '../assets/images/EssenCityguide/Tile.png';
 import tirolHover from '../assets/images/Tirol/HoveringTile.png';
 import thyssenInfraHover from '../assets/images/ThyssenInfrastructure/HoverTile.png';
 import trikottaufeHover from '../assets/images/Trikottaufe/HoverTile.png';
+import vodafone5GHyperRealityHover from '../assets/images/Vodafone5GHyperReality/HoverTile.png';
 
 export const images = {
   flamecoach: {
@@ -74,5 +76,9 @@ export const images = {
   trikottaufe: {
     tile: trikottaufeThumb,
     hoveredTile: trikottaufeHover,
+  },
+    vodafone5GHyperReality: {
+    tile: vodafone5GHyperRealityThumb,
+    hoveredTile: vodafone5GHyperRealityHover,
   },
 };

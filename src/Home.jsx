@@ -70,8 +70,9 @@ const projects = [
   { path: 'schumann', label: 'Schumann VR', img: images.schumann.tile, hoverImg: images.schumann.hoveredTile },
   { path: 'essencityguide', label: 'Essen 1887', img: images.essen.tile, hoverImg: images.essen.hoveredTile },
   { path: 'tirol', label: 'Experience Tirol', img: images.tirol.tile, hoverImg: images.tirol.hoveredTile },
-  { path: 'terrainfra', label: 'Terra Infrastructure', img: images.thyssenInfra.tile, hoverImg: images.thyssenInfra.hoveredTile },
-  { path: 'trikottaufe', label: 'Fortuna Trikottaufe', img: images.trikottaufe.tile, hoverImg: images.trikottaufe.hoveredTile }
+  { path: 'terrainfrastructure', label: 'Terra Infrastructure', img: images.thyssenInfra.tile, hoverImg: images.thyssenInfra.hoveredTile },
+  { path: 'trikottaufe', label: 'Fortuna Trikottaufe', img: images.trikottaufe.tile, hoverImg: images.trikottaufe.hoveredTile },
+  { path: 'vodafone5ghyperreality', label: 'Vodafone 5G Hyper-Reality Experience', img: images.vodafone5GHyperReality.tile, hoverImg: images.vodafone5GHyperReality.hoveredTile }
 ];
 
 return (

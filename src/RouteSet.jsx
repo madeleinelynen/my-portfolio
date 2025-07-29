@@ -14,6 +14,7 @@ import Essen1887 from './pages/Essen1887.jsx';
 import ExperienceTirol from './pages/ExperienceTirol.jsx';
 import TerraInfrastructure from './pages/TerraInfrastructure.jsx';
 import Trikottaufe from './pages/Trikottaufe.jsx';
+import Vodafone5GHyperReality from './pages/Vodafone5GHyperReality.jsx';
 
 const RouteSet = () => {
   const { lang } = useParams();
@@ -37,8 +38,9 @@ const RouteSet = () => {
           <Route path="schumann" element={<SchumannVR />} />
           <Route path="essencityguide" element={<Essen1887 />} />
           <Route path="tirol" element={<ExperienceTirol />} />
-          <Route path="terrainfra" element={<TerraInfrastructure />} />
+          <Route path="terrainfrastructure" element={<TerraInfrastructure />} />
           <Route path="trikottaufe" element={<Trikottaufe />} />
+          <Route path="vodafone5GHyperReality" element={<Vodafone5GHyperReality />} />
         </Routes>
       </div>
     </LanguageProvider>

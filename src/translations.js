@@ -32,6 +32,8 @@ import vodafone5GCar_de from './locales/de/pages/vodafone5GCar.json';
 import vodafone5GCar_en from './locales/en/pages/vodafone5GCar.json';
 import vodafoneOMR_de from './locales/de/pages/vodafoneOMR.json';
 import vodafoneOMR_en from './locales/en/pages/vodafoneOMR.json';
+import vodafone5GHyperReality_de from './locales/de/pages/vodafone5GHyperReality.json';
+import vodafone5GHyperReality_en from './locales/en/pages/vodafone5GHyperReality.json';
 
 const translations = {
   de: {
@@ -52,6 +54,7 @@ const translations = {
     trikottaufe: trikottaufe_de,
     vodafone5GCar: vodafone5GCar_de,
     vodafoneOMR: vodafoneOMR_de,
+    vodafone5GHyperReality: vodafone5GHyperReality_de,
   },
   en: {
     home: home_en,
@@ -71,6 +74,7 @@ const translations = {
     trikottaufe: trikottaufe_en,
     vodafone5GCar: vodafone5GCar_en,
     vodafoneOMR: vodafoneOMR_en,
+    vodafone5GHyperReality: vodafone5GHyperReality_en,
   },
 };
 
