@@ -18,7 +18,7 @@ function TrikottaufePage() {
       image={titleImage}
       description={t(langKey, 'description')}
       role = {t(langKey, 'role')}
-      infoTexts={["3", "Juni 2018 - Juli 2018", "Unity Engine"]}
+      infoTexts={["3", t(langKey, 'period'), "Unity Engine"]}
       hardware={t(langKey, 'hardware')}
       software={t(langKey, 'software')}
       sideImage={sideImage}

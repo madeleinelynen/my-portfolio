@@ -26,7 +26,7 @@ function VodafoneOMRPage() {
       image={titleImage}
       description= {t(langKey, 'description')}
       role = {t(langKey, 'role')}
-      infoTexts={["8", "Januar 2022 - Mai 2022", "Unity Engine"]}
+      infoTexts={["8", t(langKey, 'period'), "Unity Engine"]}
       hardware={t(langKey, 'hardware')}
       software={t(langKey, 'software')}
       sideImage={sideImage}

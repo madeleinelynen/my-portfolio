@@ -7,7 +7,8 @@
 
     "software": [
         "Unity Engine 2021.1",
-        "Visual Studio 2022"
+        "Visual Studio 2022",
+        "SideQuest"
     ],
 
     "description": "Ein rätselbasiertes Spiel für fünf Spieler, bei dem vier über Smartphones und der fünfte Spieler über eine VR-Brille in einem lokalen Multiplayer-Erlebnis interagieren. Als Multi-Plattform Couch-Koop-Indie-Game kommt Oddy in von der afj betreuten Jugendzentren in der ganzen Bundesrepublik zum Einsatz.",

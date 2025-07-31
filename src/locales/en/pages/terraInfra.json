@@ -14,6 +14,8 @@
     "Ultraleap Gemini v5"
   ],
 
+  "period": "January 2022 - October 2022",
+
   "description": "Interactive VR experience simulating the drilling process in the Kapp Sea for Terra Infrastructure. Users ride a virtual transport cage through several stations aboard a research vessel down to the seafloor, where the drilling process—including sediment loosening via vibration—is presented immersively. A digital, interactive tablet with hand tracking provides accompanying information.",
 
   "role": [

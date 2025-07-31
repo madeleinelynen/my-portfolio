@@ -26,7 +26,7 @@ function ThyssenInfrastructurePage() {
       image={titleImage}
       description= {t(langKey, 'description')}
       role = {t(langKey, 'role')}
-      infoTexts={["7", "Januar 2022 - Oktober 2022", "Unity Engine"]}
+      infoTexts={["7", t(langKey, 'period'), "Unity Engine"]}
       hardware={t(langKey, 'hardware')}
       software={t(langKey, 'software')}
       sideImage={sideImage}

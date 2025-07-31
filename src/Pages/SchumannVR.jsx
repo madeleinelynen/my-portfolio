@@ -13,7 +13,7 @@ function SchumannPage() {
       image={titleImage}
       description= {t(langKey, 'description')}
       role = {t(langKey, 'role')}
-      infoTexts={["10", "Mai 2019 - Oktober 2019", "Unity Engine"]}
+      infoTexts={["10", t(langKey, 'period'), "Unity Engine"]}
       hardware={t(langKey, 'hardware')}
       software={t(langKey, 'software')}
       sideImage={sideImage}

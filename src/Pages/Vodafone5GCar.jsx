@@ -14,7 +14,7 @@ function VodafoneGigacar() {
       image={titleImage}
       description={t(langKey, 'description')}
       role = {t(langKey, 'role')}
-      infoTexts={["7", "März 2019 - September 2019", "Unity Engine"]}
+      infoTexts={["7", t(langKey, 'period'), "Unity Engine"]}
       hardware={t(langKey, 'hardware')}
       software={t(langKey, 'software')}
       sideImage={sideImage}

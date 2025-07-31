@@ -11,6 +11,8 @@
         "Visual Studio 2017"
     ],
 
+    "period": "March 2019 - September 2019",
+
     "description": "VR experience for Vodafone Business, where users take part in an autonomous car ride. Inside the vehicle, a display provides real-time data, targeted advertising, and safety alerts. At the end of the experience, the user is lifted into the air by a drone and controls a mini-game in which they navigate through rings and collect points.",
 
     "role": [
