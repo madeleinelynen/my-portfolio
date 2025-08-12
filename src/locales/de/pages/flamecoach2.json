@@ -19,8 +19,8 @@
         "Ultraleap SDK"
     ],
 
-    "description": "VR-Simulation zur Brandbekämpfung in verschiedenen Szenarien. Ein realer Feuerlöscher wird mit firmeneigener Hardware und Trackern ausgestattet, sodass er in der virtuellen Umgebung ebenso sichtbar und steuerbar ist wie in der realen Welt. Das System wurde bereits an mehr als 30 Kunden verkauft, darunter BMW, Daimler, Securitas und Commerzbank.",
-    
+    "description": "Erweiterte VR-Brandbekämpfungssimulation mit neuen Funktionen und realitätsnahen Szenarien. Basierend auf dem Projekt Flamecoach bietet diese erweiterte Simulation eine realistische Trainingsumgebung zur Brandbekämpfung. Zu den Verbesserungen zählen ein überarbeitetes Feuersystem und User Interface, erweiterte Szenarien sowie die Möglichkeit, mehrere Feuerlöscher gleichzeitig einzusetzen. Ziel ist es, das Trainingserlebnis noch praxisnäher und flexibler zu gestalten.",
+
     "role": [
         "Programmierung, inklusive Integration von Inputs der firmeneigenen Hardware",
         "UX/UI-Entwicklung und -Integration", 

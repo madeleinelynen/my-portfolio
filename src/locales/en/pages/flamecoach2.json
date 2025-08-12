@@ -19,8 +19,8 @@
     "Ultraleap SDK"
   ],
 
-  "description": "VR simulation for firefighting in various scenarios. A real fire extinguisher is equipped with proprietary hardware and trackers, making it visible and operable in the virtual environment just like in the real world. The system has already been sold to more than 30 clients, including BMW, Daimler, Securitas, and Commerzbank.",
-
+  "description": "Extended VR Firefighting Simulation with new features and realistic scenarios. Based on the Flamecoach project, this enhanced simulation provides a highly realistic training environment for firefighting. Improvements include a redesigned fire system and user interface, expanded scenarios, and the ability to operate multiple fire extinguishers simultaneously. The goal is to make the training experience even more practical and flexible.",
+    
   "role": [
     "Programming, including integration of inputs from proprietary hardware",
     "UX/UI development and integration, creation of animations within the engine",
